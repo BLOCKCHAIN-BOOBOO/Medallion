@@ -36,10 +36,10 @@
 
 .market-background {
   width: 100%;
-  background-image: url(./images/Group165.png);
+  /* background-image: url(./images/Group165.png);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 80vh;
+  min-height: 80vh; */
 }
 .market-section-color {
   min-height: 80vh;
@@ -99,10 +99,11 @@
 }
 
 /* footer section */
+/* 
 .footer-section {
   background-color: #0054a0;
   color: #fff;
-}
+} */
 
 @media (min-width: 0px) {
   .footer-logo1 {

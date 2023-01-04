@@ -57,29 +57,31 @@ const Activity = () => {
 
   return (
     <div id="content-wrap">
-      <section className="marketplace-section py-10 mt-16 sm:mt-16 md:mt-20 lg:mt-20 md:pt-10 md:pb-4 lg:pt-10 lg:pb-4 relative">
+      <section className=" py-10 mt-16 sm:mt-16 md:mt-20 lg:mt-20 md:pt-10 md:pb-4 lg:pt-10 lg:pb-4 relative">
+      {/* marketplace-section */}
         <div className="container mx-auto flex flex-col md:flex md:flex-col lg:flex lg:flex-col align">
-          <TitleBanner title="ACTIVITY" />
+          <TitleBanner title="Activity" />
         </div>
       </section>
       <div className="market-section-color">
-        <section className="market-background relative flex justify-center self-center text-center pt-20 md:pt-20 sm:pt-20 xl:pt-32">
+        <section className="market-background relative flex justify-center self-center text-center pt-20 md:pt-20 sm:pt-20 xl:pt-20">
 
           {Loading ? (
             <ReactLoading type="bars" color="#fff" />
           ) : (
             <>
               {records ? (
-                <div className="p-2 rounded-2xl bg-white h-80 overflow-y-auto">
-                  <table className="table-auto bg-white">
+                <div className="container">
+                <div className="rounded-2xl bg-white h-96 overflow-y-auto">
+                  <table className="table-auto w-full bg-white">
                     <thead>
                       <tr>
-                        <td className="p-2 border font-bold">Medallion ID</td>
-                        <td className="p-2 border font-bold">From</td>
-                        <td className="p-2 border font-bold">To</td>
-                        <td className="p-2 border font-bold">Action</td>
-                        <td className="p-2 border font-bold">Amount</td>
-                        <td className="p-2 border font-bold">Date</td>
+                        <td className="p-3 border font-bold">Medallion ID</td>
+                        <td className="p-3 border font-bold">From</td>
+                        <td className="p-3 border font-bold">To</td>
+                        <td className="p-3 border font-bold">Action</td>
+                        <td className="p-3 border font-bold">Amount</td>
+                        <td className="p-3 border font-bold">Date</td>
                       </tr>
                     </thead>
                     <tbody>
@@ -124,6 +126,7 @@ const Activity = () => {
                       })}
                     </tbody>
                   </table>
+                </div>
                 </div>
               ) : (
                 <div className="text-white text-bold">NO ACTIVITY</div>

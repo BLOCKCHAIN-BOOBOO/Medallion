@@ -77,7 +77,7 @@ function Frontend() {
     <div id="page-container">
       <NavBar />
       {/*UI THEME HOME PAGE START*/}
-      <div className="z-0">
+      <div className="z-0 market-section-color">
         <Outlet />
       </div>
       {/*UI THEME HOME PAGE END*/}

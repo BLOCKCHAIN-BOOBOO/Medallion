@@ -17,7 +17,6 @@ function SigninForm() {
   let Content = "";
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
   const {
     register,
     handleSubmit,
@@ -58,17 +57,18 @@ function SigninForm() {
   };
 
   Content = (
-    <div className="buy-card lg:w-2/5 p-6 self-center md:p-8 text-left">
+    <div className="login-card p-6 self-center md:p-8 text-left">
+      {/* buy-card */}
       <div className="flex flex-col">
-        <h3 className="text-3xl font-bold mb-10 self-center">Sign In</h3>
+        <h3 className="text-3xl font-bold mb-10 self-center login-text ">Sign In</h3>
         <form onSubmit={handleSubmit(onSubmit)} className="self-center">
           <label className="block mb-5 self-center">
-            <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
+            <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
               E-mail Id
             </span>
             <input
               type="email"
-              className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
+              className="mt-1 px-3 p-1 bg-transparent login-input shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
               placeholder="Enter Username"
               required
               value={Email}
@@ -79,40 +79,43 @@ function SigninForm() {
               })}
             />
             {errors.email?.type === "pattern" && (
-              <span className="text-red-500">
+              <span className="wrong-text">
                 Please Enter Valid Email Address
               </span>
             )}
           </label>
 
           <label className="block mb-5 self-center">
-            <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-sm text-left text-gray-500 font-medium">
+            <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-sm text-left text-gray-500 font-medium">
               Password
             </span>
             <input
               type={showconfirm ? "text" : "password"}
               required
-              className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-64 dashboard-input-width rounded-3xl input-background sm:text-sm focus:ring"
+              className="mt-1 px-3 p-1 bg-transparent shadow-sm login-input border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-64 dashboard-input-width rounded-3xl input-background sm:text-sm focus:ring"
               placeholder="Enter Password"
               {...register("password", { required: true })}
             />
 {showconfirm ? (
                 <i className="fa fa-eye float-right -mt-6 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(false)}></i>
               ) : (
-                <i className="fa fa-eye-slash float-right -mt-6 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(true)}></i>
+                <i className="fa fa-eye-slash float-right -mt-9 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(true)}></i>
               )}
 
 
            
             
             {errors.password && (
-              <span className="text-red-500">This Field is required</span>
+              <span className="wrong-text">This Field is required</span>
             )}
           </label>
 
           <div className="mb-10 mt-5 self-center lg:self-center text-center">
             <button
-              className="text-white rounded-3xl bg-indigo-800 text-xs font-bold px-10 py-2 rounded-full"
+              // className="login-button"
+
+          className={Loading ? "login-active-button" : "login-button"}
+
               disabled={Loading ? true : false}
             >
               Login

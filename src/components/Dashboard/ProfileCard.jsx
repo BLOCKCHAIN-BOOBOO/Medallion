@@ -37,10 +37,10 @@ const ProfileCard = () => {
         width="100"
         alt={user.token && FormatUsername(user)}
       />
-      <p className="font-bold text-md text-white p-2 ">
+      <p className="font-bold text-md p-2 ">
         {user.token && FormatUsername(user)}
       </p>
-      <div className="flex font-bold text-md text-white p-2 ">
+      <div className="flex font-bold text-md p-2 ">
 
         {/* <span className="break-words "> {user.token && userInfo.address ?  userInfo.address : ""} </span> */}
         <span className="text-md self-start pb-1 pt-px">

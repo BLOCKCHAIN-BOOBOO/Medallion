@@ -91,7 +91,7 @@ const wrapperRef = useRef(null);
         type="button"
         onClick={toggleClass}
         data-dropdown-toggle="dropdownNavbar"
-        className="text-white hover:bg-white-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2  md:p-0 font-medium flex items-center justify-between w-full md:w-auto"
+        className="navbar-option-text hover:bg-white-50 border-b border-gray-100 md:hover:bg-transparent md:border-0 pl-3 pr-4 py-2  md:p-0 font-medium flex items-center justify-between w-full md:w-auto"
       >
         {props.user.token && FormatUsername(props.user)} &nbsp;
         <ion-icon name="caret-down-outline"></ion-icon>
@@ -99,13 +99,13 @@ const wrapperRef = useRef(null);
       <div
         id="dropdownNavbar"
         ref={dropdown_node}
-        className="absolute hidden mt-10 -ml-6 bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow w-32"
+        className="absolute hidden mt-10 -ml-6 bg-white text-base z-10 list-none divide-y divide-gray-100 rounded shadow w-36"
       >
         <ul className="py-1" aria-labelledby="dropdownLargeButton">
           <li>
             <Link
               to="/collection" onClick={toggleClass}
-              className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+              className="text-sm navbar-option-text block px-4 py-2"
             >
               My Collections
             </Link>
@@ -113,7 +113,7 @@ const wrapperRef = useRef(null);
           <li>
             <Link
               to="/user-dashboard/update-profile" onClick={toggleClass}
-              className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+              className="text-sm navbar-option-text block px-4 py-2"
             >
                {/* to="/user-dashboard/update-profile" */}
               Dashboard
@@ -124,7 +124,7 @@ const wrapperRef = useRef(null);
           <Link
             to="/login"
             onClick={SignOut}
-            className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2"
+            className="text-sm navbar-option-text block px-4 py-2"
           >
             Log Out
           </Link>

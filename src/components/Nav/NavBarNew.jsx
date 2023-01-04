@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { UserLoggedOut } from "../../store/UserAuthenticationReducer";
 import { ValidateToken } from "../../Utils/Helper";
-import Logo from "./../../theme/images/princess_logo.png";
+import Logo from "./../../theme/images/Logo.png";
 import NewDropDown from "./NewDropDown";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
@@ -103,16 +103,18 @@ const SignOut = async () => {
 
   return (
     <div>
-    <nav className="shadow fixed align w-full z-10 top-0 princess-background sm:h-full h-16 md:h-20 xl:h-20">
+    <nav className="fixed align w-full z-10 top-0 princess-background sm:h-full h-16 md:h-20 xl:h-20">
+    {/* shadow */}
       <div className="container mx-auto relative md:flex md:items-center md:justify-between py-2 md:py-4">
         <Link to={user.token && ValidateToken()?"/collection":"/market-place"}>
-          <span className="font-serif text-3xl text-white float-left mx-2 md:mx-0">
-            <img src={Logo} alt="Princess" className="mx-auto"></img>
+          <span className="flex font-serif text-3xl text-white float-left mx-2 md:mx-0">
+            <img src={Logo} alt="Princess" className="mx-2"></img>
+            <span className="princess-header-text xl:block lg:block md:hidden sm:hidden hidden">PRINCESS</span>
           </span>
         </Link>
 
         <div className="block text-3xl relative cursor-pointer md:hidden">
-          <button className="flex flex-col text-white float-right right-8 top-6 mx-2 md:mx-0 bar-icon"
+          <button className="flex flex-col float-right right-8 top-6 mx-2 md:mx-0 bar-icon"
            onClick={e=>mobileMenutoggle(e)}>
             {/* <ion-icon name="menu" onClick={e=>mobileMenutoggle(e)}></ion-icon> */}
          
@@ -128,7 +130,7 @@ const SignOut = async () => {
           <li 
             onClick={e=>mobileMenutoggle(e)}
           //  onClick="Menu(this)"
-           className="active:border-b-yellow-600 active:border-b-2 list-style-none md:text-white lg:text-white hover:border-b-2 hover:border-b-yellow-600 
+           className="navbar-option-text active:border-b-yellow-600 active:border-b-2 list-style-none hover:border-b-2 hover:border-b-yellow-600 
            text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2 "
            
            >
@@ -141,7 +143,7 @@ const SignOut = async () => {
           <li 
           // onClick="Menu(this)"
            onClick={e=>mobileMenutoggle(e)}
-           className="list-style-none md:text-white lg:text-white hover:border-b-2 hover:border-b-yellow-600 text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2"
+           className="navbar-option-text list-style-none hover:border-b-2 hover:border-b-yellow-600 text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2"
           >
             <NavLink   to="/collection">MY COLLECTIONS</NavLink>
           </li>
@@ -149,7 +151,7 @@ const SignOut = async () => {
           <li 
           // onClick={e=>(mobileMenutoggle(e),hideicon())} 
           onClick={e=>mobileMenutoggle(e)}
-           className={`list-style-none md:text-white lg:text-white hover:border-b-2 hover:border-b-yellow-600 text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 py-2 my-2" 
+           className={`navbar-option-text list-style-none hover:border-b-2 hover:border-b-yellow-600 text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 py-2 my-2" 
             ${dashboardurl === "/user-dashboard/update-user-password" &&" active"} ${dashboardurl==="/user-dashboard/wallet" &&" active"} ${dashboardurl==="/user-dashboard" &&" active"} {dashboardurl==="/user-dashboard/update-user-password" &&" active"}`}>
             <NavLink to="/user-dashboard/update-profile">
             DASHBOARD </NavLink>
@@ -168,7 +170,7 @@ const SignOut = async () => {
             <li 
             onClick={e=>mobileMenutoggle(e)}
             // onClick="Menu(this)"
-            className="list-style-none md:text-white lg:text-white hover:border-b-2 hover:border-b-yellow-600 text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2">
+            className="navbar-option-text list-style-none hover:border-b-2 hover:border-b-yellow-600 text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2">
               <NavLink to="/activity">ACTIVITY</NavLink>
               
             </li>
@@ -176,21 +178,22 @@ const SignOut = async () => {
          {user.token && ValidateToken() ? <div className="text-1xl mb-3 md:mb-0 float-right md:hidden " ><NavLink
             to="/login"
             onClick={e=>(mobileMenutoggle(e),SignOut())}
-            className="text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 flex float-right justify-end "
+            className="navbar-option-text text-sm hover:bg-gray-100 text-gray-700 block px-4 py-2 flex float-right justify-end "
           >
             Log Out
           </NavLink></div>:<div className="text-1xl mb-3 md:mb-0 float-right text-right self-end justify-end md:hidden">
             <Link 
                onClick={e=>mobileMenutoggle(e)}
               to="/login"
-              className="hover:border-b-yellow-600 md:text-white lg:text-white text-sm  duration-500 mx-5"
+              className="navbar-option-text hover:border-b-yellow-600 text-sm  duration-500 mx-5"
             >
               LOG IN
             </Link>
             <Link 
                onClick={e=>mobileMenutoggle(e)}
               to="/create-user-account"
-              className="text-white rounded-3xl duration-500 btn-sign mr-4 md:mr-0 px-3 py-2"
+              // btn-sign
+              className="text-white rounded-3xl duration-500 signup-btn mr-4 md:mr-0 px-3 py-2"
             >
               SIGN UP
             </Link>
@@ -204,13 +207,14 @@ const SignOut = async () => {
             <div>
               <Link
                 to="/login  "
-                className="hover:border-b-yellow-600 text-white text-sm  mx-5"
+                className="navbar-option-text hover:border-b-yellow-600  text-sm  mx-5"
               >
                 LOG IN
               </Link>
               <Link
                 to="/create-user-account"
-                className="text-white rounded-3xl btn-sign mr-4 md:mr-0 px-3 py-2"
+                // btn-sign
+                className="text-white rounded-3xl  signup-btn mr-4 md:mr-0 px-3 py-2"
               >
                 SIGN UP
               </Link>

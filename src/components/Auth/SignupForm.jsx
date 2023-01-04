@@ -41,17 +41,17 @@ function SignupForm() {
   };
 
   let Content = (
-    <div className="buy-card lg:w-2/5 p-6 self-center md:p-8 text-left">
+    <div className="login-card p-6 self-center md:p-8 text-left">
       <div className="flex flex-col">
-        <h3 className="text-3xl font-bold mb-5 self-center">Sign Up</h3>
+        <h3 className="text-3xl font-bold mb-5 self-center login-text">Sign Up</h3>
         <form className="self-center" onSubmit={handleSubmit(onSubmit)}>
           <label className="block mb-5 self-center">
-            <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
+            <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
               First Name
             </span>
             <input
               type="text"
-              className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
+              className="mt-1 px-3 p-1 bg-transparent login-input shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
               placeholder="Enter First Name"
               value={FirstName}
               {...register("first_name", {
@@ -60,16 +60,16 @@ function SignupForm() {
               })}
             />
             {errors.first_name && (
-              <span className="text-red-500">This Field is required</span>
+              <span className="wrong-text">This Field is required</span>
             )}
           </label>
 
           <label className="block mb-5 self-center">
-            <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-sm text-left text-gray-500 font-medium">
+            <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-sm text-left text-gray-500 font-medium">
               Last Name
             </span>
             <input
-              className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-64 dashboard-input-width rounded-3xl input-background sm:text-sm focus:ring"
+              className="mt-1 px-3 p-1 bg-transparent shadow-sm login-input border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-64 dashboard-input-width rounded-3xl input-background sm:text-sm focus:ring"
               type="text"
               placeholder="Enter Last name"
               value={LastName}
@@ -79,16 +79,16 @@ function SignupForm() {
               })}
             />
             {errors.last_name && (
-              <span className="text-red-500">This Field is required</span>
+              <span className="wrong-text">This Field is required</span>
             )}
           </label>
 
           <label className="block mb-5 self-center">
-            <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-sm text-left text-gray-500 font-medium">
+            <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-sm text-left text-gray-500 font-medium">
               Email
             </span>
             <input
-              className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-64 dashboard-input-width rounded-3xl input-background sm:text-sm focus:ring"
+              className="mt-1 px-3 p-1 bg-transparent shadow-sm login-input border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-64 dashboard-input-width rounded-3xl input-background sm:text-sm focus:ring"
               type="email"
               placeholder="Enter Email"
               value={Email}
@@ -99,19 +99,19 @@ function SignupForm() {
               })}
             />
             {errors.email?.type === "pattern" && (
-              <span className="text-red-500">
+              <span className="wrong-text">
                 Please Enter Valid Email Address
               </span>
             )}
           </label>
 
           <label className="block mb-5 self-center">
-            <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-sm text-left text-gray-500 font-medium">
+            <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-sm text-left text-gray-500 font-medium">
               Password
             </span>
             <input
               type="password"
-              className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-64 dashboard-input-width rounded-3xl input-background sm:text-sm focus:ring"
+              className="mt-1 px-3 p-1 bg-transparent login-input shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block w-64 dashboard-input-width rounded-3xl input-background sm:text-sm focus:ring"
               placeholder="Enter Password"
               {...register("password", {
                 required: true,
@@ -122,7 +122,7 @@ function SignupForm() {
               })}
             />
             {errors.password?.type === "minLength" && (
-              <span className="text-red-500">
+              <span className="wrong-text">
                 Minimum 6 characters required
               </span>
             )}
@@ -139,9 +139,16 @@ function SignupForm() {
           placeholder=""
         />
       </label> */}
+      <div className="">
+        <input type="checkbox" />
+        <span className="terms-text">Accept Terms of Marketplace</span>
+      </div>
 
           <div className="mb-5 mt-5 self-center text-center">
-            <button className="text-white rounded-3xl bg-indigo-800 text-xs font-bold px-10 py-2 rounded-full">
+            <button 
+             className={Loading ? "login-active-button" : "login-button"}
+               disabled={Loading ? true : false} >
+              
               SIGN UP
             </button>
           </div>

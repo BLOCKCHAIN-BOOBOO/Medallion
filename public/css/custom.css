@@ -153,11 +153,11 @@ html {
 /*Market Place CSS End*/
 
 /*Footer start*/
-.footer-section {
+/* .footer-section {
   position: relative;
   background: #0054a0;
   padding: 50px 0px 0px;
-}
+} */
 .all {
   color: #d9d9d9;
 }
@@ -630,11 +630,12 @@ button {
 }
 
 /* footer-section */
+/* 
 .footer-section {
   position: relative;
   background: #0054a0;
   padding: 50px 0px 0px;
-}
+} */
 .all {
   color: #d9d9d9;
 }

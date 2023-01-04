@@ -29,9 +29,9 @@
 
 .market-background {
   width: 100%;
-  background-image: url(../images/Group165.png);
+  /* background-image: url(../images/Group165.png);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: cover; */
 }
 .market-section-color {
   background: linear-gradient(to bottom, #4e48cf 6.93%, #0167d6 52.34%);
@@ -89,10 +89,11 @@
 }
 
 /* footer section */
+/* 
 .footer-section {
   background-color: #0054a0;
   color: #fff;
-}
+} */
 
 @media (min-width: 0px) {
   .footer-logo1 {

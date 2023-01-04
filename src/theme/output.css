@@ -871,6 +871,9 @@ video {
 .w-32 {
   width: 8rem;
 }
+.w-36{
+  	width: 9rem;
+}
 
 .w-1\/2 {
   width: 50%;
@@ -1484,6 +1487,12 @@ video {
 }
 
 /* navbar */
+.signup-btn{
+  background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), 
+inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+}
 .btn-sign {
   background: #f2c746;
   border-radius: 10px;
@@ -1494,7 +1503,9 @@ video {
 }
 
 .princess-background {
-  background: #0054a0;
+  /* background: #0054a0; */
+  /* background:#F5F5F5; */
+  background:#F2EFED;
 }
 
 /* marketplace section */
@@ -1522,17 +1533,19 @@ video {
 
 .market-background {
   width: 100%;
-  background-image: url(./images/Group165.png);
+  /* background-image: url(./images/Group165.png);
   background-repeat: no-repeat;
   background-size: cover;
-  /* min-height: 80vh; */
-  min-height: 100vh;
+ 
+  min-height: 100vh; */
 }
 
 .market-section-color {
   /* min-height: 80vh; */
   min-height: 100vh;
-  background: #0167d6;
+  /* background: #0167d6; */
+  /* background:#F5F5F5; */
+  background:#F2EFED;
   /*background: linear-gradient(to bottom, #4e48cf 6.93%, #0167d6 52.34%);*/
 }
 
@@ -1590,6 +1603,18 @@ video {
   color: #000;
 }
 
+
+
+/* navbar text */
+.navbar-option-text{
+  font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.025em;
+color: #020215;
+}
 .admin-card {
   background: #fff;
   box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
@@ -1598,10 +1623,21 @@ video {
 }
 
 /* footer section */
-.footer-section {
+.footer-text{
+  color:#003595;
+  font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.025em;
+text-decoration-line: underline;
+text-transform: uppercase;
+}
+/* .footer-section {
   background-color: #0054a0;
   color: #fff;
-}
+} */
 
 @media (min-width: 0px) {
   .footer-logo1 {
@@ -1868,12 +1904,18 @@ video {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
   }
+  .sm\:invisible{
+  	visibility: hidden;
+  }
 }
 
 @media (min-width: 768px) {
 
   .md\:visible {
     visibility: visible;
+  }
+  .md\:invisible{
+  	visibility: hidden;
   }
 
   .md\:static {
@@ -2190,6 +2232,13 @@ video {
     --tw-text-opacity: 1;
     color: rgb(255 255 255 / var(--tw-text-opacity));
   }
+  .lg\:visible{
+  	visibility: visible;
+  }
+
+  .lg\:block{
+    	display: block;
+  }
 }
 
 @media (min-width: 1280px) {
@@ -2273,6 +2322,12 @@ video {
     padding-left: 10rem;
     padding-right: 10rem;
   }
+  .xl\:visible{
+  	visibility: visible;
+  }
+  .lg\:block{
+    display: block;
+}
 }
 
 .-mt-9 {
@@ -2292,3 +2347,195 @@ video {
   width: 160px;
   margin:auto;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* login page */
+.princess-header-text{
+  font-family: 'Lora';
+/* font-style: italic; */
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: 0.005em;
+background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-clip: text;
+text-fill-color: transparent;
+}
+
+.login-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px;
+  position: absolute; 
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+.login-input{
+  box-sizing: border-box;
+display: flex;
+flex-direction: row;
+align-items: center;
+padding: 8px 16px;
+width: 356px;
+height:45px;
+/* height: 58px; */
+background: rgba(255, 255, 255, 0.7);
+border: 1.5px solid #CDD1D5;
+border-radius: 4px;
+
+
+font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.09em;
+color: #6C6C78;
+
+}
+.login-button{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 16px;
+background: #CDD1D5;
+border-radius: 4px;
+width:100%;
+
+
+font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #6C6C78;
+}
+
+
+.login-active-button{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px;
+background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+width:100%;
+
+font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #fff;
+}
+
+.login-text{
+  font-family: 'Lora';
+font-style: italic;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+text-align: center;
+letter-spacing: 0.005em;
+color: #020215;
+}
+
+.wrong-text{
+  font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.025em;
+color: #B92D2D;
+}
+
+.terms-text{
+  font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.025em;
+color: #020215;
+}
+
+.input-label{
+  font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #6C6C78;
+}
+
+/* login page end */
+
+
+/* Marketplace Page */
+.no-medallions-text{
+  font-family: 'Lora';
+font-style: italic;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+text-align: center;
+letter-spacing: 0.005em;
+color: #020215;
+text-transform: capitalize;
+}
+
+.second-header-text{
+  font-family: 'Lora';
+font-style: italic;
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+text-align: center;
+letter-spacing: 0.005em;
+color: #020215;
+text-transform: capitalize;
+}
+
+.marketplace-sub-text{
+  font-family: 'Red Hat Text';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+text-align: center;
+letter-spacing: 0.025em;
+color: #020215;
+}
+
+/* Marketplace page end */

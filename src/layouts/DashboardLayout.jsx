@@ -10,9 +10,10 @@ function DashboardLayout() {
   }, []);
   return (
     <div id="content_wrap">
-      <section className="marketplace-section py-10 mt-16 sm:mt-16 md:mt-20 lg:mt-20 md:pt-10 md:pb-4 lg:pt-10 lg:pb-4 relative">
+      <section className="py-10 mt-16 sm:mt-16 md:mt-20 lg:mt-20 md:pt-10 md:pb-4 lg:pt-10 lg:pb-4 relative">
+      {/* marketplace-section  */}
         <div className="container mx-auto flex flex-col md:flex md:flex-col lg:flex lg:flex-col align">
-          <TitleBanner title="DASHBOARD" />
+          <TitleBanner title="Dashboard" />
         </div>
       </section>
       <div className="market-section-color">
