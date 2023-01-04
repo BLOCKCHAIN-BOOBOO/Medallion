@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Princess</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="ROBOTS" content="index, follow" />
+    <meta name="ROBOTS" content="all" />
+    <meta name="google-website-verification" content="key" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Baloo Tammudu"
+    />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <script>
+      function Menu(e) {
+        let list = document.querySelector('ul');
+        e.name === 'menu' ? (e.name = "close", list.classList.add('top-[55px]'),list.classList.remove('hidden'), list.classList.add('opacity-100') ,list.classList.remove('opacity-0')) : 
+        (e.name = "menu", list.classList.remove('top-[55px]'),list.classList.add('hidden') ,list.classList.remove('opacity-100'),list.classList.add('opacity-0'))
+      }
+      </script>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div id="portal_node"></div>
+  </body>
+</html>

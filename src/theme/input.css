@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* navbar */
+.btn-sign {
+  background: #f2c746;
+  border-radius: 10px;
+}
+.btn-sign:hover {
+  background: #f2c746;
+}
+.princess-background {
+  background: #0054a0;
+}
+
+/* marketplace section */
+.medallion-background {
+  background: #f4f4f4;
+}
+.market-font {
+  font-family: Baloo Tammudu;
+}
+.marketplace-section {
+  /* background: #0167d6; */
+  background: linear-gradient(to bottom, #0167d6 6.93%, #2857b5 52.34%);
+}
+
+.sub_menu_default_border {
+  border-bottom: 2px solid #2857b5;
+}
+
+.sub_menu_default_border_active {
+  @apply border-b-yellow-600;
+}
+
+.market-background {
+  width: 100%;
+  background-image: url(./images/Group165.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 80vh;
+}
+.market-section-color {
+  min-height: 80vh;
+  background: #0167d6;
+  /*background: linear-gradient(to bottom, #4e48cf 6.93%, #0167d6 52.34%);*/
+}
+.scroll {
+  height: 450px;
+  overflow: auto;
+}
+.create-card {
+  width: 100%;
+}
+.admin-dashboard-card {
+  width: 30%;
+}
+
+.container {
+  justify-content: space-between;
+}
+.banner-middle {
+  top: -15rem;
+}
+.bg-1 {
+  height: 30rem;
+}
+.bg-2 {
+  width: 180px;
+  height: 200px;
+}
+.bg-3 {
+  left: 60rem;
+  width: 150px;
+  height: 110px;
+}
+
+/* features section */
+.btn-features {
+  width: 100%;
+  background: #f4b3ff;
+}
+.btn-features:hover {
+  box-shadow: 0px 2px 25px #f4b2ff;
+  color: #fff;
+}
+.buy-card {
+  background: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  color: #000;
+}
+.admin-card {
+  background: #fff;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+  border-radius: 20px;
+  color: #000;
+}
+
+/* footer section */
+.footer-section {
+  background-color: #0054a0;
+  color: #fff;
+}
+
+@media (min-width: 0px) {
+  .footer-logo1 {
+    width: 80.35px;
+    height: 40.85px;
+  }
+  .footer-logo2 {
+    width: 110.95px;
+    height: 40.06px;
+  }
+  .footer-logo3 {
+    width: 140.66px;
+    height: 20.62px;
+  }
+}
+
+@media (min-width: 640px) {
+  .footer-logo1 {
+    width: 80.35px;
+    height: 40.85px;
+  }
+  .footer-logo2 {
+    width: 110.95px;
+    height: 40.06px;
+  }
+  .footer-logo3 {
+    width: 140.66px;
+    height: 20.62px;
+  }
+}
+@media (min-width: 768px) {
+  .footer-logo1 {
+    width: 100.35px;
+    height: 48.85px;
+  }
+  .footer-logo2 {
+    width: 125.95px;
+    height: 45.06px;
+  }
+  .footer-logo3 {
+    width: 150.66px;
+    height: 25.62px;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-logo1 {
+    width: 129.35px;
+    height: 69.85px;
+  }
+  .footer-logo2 {
+    width: 168.95px;
+    height: 60.06px;
+  }
+  .footer-logo3 {
+    width: 210.66px;
+    height: 37.62px;
+  }
+}
+
+#page-container {
+  position: relative;
+}
+
+#content-wrap {
+  padding-bottom: 4.5rem; /* Footer height */
+}
+
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin-top: -4.5rem;
+  height: 4.5rem; /* Footer height */
+}
+/* //////// */
+
+
+.card-details {
+  width: 335px;
+  /* background-color: #f2c746; */
+  background-image: linear-gradient(rgb(14 12 12),rgb(38 36 36 / 80%));
+  margin-right: 21px;
+  border-radius: 7px;
+  height: auto;
+  padding: 25px;
+}
+
+.card-no-size{
+  font-size:25px;
+}
+.caredWrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 40px;
+}
+.medallion-pay-card-height{
+  height:30rem;
+}
+.medallion-pay-card{
+width: 50%;
+min-width: 20%;
+/* height: auto; */
+min-height: 30%;
+position: fixed;
+top: 25%;
+left: 25%;
+/* background-color: rgb(255, 255, 255); */
+background: linear-gradient(to bottom, #4e48cf 6.93%, #1d4fb2 52.34%);
+border-radius:20px;
+}
+
+
+#activity-modal {
+  position: fixed;
+  left: 400px;
+  right: 400px;
+  top: 100px;
+  bottom: 100px;
+  background: white;
+  border-radius: 20px;
+}
+#activity-modal .title {
+  border-bottom: 1px solid black;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+}
+.border-highlight:hover{
+border:2px solid white;
+}
+
+.bar-icon::before{ 
+  content:"\f0c9";
+  font-size:25px;
+  font-family: FontAwesome;
+}
+.bar-icon.close-icon::before{ 
+  content:"\2612" !important;
+  font-size:25px;
+  font-family: FontAwesome;
+}
+
+/* .ul-open{
+  top:55px;
+  display:block;
+  opacity:100 !important;
+
+}
+.ul-close{
+  top:0;
+  display:none;
+  opacity: 0;
+
+} */
+
+.ul-close{
+  /* top:25px !important; */
+  top:10px !important;
+  display: flex;
+  opacity:100 !important;
+}
+
+.ul-open{
+  opacity:0;
+  top:0;
+  /* display:none; */
+  display:flex;
+}

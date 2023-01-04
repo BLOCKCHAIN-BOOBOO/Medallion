@@ -1,0 +1,48 @@
+@media (min-width: 1280px) {
+  .align {
+    padding: 0 5rem;
+  }
+  .input-width {
+    width: 32rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .align {
+    padding: 0 5rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1120px) {
+  .dashboard-input-width {
+    width: 16rem !important;
+  }
+}
+
+@media (min-width: 1121px) and (max-width: 1200px) {
+  .dashboard-input-width {
+    width: 20rem !important;
+  }
+}
+@media (min-width: 1201px) and (max-width: 1280px) {
+  .dashboard-input-width {
+    width: 21rem !important;
+  }
+}
+@media (min-width: 1281px) {
+  .dashboard-input-width {
+    width: 24rem !important;
+  }
+}
+
+@media (min-width: 320px) {
+  .admin-dashboard-card {
+    width: 90% !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  .textarea-width {
+    width: 50rem !important;
+  }
+}
