@@ -77,6 +77,8 @@ body {
   height: 100vh;
   top: 0;
   bottom: 0;
+  font-family: 'Red Hat Display';
+  font-style: normal;
 }
 
 /*
@@ -683,6 +685,8 @@ video {
   margin: 0.5rem;
 }
 
+.m-4	{margin: 1rem;}
+.m-6	{margin: 1.5rem;}
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -775,6 +779,9 @@ video {
 
 .mt-10 {
   margin-top: 2.5rem;
+}
+.mt-32{
+  	margin-top: 8rem;
 }
 
 .mb-1 {
@@ -952,6 +959,9 @@ video {
 .pt-1 {
   padding-top: 0.25rem;
 }
+.pt-4 {
+  padding-top: 1.5rem !important;
+}
 
 .m-auto {
   margin: auto !important;
@@ -1010,6 +1020,9 @@ video {
 .self-center {
   align-self: center;
 }
+.self-end	{
+  align-self: flex-end;
+ }
 
 .text-center {
   text-align: center;
@@ -1237,6 +1250,9 @@ video {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+.pb-4 {
+  padding-bottom: 1rem;
 }
 
 .pb-20 {
@@ -1606,6 +1622,18 @@ border-radius: 4px;
 
 
 /* navbar text */
+.active{
+  /* border-bottom: 2px solid #f2c746; */
+font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.025em;
+text-decoration-line: underline;
+color: #003595;
+}
+
 .navbar-option-text{
   font-family: 'Red Hat Display';
 font-style: normal;
@@ -1759,6 +1787,7 @@ text-transform: uppercase;
   border-bottom-color: #f2c746;
 }
 
+.border-t-2{	border-top-width: 2px;}
 .active\:border-b-yellow-600:active {
   --tw-border-opacity: 1;
   border-bottom-color: #f2c746;
@@ -1817,11 +1846,12 @@ text-transform: uppercase;
 .active-link:active{
   color:#000;
 }
-.active{
-  border-bottom: 2px solid #f2c746;
-}
-@media (min-width: 640px) {
 
+@media (min-width: 640px) {
+ 
+  .sm\:float-right	{
+    float: right;
+   }
   .sm\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -1835,6 +1865,12 @@ text-transform: uppercase;
   .sm\:mt-16 {
     margin-top: 4rem;
   }
+  .sm\:mt-32{
+  	margin-top: 8rem;
+}
+.sm\:mt-20{
+  margin-top: 5rem;
+}
 
   .sm\:mr-0 {
     margin-right: 0px;
@@ -1907,9 +1943,21 @@ text-transform: uppercase;
   .sm\:invisible{
   	visibility: hidden;
   }
+  .sm\:self-center	{
+    align-self: flex-center;
+   }
+   .sm\:self-end	{
+    align-self: flex-end;
+   }
 }
 
 @media (min-width: 768px) {
+  .md\:float-right	{
+    float: right;
+   }
+  .md\:self-end	{
+    align-self: flex-end;
+   }
 
   .md\:visible {
     visibility: visible;
@@ -1945,7 +1993,9 @@ text-transform: uppercase;
     margin-top: 0px;
     margin-bottom: 0px;
   }
-
+  .md\:mt-32{
+  	margin-top: 8rem;
+}
   .md\:mt-20 {
     margin-top: 5rem;
   }
@@ -2243,6 +2293,13 @@ text-transform: uppercase;
 
 @media (min-width: 1280px) {
 
+ .xl\:self-end	{
+  align-self: flex-end;
+ }
+ .xl\:float-right	{
+  float: right;
+ }
+
   .xl\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -2311,6 +2368,12 @@ text-transform: uppercase;
   .xl\:pt-32{
       padding-top: 8rem;
   }
+  .xl\:mt-32{
+  	margin-top: 8rem;
+}
+.xl\:mt-20{
+  margin-top: 5rem;
+}
 
   .xl\:w-2\/5 {
     width: 40%;
@@ -2414,7 +2477,7 @@ letter-spacing: 0.09em;
 color: #6C6C78;
 
 }
-.login-button{
+.inactive-button{
   display: flex;
 flex-direction: row;
 justify-content: center;
@@ -2436,7 +2499,7 @@ color: #6C6C78;
 }
 
 
-.login-active-button{
+.active-button{
   display: flex;
 flex-direction: row;
 justify-content: center;
@@ -2539,3 +2602,209 @@ color: #020215;
 }
 
 /* Marketplace page end */
+
+/* Dashboard page start */
+.dashboard-user-header{
+font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #020215;
+}
+
+.user-wallet-add{
+  font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #020215;
+}
+
+.dashboard-tab-header{
+  font-family: 'Red Hat Display';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 32px;
+  letter-spacing: 0.03em;
+  color: #020215;
+}
+
+.connect-wallet-button{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px;
+background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+/* width:100%; */
+
+font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #fff;
+}
+
+.dashboard-tabs-text{
+  font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #003595;
+}
+/* Dashboard page end */
+
+/* My Collections page start*/
+.medallion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  background: #FFFFFF;
+  border-radius: 16px;
+}
+
+.view-button{
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #003595;
+border:2px solid;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 8px 16px;
+background: #FFFFFF;
+border-radius: 4px;
+}
+
+.claim-button{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+padding: 16px;
+background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+border-radius: 4px;
+width:100%;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color:  #F2EFED;
+}
+.gold-button{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 20px;
+background: #CC9F53;
+border-radius: 4px;
+}
+.elite-button{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 10px 20px;
+  background: #000000;
+  border-radius: 4px;
+  }
+  .blue-button{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 10px 20px;
+    background: #003595;
+    border-radius: 4px;
+    }
+    .ruby-button{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      padding: 10px 20px;
+      background: #8E1537;
+      border-radius: 4px;
+      }
+.medallion-card-background{
+  position: relative;
+/* height: 210px; */
+left: -0.5px;
+right: 0.5px;
+top: 0px;
+/* width:380px; */
+height: 270px;
+border-top-left-radius: 16px;
+border-top-right-radius:16px;
+/* background: #003595; */
+background-image: url("../../src/theme/images/bg-wave.png");
+background-repeat: no-repeat;
+background-size: cover;
+
+/* Width:287.5px;
+Height:210px;
+Left:-0.5px; */
+}
+
+.medallion-second-card{
+  /* position: relative; */
+/* height: 150px; */
+left: -0.5px;
+right: 0.5px;
+top: 0px;
+/* width: 380px; */
+height:200px;
+background-image: url("../../src/theme/images/wave.png");
+background-repeat: no-repeat;
+background-size: cover;
+/* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
+
+/* Width:287.5px;
+Height:157.5px;
+Left:-0.5px; */
+}
+.medallion-second-card div{
+  padding:30px;
+}
+.medallion-name-text{
+font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 22px;
+line-height: 32px;
+letter-spacing: 0.03em;
+
+color: #FFFFFF;
+}
+
+.button-wave{
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width: 30px;
+  height:20px; */
+  background-image: url("../../src/theme/images/button-wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* My Collections page end */

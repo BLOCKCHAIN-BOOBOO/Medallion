@@ -15,7 +15,7 @@ function NoData() {
         <div className="text-center mt-4 full-width">
           <NavLink
             to="/user-dashboard"
-            className="rounded-3xl text-xs login-active-button md:mr-0 px-8 py-2 font-bold"
+            className="rounded-3xl text-xs active-button md:mr-0 px-8 py-2 font-bold"
           >
             {/* btn-sign */}
             GO TO DASHBOARD

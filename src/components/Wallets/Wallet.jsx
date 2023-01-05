@@ -214,12 +214,14 @@ var ethball=1212.23234234.toFixed(3);
         </div>
       ) : (
         <div className="p-2">
+          <div className="flex mx-auto block">
           <button
-            className="p-2 bg-yellow-400 rounded-lg block hover:cursor-pointer mx-auto"
+            className="p-2 connect-wallet-button hover:cursor-pointer mx-auto"
             onClick={() => handleModalOpen()}
           >
             Connect Your Wallet
           </button>
+          </div>
           <Modal hide_close_button={false}>
             <h1 className="text-3xl p-4 self-center">Connect Wallet</h1>
             <ShowWallets />

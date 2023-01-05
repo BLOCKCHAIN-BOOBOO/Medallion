@@ -130,8 +130,7 @@ const SignOut = async () => {
           <li 
             onClick={e=>mobileMenutoggle(e)}
           //  onClick="Menu(this)"
-           className="navbar-option-text active:border-b-yellow-600 active:border-b-2 list-style-none hover:border-b-2 hover:border-b-yellow-600 
-           text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2 "
+           className="navbar-option-text md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2 "
            
            >
             <NavLink  
@@ -143,7 +142,7 @@ const SignOut = async () => {
           <li 
           // onClick="Menu(this)"
            onClick={e=>mobileMenutoggle(e)}
-           className="navbar-option-text list-style-none hover:border-b-2 hover:border-b-yellow-600 text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2"
+           className="navbar-option-text list-style-none md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2"
           >
             <NavLink   to="/collection">MY COLLECTIONS</NavLink>
           </li>
@@ -151,7 +150,7 @@ const SignOut = async () => {
           <li 
           // onClick={e=>(mobileMenutoggle(e),hideicon())} 
           onClick={e=>mobileMenutoggle(e)}
-           className={`navbar-option-text list-style-none hover:border-b-2 hover:border-b-yellow-600 text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 py-2 my-2" 
+           className={`navbar-option-text list-style-none md:mx-2 xl:mx-4 sm:mx-2 mx-2 py-2 my-2" 
             ${dashboardurl === "/user-dashboard/update-user-password" &&" active"} ${dashboardurl==="/user-dashboard/wallet" &&" active"} ${dashboardurl==="/user-dashboard" &&" active"} {dashboardurl==="/user-dashboard/update-user-password" &&" active"}`}>
             <NavLink to="/user-dashboard/update-profile">
             DASHBOARD </NavLink>
@@ -170,7 +169,7 @@ const SignOut = async () => {
             <li 
             onClick={e=>mobileMenutoggle(e)}
             // onClick="Menu(this)"
-            className="navbar-option-text list-style-none hover:border-b-2 hover:border-b-yellow-600 text-sm md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2">
+            className="navbar-option-text list-style-none md:mx-2 xl:mx-4 sm:mx-2 mx-2 md:my-2 my-2">
               <NavLink to="/activity">ACTIVITY</NavLink>
               
             </li>

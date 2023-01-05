@@ -32,8 +32,9 @@ function PrivateCardLayout({ medallion }) {
   }, [Medallion_Id, Token]);
 
   return (
-    <div className="buy-card p-6 md:p-8 text-left">
-      <div className={medallion.status === "on_sale" ? "mt-0" : "mt-4"}>
+    <div className="medallion-card text-left flex flex-col ">
+      <div>
+      {/* className={medallion.status === "on_sale" ? "mt-0" : "mt-4"} */}
         {medallion.status === "on_sale" && (
           <img
             src={forsale}
@@ -48,7 +49,7 @@ function PrivateCardLayout({ medallion }) {
         <PriceComponent medallion_price={medallion.price} />
       )}
       <div className="text-center">
-        <div className={medallion.status === "on_sale" ? "mt-0" : "mt-7"}>
+        <div className={medallion.status === "on_sale" ? "mt-0 pb-4" : "mt-7 mx-auto justify-center flex pb-4"}>
           {medallion.claimed ? (
             <ViewComponent
               ViewUrl="/collection/"

@@ -2,26 +2,34 @@ import { NavLink } from "react-router-dom";
 
 function DashboardMenu() {
   return (
-    <div className="lg:flex-row mt-2 md:flex-row flex border rounded-xl p-3 justify-start space-x-10">
-      <NavLink
+    <div>
+    <ul className="lg:flex-row mt-2 md:flex-row flex  p-3 justify-start space-x-10">
+     
+     <li>
+       <NavLink
         to="wallet"
-        className="navbar-option-text active:border-b-2 active:border-b-yellow-600 hover:border-b-2 hover:border-b-yellow-600 text-sm  font-bold border-2 border-transparent"
+        className="dashboard-tabs-text "
       >
         WALLET
       </NavLink>
+      </li>
+      <li>
       <NavLink
          to="update-profile"
-        className="navbar-option-text active:border-b-2 active:border-b-yellow-600 hover:border-b-2
-         hover:border-b-yellow-600 text-sm  font-bold border-2 border-transparent "
+        className="dashboard-tabs-text "
       >
         EDIT PROFILE
       </NavLink>
+      </li>
+      <li>
       <NavLink
         to="update-user-password"
-        className="navbar-option-text active:border-b-2 active:border-b-yellow-600 hover:border-b-2 hover:border-b-yellow-600 text-sm  font-bold border-2 border-transparent"
+        className="dashboard-tabs-text"
       >
         CHANGE PASSWORD
       </NavLink>
+      </li>
+    </ul>
     </div>
   );
 }

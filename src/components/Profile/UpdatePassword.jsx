@@ -37,16 +37,17 @@ function UpdatePassword() {
   };
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="flex flex-col">
+      {/* w-full  */}
       <ToastContainer />
       <div className="self-center">
         {Loading && <ReactLoading type="bars" color="#fff" />}
       </div>
 
       {FormVisible && (
-        <div className="buy-card lg:w-2/5 p-6 self-center md:p-8 text-left">
+        <div className=" p-6 self-center md:p-8 text-left">
           <div className="flex flex-col">
-            <h3 className="text-3xl font-bold mb-10 self-center">
+            <h3 className="dashboard-tab-header mb-10 self-start">
               Change Password
             </h3>
             <form
@@ -54,13 +55,14 @@ function UpdatePassword() {
               onSubmit={SubmitHandler}
               className="self-center text-center"
             >
-              <label className="block mb-5 self-center">
+                <div className="flex m-2 xl:flex-row md:flex-row sm:flex-col flex-col">
+              <label className="block m-4 self-center">
                 <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
                   Current Password
                 </span>
                 <input
                   type={currentshowconfirm ? "text" : "password"}
-                  className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
+                  className="login-input mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
                   required
                   onChange={(e) => SetCurrentPassword(e.target.value)}
                 />
@@ -72,13 +74,13 @@ function UpdatePassword() {
 
               </label>
 
-              <label className="block mb-5 self-center">
+              <label className="block m-4 self-center">
                 <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
                   New Password
                 </span>
                 <input
                   type={newshowconfirm ? "text" : "password"}
-                  className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
+                  className="login-input mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
                   required
                   onChange={(e) => SetNewPassword(e.target.value)}
                 />
@@ -89,10 +91,12 @@ function UpdatePassword() {
               )}
 
               </label>
-
-              <button className="text-white rounded-3xl bg-indigo-800 text-xs font-bold px-10 py-2">
+              </div>
+               <div className="flex xl:float-right md:float-right sm:self-center self-center m-6">
+              <button className="inactive-button px-10 py-2">
                 Update Password
               </button>
+              </div>
             </form>
           </div>
         </div>

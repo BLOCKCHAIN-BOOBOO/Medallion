@@ -16,16 +16,22 @@ function DashboardLayout() {
           <TitleBanner title="Dashboard" />
         </div>
       </section>
-      <div className="market-section-color">
-        <div className="container mx-auto flex flex-col">
+      <div className="mx-auto w-full flex relative">
+      <div className="w-full flex mx-auto login-card conatiner align">
+      {/* market-section-color */}
+        <div className="container mx-auto py-4 flex xl:flex-row md:flex-col sm:flex-col flex-col">
+        
           <ProfileCard />
           <DashboardMenu />
+         
         </div>
-        <section className="market-background relative pt-10">
-          <div className="container mx-auto">
+        <section className="market-background border-t-2 border-slate-100 relative pt-10">
+          {/* <div className=""> */}
+          {/* container mx-auto */}
             <Outlet />
-          </div>
+          {/* </div> */}
         </section>
+      </div>
       </div>
     </div>
   );

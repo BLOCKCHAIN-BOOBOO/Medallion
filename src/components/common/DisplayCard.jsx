@@ -164,7 +164,7 @@ function DisplayCard(props) {
         {props.show_view && (
           <Link
             to={ViewUrl}
-            className="text-white rounded-3xl btn-sign md:mr-2 px-10 py-1 font-bold"
+            className="view-button"
           >
             VIEW
           </Link>
@@ -173,7 +173,7 @@ function DisplayCard(props) {
         {props.show_claim && Claimed && (
           <Link
             to={ViewUrl}
-            className="text-white rounded-3xl btn-sign md:mr-2 px-10 py-1 font-bold"
+            className="view-button"
           >
             VIEW
           </Link>

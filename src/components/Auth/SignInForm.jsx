@@ -112,9 +112,9 @@ function SigninForm() {
 
           <div className="mb-10 mt-5 self-center lg:self-center text-center">
             <button
-              // className="login-button"
+              // className="inactive-button"
 
-          className={Loading ? "login-active-button" : "login-button"}
+          className={Loading ? "active-button" : "inactive-button"}
 
               disabled={Loading ? true : false}
             >

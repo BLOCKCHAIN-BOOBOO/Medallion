@@ -146,7 +146,7 @@ function SignupForm() {
 
           <div className="mb-5 mt-5 self-center text-center">
             <button 
-             className={Loading ? "login-active-button" : "login-button"}
+             className={Loading ? "active-button" : "inactive-button"}
                disabled={Loading ? true : false} >
               
               SIGN UP

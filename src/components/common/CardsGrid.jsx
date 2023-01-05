@@ -45,7 +45,7 @@ function CardsGrid(props) {
           )} */}
           <div
             className="flex flex-col xl:flex xl:flex-col xl:justify-between grid grid-cols-1 gap-4 mt-2
-            sm:grid sm:grid-cols-1 sm:gap-5 md:grid md:grid-cols-2 md:gap-7 xl:grid xl:grid-cols-3 xl:gap-20 mx-4 sm:mx-20 xl:mx-0"
+            sm:grid sm:grid-cols-1 sm:gap-5 md:grid md:grid-cols-2 md:gap-7 xl:grid xl:grid-cols-3 xl:gap-20 mx-auto"
           >
             {Content}
           </div>
