@@ -68,22 +68,26 @@ else{
     <div>
       <form onSubmit={TransferHandler}>
         <div className="flex flex-col">
-          <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
+          <span className="after:content-[''] after:ml-0.5 after:text-red-500 block  input-label">
             Email
           </span>
           <input
             type="email"
             required
-            className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
+            className="mt-1  self-center text-center login-input px-3 p-1 bg-transparent  border 
+         focus:outline-none focus:border-sky-500 focus:ring-sky-500 block
+         focus:ring"
             onChange={(e) => SetUserAddress(e.target.value)}
           />
         </div>
         <p className="text-red-500 text-sm">
           Note: Transfer of Medallion is Irreversible
         </p>
-        <button className="text-white rounded-3xl bg-indigo-800 text-xs font-bold px-10 py-2 my-3">
+        <div className="flex mx-auto">
+        <button className="inactive-button px-10 py-2 my-3">
           Transfer
         </button>
+        </div>
       </form>
     </div>
   );

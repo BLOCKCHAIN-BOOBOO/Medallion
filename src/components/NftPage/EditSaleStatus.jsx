@@ -96,10 +96,10 @@ function EditSaleStatus(props) {
         {PricingForm && (
           <div>
             {/*Currency*/}
-            <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
+            <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left input-label">
               Currency
             </span>
-            <select
+            <select 
               className={SelectClass}
               onChange={(e) =>
                 SetCurrency({ ...Currency, currency: e.target.value })
@@ -114,13 +114,13 @@ function EditSaleStatus(props) {
             </select>
             {/*Price */}
             <div className="flex flex-col">
-              <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
+              <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left input-label">
                 Price
               </span>
               <input
                 type="text"
                 value={Price.medallion_price}
-                className="mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
+                className="mt-1 px-3 login-input p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
                 onChange={(e) =>
                   SetPrice({ ...Price, medallion_price: e.target.value })
                 }
@@ -128,10 +128,11 @@ function EditSaleStatus(props) {
             </div>
           </div>
         )}
-
-        <button className="text-white rounded-3xl bg-indigo-800 text-xs font-bold px-10 py-2 my-3">
+ <div className="flex mx-auto inline-block">
+        <button className="inactive-button px-10 py-2 my-3">
           Update
         </button>
+        </div>
       </form>
     </div>
   );
