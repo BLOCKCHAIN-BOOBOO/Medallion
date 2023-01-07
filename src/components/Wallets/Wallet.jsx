@@ -172,7 +172,7 @@ var ethball=1212.23234234.toFixed(3);
       )}
 
       {CurrentWallet && CurrentWallet.user_account ? (
-        <div className="buy-card text-center border mx-auto rounded-xl xl:w-1/4 md:w-2/4 sm:w-2/4 w-3/4 space-y-2 p-5">
+        <div className="login-card text-center border mx-auto rounded-xl xl:w-1/4 md:w-2/4 sm:w-2/4 w-3/4 space-y-2 p-5">
           <div className="py-1">
             <p className="">Wallet Balance</p>
             {/* <span className="p-2 bg-white"> */}
@@ -184,7 +184,7 @@ var ethball=1212.23234234.toFixed(3);
           </div>
 
           <button
-            className="rounded-3xl btn-sign md:mr-2 px-10 py-1 my-2 font-bold"
+            className="rounded-3xl active-button md:mr-2 px-10 py-1 my-2 font-bold"
             onClick={() => handleClaimFund()}
           >
             Claim Fund

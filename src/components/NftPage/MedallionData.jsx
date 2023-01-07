@@ -26,7 +26,7 @@ function MedallionData({ SingleRecord }) {
       <button
       //  className="gold-button button-wave flex mx-auto  self-center text-center justify-center "
       
-      className={`button-wave flex text-left" 
+      className={`button-wave flex text-left cursor-default" 
       ${SingleRecord.elite_status === "GOLD" &&" gold-button"} ${SingleRecord.elite_status==="ELITE" &&" elite-button"} 
       ${SingleRecord.elite_status==="BLUE" &&" blue-button"} ${SingleRecord.elite_status==="RUBY" &&" ruby-button"}`}
       

@@ -8,7 +8,7 @@ import { useNavigate } from "react-router";
 
 
 const SelectClass =
-  "block w-1/2 px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 mb-5 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none";
+  "block w-full px-3 py-1.5 text-base bg-clip-padding bg-no-repeat  transition ease-in-out m-0 mb-5 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none";
 
 function EditSaleStatus(props) {
   const Token = useSelector((state) => state.user.token);
@@ -72,7 +72,9 @@ function EditSaleStatus(props) {
           {Loading && <ReactLoading type="bars" color="#fff" />}
         </div>
       </div>
-      <form onSubmit={UpdateHandler} className="self-center text-center">
+      <form onSubmit={UpdateHandler} className="mt-10 self-center text-center inline-block mx-auto flex flex-col">
+        <div className="flex-col flex w-full mx-auto">
+       <div className="mx-auto w-full inline-block ">
         <select
           className={SelectClass}
           onChange={(e) =>
@@ -92,11 +94,11 @@ function EditSaleStatus(props) {
             Off Sale
           </option>
         </select>
-
+        </div>
         {PricingForm && (
-          <div>
+          <div className="mx-auto inline-block">
             {/*Currency*/}
-            <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left input-label">
+            <span className="after:content-[''] after:ml-0.5 mt-2 after:text-red-500 block text-left input-label">
               Currency
             </span>
             <select 
@@ -114,13 +116,14 @@ function EditSaleStatus(props) {
             </select>
             {/*Price */}
             <div className="flex flex-col">
-              <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left input-label">
+              <span className="after:content-[''] after:ml-0.5 mt-2 after:text-red-500 block text-left input-label">
                 Price
               </span>
               <input
                 type="text"
                 value={Price.medallion_price}
-                className="mt-1 px-3 login-input p-1 bg-transparent shadow-sm border-gray-500 border placeholder-white focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
+                className="mt-1 px-3 login-input p-1 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block 
+                  focus:ring"
                 onChange={(e) =>
                   SetPrice({ ...Price, medallion_price: e.target.value })
                 }
@@ -128,10 +131,11 @@ function EditSaleStatus(props) {
             </div>
           </div>
         )}
- <div className="flex mx-auto inline-block">
+ <div className=" mx-auto inline-block">
         <button className="inactive-button px-10 py-2 my-3">
           Update
         </button>
+        </div>
         </div>
       </form>
     </div>

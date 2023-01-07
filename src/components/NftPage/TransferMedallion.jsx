@@ -67,7 +67,7 @@ else{
   return (
     <div>
       <form onSubmit={TransferHandler}>
-        <div className="flex flex-col">
+        <div className="flex flex-col mt-10">
           <span className="after:content-[''] after:ml-0.5 after:text-red-500 block  input-label">
             Email
           </span>
@@ -83,7 +83,7 @@ else{
         <p className="text-red-500 text-sm">
           Note: Transfer of Medallion is Irreversible
         </p>
-        <div className="flex mx-auto">
+        <div className="inline-block mx-auto">
         <button className="inactive-button px-10 py-2 my-3">
           Transfer
         </button>

@@ -854,6 +854,7 @@ video {
 .flex {
   display: flex;
 }
+.inline-block	{display: inline-block;}
 
 .table {
   display: table;
@@ -881,7 +882,7 @@ video {
 .w-36{
   	width: 9rem;
 }
-
+.w-96{	width: 24rem;}
 .w-1\/2 {
   width: 50%;
 }
@@ -1940,7 +1941,11 @@ text-transform: uppercase;
   }
   .sm\:w-2\/4 {
     width: 50%;
+  }.sm\:w-3\/4 {
+    width: 75%;
   }
+  .sm\:w-2\/3{	width: 66.666667%;}
+
 
   .sm\:px-10 {
     padding-left: 2.5rem;
@@ -2176,6 +2181,10 @@ text-transform: uppercase;
   .md\:w-2\/4 {
     width: 50%;
   }
+  .md\:w-3\/4 {
+    width: 75%;
+  }
+  .md\:w-2\/3{	width: 66.666667%;}
 }
 
 @media (min-width: 1024px) {
@@ -2380,7 +2389,10 @@ text-transform: uppercase;
 .xl\:mt-20{
   margin-top: 5rem;
 }
-
+.xl\:w-3\/4 {
+  width: 75%;
+}
+.xl\:w-2\/3{	width: 66.666667%;}
   .xl\:w-2\/5 {
     width: 40%;
   }
@@ -2826,4 +2838,6 @@ font-family: 'Red Hat Display';
 .react-tabs__tab--selected a{
   border-bottom:2px solid #003595
 }
+
+
 /* My Collections page end */

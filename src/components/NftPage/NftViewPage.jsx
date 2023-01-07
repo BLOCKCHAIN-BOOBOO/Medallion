@@ -82,7 +82,7 @@ const displayCard=(type)=>{
          
             <div className=" mx-auto p-6 md:p-8 text-left">
             {/* buy-card-width xl:w-2/5 md:w-4/5 sm:w-full w-full p-6 md:p-8 text-left   */}
-                <div className="login-card mx-auto p-6 md:p-8 text-left h-auto ">
+                <div className="login-card mx-auto p-6 md:p-8 text-left h-auto xl:w-2/3 md:w-full sm:w-full w-full">
                 {/* buy-card  */}
                 <div className="flex flex-row">
                 {SingleRecord && (
@@ -128,15 +128,15 @@ const displayCard=(type)=>{
 
 {/* <Tabs> */}
 <div className="w-full">
-<TabList className="border-b-2 flex xl:flex-row md:flex-row sm:flex-col flex-col py-1 self-start text-start justify-start">
+<TabList className="border-b-2 flex xl:flex-row md:flex-row sm:flex-row flex-row py-1 self-start text-start justify-start">
                     {/* <Tab></Tab> */}
-                    <Tab className="px-4">
+                    <Tab className="xl:px-4 md:px-2 sm:px-1 px-1 cursor-pointer">
                       <a className=" m-2  md:mr-0 sub-tabs-text" onClick={e=>displayCard("")}>
                        General Info
                       </a>
                     </Tab>
                  
-                    <Tab className="px-4">
+                    <Tab className="xl:px-4 md:px-2 sm:px-1 px-1 cursor-pointer">
                       <a className="m-2 md:mr-0 sub-tabs-text" onClick={e=>displayCard("")}>
                         Medallion Activity
                       </a>
@@ -144,7 +144,7 @@ const displayCard=(type)=>{
                   </TabList>
                   {/* <TabPanel></TabPanel> */}
   <TabPanel className="xl:px-10 md:px-0 sm:px-10 px-8">
-<div className="mt-10 mb-10 p-6 md:p-8">
+<div className="">
   <div className="py-2">
 <span className="dashboard-tab-header">Description</span>
                   {ContentControl ? (
@@ -173,7 +173,7 @@ const displayCard=(type)=>{
 </TabPanel>
 
 <TabPanel className="xl:px-10 md:px-10 sm:px-10 px-1">
-                  <div className=" mt-10 mb-10 w-full p-6 md:p-8 text-center" >
+                  <div className=" mt-10 mb-10 w-full text-center" >
                   {/* buy-card */}
                     <div className="py-2">
                       <p className="text-xl font-semibold text-left">Medallion Activity</p>
@@ -224,9 +224,9 @@ const displayCard=(type)=>{
                 </Tabs>
 
 {display === "list marketplace"&&
-(<div className="mt-10 mb-10 w-full p-6 md:p-8 text-center" >
+(<div className="mt-2 mb-10 w-full p-6 md:p-8 text-center" >
   {/* buy-card  */}
-                    <div>
+                    <div className="xl:w-2/3 md:w-full sm:w-full w-full mx-auto">
                       <p className="text-xl font-semibold">List and Unlist Medallion</p>
                       <EditSaleStatus
                         MedallionID={SingleRecord.medallion_ID}
@@ -240,9 +240,9 @@ const displayCard=(type)=>{
                     )}
 
               {display === "Gift Medallion"&&
-(   <div className="mt-10 mb-10 w-full p-6 md:p-8 text-center justify-center self-center" >
+(   <div className="mt-2 mb-10 w-full text-center justify-center self-center" >
   {/* buy-card  */}
-<div>
+<div className="h-auto xl:w-2/3 md:w-full sm:w-full w-full mx-auto">
   <p className="text-xl font-semibold">Gift Medallion</p>
   <TransferMedallion
     MedallionID={SingleRecord.medallion_ID}
