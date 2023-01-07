@@ -2692,7 +2692,7 @@ color: #003595;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
+  /* position: absolute; */
   background: #FFFFFF;
   border-radius: 16px;
 }
