@@ -112,21 +112,21 @@ function ClaimComponent({ MedallionId, Activitylength }) {
           </div>
         </Modal>
       )}
-      {Activitylength > 1 ? (
+      {/* {Activitylength > 1 ? ( */}
+        {/* //</div> <button
+        //   onClick={() => handleClaimNft(MedallionId)}
+        //   className="text-white rounded-3xl -mt-4 btn-sign md:mr-0 px-10 py-1 font-bold"
+        // >
+        //   ACCEPT
+        // </button>
+      // ) : ( */}
         <button
           onClick={() => handleClaimNft(MedallionId)}
-          className="text-white rounded-3xl -mt-4 btn-sign md:mr-0 px-10 py-1 font-bold"
-        >
-          ACCEPT
-        </button>
-      ) : (
-        <button
-          onClick={() => handleClaimNft(MedallionId)}
-          className="text-white rounded-3xl -mt-4 btn-sign md:mr-0 px-10 py-1 font-bold"
+          className="claim-button"
         >
           CLAIM
         </button>
-      )}
+      {/* )} */}
     </div>
   );
 }

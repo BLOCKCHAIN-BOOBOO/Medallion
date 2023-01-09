@@ -1,16 +1,16 @@
 @media (min-width: 1280px) {
-  .align {
+  /* .align {
     padding: 0 5rem;
-  }
+  } */
   .input-width {
     width: 32rem !important;
   }
 }
 
-@media (min-width: 1024px) {
-  .align {
+@media (min-width: 1024px) and (max-width:1280px) {
+  /* .align {
     padding: 0 5rem;
-  }
+  } */
 }
 
 @media (min-width: 1024px) and (max-width: 1120px) {
@@ -46,3 +46,21 @@
     width: 50rem !important;
   }
 }
+
+
+@media (min-width: 280px) and (max-width: 1024px) {
+  .align {
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1234px) {
+  .align {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1234px) {
+  .align {
+    padding: 0 5rem;
+  }
+}
+

@@ -28,10 +28,9 @@ function MedallionActivity({ Medallion_Id }) {
   }, [Medallion_Id, Token]);
 
   return (
-    <div>
+    <>
       {Activity && (
-        <div className="h-60 bg-white overflow-y-auto overflow-x-auto">
-           {/* xl:px-40 md:px-20 sm:px-20 px-2 */}
+        // <div className="h-60 bg-white overflow-y-auto overflow-x-auto">            xl:px-40 md:px-20 sm:px-20 px-2 
           <table className="table-auto m-0 m-auto">
             <thead>
               <tr className="text-sm">
@@ -79,9 +78,9 @@ function MedallionActivity({ Medallion_Id }) {
               })}
             </tbody>
           </table>
-        </div>
+        // </div>
       )}
-    </div>
+    </>
   );
 }
 

@@ -32,7 +32,7 @@ function PrivateCardLayout({ medallion }) {
   }, [Medallion_Id, Token]);
 
   return (
-    <div className="medallion-card text-left flex flex-col ">
+    <div className="medallion-card text-left mx-auto self-center flex flex-col ">
       <div>
       {/* className={medallion.status === "on_sale" ? "mt-0" : "mt-4"} */}
         {medallion.status === "on_sale" && (
@@ -55,12 +55,18 @@ function PrivateCardLayout({ medallion }) {
               ViewUrl="/collection/"
               MedallionId={medallion.medallion_ID}
             />
-          ) : (
+           ) : ( 
+           <div className="flex">
+            <ViewComponent
+            ViewUrl="/collection/"
+            MedallionId={medallion.medallion_ID}
+          />
             <ClaimComponent
               MedallionId={medallion.medallion_ID}
               Activitylength={Activitylength}
             />
-          )}
+            </div>
+           )} 
         </div>
       </div>
     </div>

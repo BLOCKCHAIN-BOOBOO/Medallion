@@ -12,13 +12,13 @@ function MedallionData({ SingleRecord }) {
   // };
 
   return (
-    <div className="m-2">
+    <div className="flex flex-col m-2 self-center sm:self-center md:self-start xl:self-start">
 
 {/* <p className="text-3xl font-bold">{SingleRecord.name}</p> */}
 
       <p className="dashboard-tabs-text py-1">Medallion ID: {SingleRecord.medallion_ID}</p>
    
-      <p className="dashboard-tab-header py-2"> {SingleRecord.elite_status}</p>
+      <p className="dashboard-tab-header py-2 hidden sm:flex md:flex xl:flex"> {SingleRecord.elite_status}</p>
       {/* Membership Status: */}
       {/* <p>Currency : {SingleRecord.currency} </p> */}
 
@@ -26,7 +26,7 @@ function MedallionData({ SingleRecord }) {
       <button
       //  className="gold-button button-wave flex mx-auto  self-center text-center justify-center "
       
-      className={`button-wave flex text-left cursor-default" 
+      className={`button-wave flex xl:self-start md:self-start sm:self-center self-center cursor-default" 
       ${SingleRecord.elite_status === "GOLD" &&" gold-button"} ${SingleRecord.elite_status==="ELITE" &&" elite-button"} 
       ${SingleRecord.elite_status==="BLUE" &&" blue-button"} ${SingleRecord.elite_status==="RUBY" &&" ruby-button"}`}
       

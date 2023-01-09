@@ -79,12 +79,21 @@ const displayCard=(type)=>{
               <div className=""> 
                 <Tabs>
                 <div className="container mx-auto flex flex-row xl:flex xl:flex-row xl:justify-between align">
-         
-            <div className=" mx-auto p-6 md:p-8 text-left">
-            {/* buy-card-width xl:w-2/5 md:w-4/5 sm:w-full w-full p-6 md:p-8 text-left   */}
-                <div className="login-card mx-auto p-6 md:p-8 text-left h-auto xl:w-2/3 md:w-full sm:w-full w-full">
+         <div className="mx-auto flex">
+            <div className=" mx-auto  p-6 md:p-8 text-left">
+            {/* buy-card-width xl:w-2/5 md:w-4/5 sm:w-full w-full p-6 md:p-8 text-left  w-5/6  */}
+                <div className="desktop-login-card mx-auto p-6 md:p-8 text-left h-auto ">
+                  <div className="mobile-login-card">
+                {/* xl:w-3/4 md:w-full sm:w-full w-full */}
                 {/* buy-card  */}
-                <div className="flex flex-row">
+                <div className=" corner-wave2 collection-medallion-card-background flex-start">
+                <div className=" corner-wave1 flex-start collection-medallion-second-card">
+                </div>
+</div>
+                <div className="flex xl:flex-row md:flex-row sm:flex-col flex-col img-position">
+              
+                <h3 className="collection-medallion-name self-center pt-4 mb-1">{SingleRecord.name}</h3>
+
                 {SingleRecord && (
               <CanvasElement
                 medallion_name={SingleRecord.name}
@@ -99,15 +108,17 @@ const displayCard=(type)=>{
                 <MedallionData SingleRecord={SingleRecord} />
                   {/* <TabList className="flex xl:flex-row md:flex-row sm:flex-col flex-col py-4 self-center text-center justify-center"> */}
                     {/* <Tab></Tab> */}
-                    <div className="flex xl:flex-row md:flex-row sm:flex-col flex-col py-4 self-center text-center justify-center">
+                    <div className="flex xl:flex-row md:flex-row sm:flex-row flex-row py-4 self-center text-center justify-center">
                     {/* <Tab className="m-2"> */}
                       <button className=" m-1  md:mr-0 active-button" onClick={e=>displayCard("list marketplace")}>
-                        List On MarketPlace
+                     <span className="display-text">List</span> 
+                     <span className="display-button-text"> List On MarketPlace</span> 
                       </button>
                     {/* </Tab>
                     <Tab className="m-2"> */}
                       <button className=" m-1  md:mr-0 active-button" onClick={e=>displayCard("Gift Medallion")}>
-                        Gift Medallion
+                      <span className="display-text">Send Gift</span>  
+                      <span className="display-button-text">  Gift Medallion</span>
                       </button>
                       </div>
                     {/* </Tab> */}
@@ -120,10 +131,7 @@ const displayCard=(type)=>{
                   {/* </TabList> */}
                   </div>
                   </div>
-
-
-
-
+                  </div>
 
 
 {/* <Tabs> */}
@@ -173,14 +181,17 @@ const displayCard=(type)=>{
 </TabPanel>
 
 <TabPanel className="xl:px-10 md:px-10 sm:px-10 px-1">
-                  <div className=" mt-10 mb-10 w-full text-center" >
+                  <div className=" " >
                   {/* buy-card */}
                     <div className="py-2">
                       <p className="text-xl font-semibold text-left">Medallion Activity</p>
-                      <MedallionActivity
+                       
+                    <MedallionActivity
                         Medallion_Id={SingleRecord.medallion_ID}
                       />
                     </div>
+                 
+                
                     </div>
                   </TabPanel>
 
@@ -215,6 +226,7 @@ const displayCard=(type)=>{
                   </TabPanel> */}
                   {/* </Tabs> */}
                  
+                  </div>
                   </div>
                   </div>
                   </div>

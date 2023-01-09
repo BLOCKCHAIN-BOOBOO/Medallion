@@ -1024,7 +1024,9 @@ video {
 .self-end	{
   align-self: flex-end;
  }
-
+ .self-start	{
+  align-self: flex-start;
+ }
 .text-center {
   text-align: center;
 }
@@ -1859,6 +1861,12 @@ text-transform: uppercase;
   .sm\:float-right	{
     float: right;
    }
+   .sm\:self-center {
+    align-self: center;
+  }
+   .sm\:self-start	{
+    align-self: flex-start;
+   }
   .sm\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -1965,6 +1973,12 @@ text-transform: uppercase;
 @media (min-width: 768px) {
   .md\:float-right	{
     float: right;
+   }
+   .md\:self-center {
+    align-self: center;
+  }
+   .md\:self-start	{
+    align-self: flex-start;
    }
   .md\:self-end	{
     align-self: flex-end;
@@ -2311,6 +2325,12 @@ text-transform: uppercase;
  .xl\:self-end	{
   align-self: flex-end;
  }
+ .xl\:self-center {
+  align-self: center;
+}
+ .xl\:self-start	{
+  align-self: flex-start;
+ }
  .xl\:float-right	{
   float: right;
  }
@@ -2429,26 +2449,70 @@ text-transform: uppercase;
   margin:auto;
 }
 
+@media (min-width: 280px) and (max-width: 720px) {
+  .display-text {
+   display:block
+  }
+  .display-button-text{
+    display:none
+  }
+}
+@media screen and (min-width: 720px) {
+  .display-text {
+   display:none
+  }
+  .display-button-text{
+    display:block;
+  }
+}
 
 
+@media (min-width: 280px) and (max-width: 1024px) {
+  .align {
+    padding: 0 1rem;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1234px) {
+  .align {
+    padding: 0 2rem;
+  }
+}
+@media screen and (min-width: 1234px) {
+  .align {
+    padding: 0 5rem;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media (min-width: 280px) and (max-width: 720px) {
+.medallion-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* position: absolute; */
+  background: #FFFFFF;
+  border-radius: 16px;
+  /* width: 370px; */
+}
+}
+@media screen and (min-width: 720px) {
+  .medallion-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* position: absolute; */
+    background: #FFFFFF;
+    border-radius: 16px;
+    width: 370px;
+  }
+  }
 
 
 
 
 /* login page */
+/* .align {
+  padding: 0 5rem;
+}  */
 .princess-header-text{
   font-family: 'Lora';
 /* font-style: italic; */
@@ -2471,6 +2535,7 @@ text-fill-color: transparent;
   /* position: absolute;  */
   background: #FFFFFF;
   border-radius: 16px;
+  position: relative;
 }
 .login-input{
   box-sizing: border-box;
@@ -2478,7 +2543,8 @@ display: flex;
 flex-direction: row;
 align-items: center;
 padding: 8px 16px;
-width: 356px;
+/* width: 356px; */
+min-width:auto;
 height:45px;
 /* height: 58px; */
 background: rgba(255, 255, 255, 0.7);
@@ -2685,17 +2751,56 @@ letter-spacing: 0.09em;
 text-transform: uppercase;
 color: #003595;
 }
+.disconnect-wallet{
+display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    /* background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+    box-shadow: 0px 4px 32px rgb(0 0 0 / 16%), inset -1px -1px 0px rgb(0 0 0 / 25%), inset 1px 1px 0px rgb(255 255 255 / 20%); */
+    border-radius: 4px;
+    width: 100%;
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #fff;
+}
+
 /* Dashboard page end */
 
 /* My Collections page start*/
-.medallion-card {
+.corner-img{
+  position: absolute;
+  height: 122.89px;
+  left: -144.8px;
+  right: 514px;
+  top: 116.57px;
+  background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%);
+  transform: rotate(-35.82deg);
+}
+.corner-img2{
+  position: absolute;
+  height: 163.85px;
+  left: -144.8px;
+  right: 514px;
+  top: 116.57px;
+  background: #003595;
+  transform: rotate(-35.82deg);
+}
+/* .medallion-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* position: absolute; */
+  position: absolute;
   background: #FFFFFF;
   border-radius: 16px;
-}
+  width:370px;
+} */
 
 .view-button{
 font-weight: 700;
@@ -2705,6 +2810,7 @@ letter-spacing: 0.09em;
 text-transform: uppercase;
 color: #003595;
 border:2px solid;
+margin:4px;
 display: flex;
 flex-direction: row;
 justify-content: center;
@@ -2719,11 +2825,12 @@ border-radius: 4px;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-padding: 16px;
+padding: 10px 16px;
 background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
 box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.2);
 border-radius: 4px;
 width:100%;
+margin:4px;
 font-weight: 700;
 font-size: 16px;
 line-height: 24px;
@@ -2734,10 +2841,21 @@ color:  #F2EFED;
 .gold-button{
 display: flex;
 flex-direction: row;
-align-items: flex-start;
 padding: 10px 20px;
 background: #CC9F53;
 border-radius: 4px;
+
+
+font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #F2EFED;
 }
 .elite-button{
   display: flex;
@@ -2746,6 +2864,17 @@ border-radius: 4px;
   padding: 10px 20px;
   background: #000000;
   border-radius: 4px;
+
+  font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #F2EFED;
   }
   .blue-button{
     display: flex;
@@ -2754,6 +2883,17 @@ border-radius: 4px;
     padding: 10px 20px;
     background: #003595;
     border-radius: 4px;
+
+    font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #F2EFED;
     }
     .ruby-button{
       display: flex;
@@ -2762,6 +2902,17 @@ border-radius: 4px;
       padding: 10px 20px;
       background: #8E1537;
       border-radius: 4px;
+
+      font-family: 'Red Hat Display';
+font-style: normal;
+font-weight: 700;
+font-size: 12px;
+line-height: 18px;
+align-items: center;
+text-align: center;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #F2EFED;
       }
 .medallion-card-background{
   position: relative;
@@ -2838,6 +2989,133 @@ font-family: 'Red Hat Display';
 .react-tabs__tab--selected a{
   border-bottom:2px solid #003595
 }
+@media (min-width: 280px) and (max-width: 720px) {
+  .collection-medallion-name{
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    z-index:1;
+    letter-spacing: 0.03em;
+    display:flex;
+    color: #FFFFFF;
+    }
+  .mobile-login-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    /* position: absolute;  */
+    background: #FFFFFF;
+    border-radius: 16px;
+    position: relative;
+  }
+.collection-medallion-card-background{
+  position: absolute;
+/* height: 210px; */
+left: -0.5px;
+right: 0.5px;
+top: 0px;
+/* width:380px; */
+height: 270px;
+border-top-left-radius: 16px;
+border-top-right-radius:16px;
+/* background: #003595; */
+background-image: url("../../src/theme/images/bg-wave.png");
+background-repeat: no-repeat;
+background-size: cover;
 
+/* Width:287.5px;
+Height:210px;
+Left:-0.5px; */
+}
+
+.collection-medallion-second-card{
+  position: absolute;
+/* height: 150px; */
+left: -0.5px;
+right: 0.5px;
+top: 0px;
+/* width: 380px; */
+height:200px;
+background-image: url("../../src/theme/images/wave.png");
+background-repeat: no-repeat;
+background-size: cover;
+/* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
+
+/* Width:287.5px;
+Height:157.5px;
+Left:-0.5px; */
+}
+.collection-medallion-second-card div{
+  padding:30px;
+}
+}
+@media screen and (min-width: 720px) {
+  .collection-medallion-name{
+    font-family: 'Red Hat Display';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 32px;
+    letter-spacing: 0.03em;
+    display:none;
+    color: #FFFFFF;
+    }
+  .desktop-login-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px;
+    /* position: absolute;  */
+    background: #FFFFFF;
+    border-radius: 16px;
+    position: relative;
+  }
+
+.corner-wave1{
+  position: absolute;
+  /* height: 163.85px;
+  left: -144.8px;
+  right: 514px;
+  top: 116.57px; */
+    height: 240.85px;
+    left: 0;
+    right: 0;
+    top: -7.43px;
+    background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%);
+    /* transform: rotate(-0.82deg); */
+    transform: rotate(-0deg);
+  /* transform: rotate(-35.82deg); */
+background-image: url("../../src/theme/images/corner-wave.png");
+background-repeat: no-repeat;
+/* background-size: cover; */
+
+}
+.corner-wave2{
+  position: absolute;
+  /* height: 163.85px;
+  left: -144.8px;
+  right: 514px;
+  top: 116.57px; */
+  height: 180.85px;
+  left: 1px;
+  right: 0;
+  border-top-left-radius: 25px;
+  top: 0;
+  /* background: #003595; */
+  transform: rotate(-0deg);
+  /* transform: rotate(-0.82deg); */
+  /* transform: rotate(-35.82deg); */
+background-image: url("../../src/theme/images/corner-wave2.png");
+background-repeat: no-repeat;
+/* background-size: cover; */
+}
+}
+
+.img-position div{
+  position:relative;
+}
 
 /* My Collections page end */

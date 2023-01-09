@@ -16,9 +16,9 @@ function DashboardLayout() {
           <TitleBanner title="Dashboard" />
         </div>
       </section>
-      <div className="mx-auto w-full flex relative">
-      <div className="w-full flex mx-auto login-card conatiner align">
-      {/* market-section-color */}
+      <div className="mx-auto w-full flex relative container align">
+      <div className=" w-full flex mx-auto login-card ">
+      {/* market-section-color w-full*/}
         <div className="container mx-auto py-4 flex xl:flex-row md:flex-col sm:flex-col flex-col">
         
           <ProfileCard />

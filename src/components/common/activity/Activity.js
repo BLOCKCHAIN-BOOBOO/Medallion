@@ -64,14 +64,14 @@ const Activity = () => {
         </div>
       </section>
       <div className="market-section-color">
-        <section className="market-background relative flex justify-center self-center text-center pt-20 md:pt-20 sm:pt-20 xl:pt-20">
+        <section className="market-background relative flex justify-center self-center text-center pt-10 md:pt-10 sm:pt-10 xl:pt-10">
 
           {Loading ? (
             <ReactLoading type="bars" color="#fff" />
           ) : (
             <>
               {records ? (
-                <div className="container">
+                <div className="container align">
                 <div className="rounded-2xl bg-white h-96 overflow-y-auto">
                   <table className="table-auto w-full bg-white">
                     <thead>

@@ -172,11 +172,11 @@ var ethball=1212.23234234.toFixed(3);
       )}
 
       {CurrentWallet && CurrentWallet.user_account ? (
-        <div className="login-card text-center border mx-auto rounded-xl xl:w-1/4 md:w-2/4 sm:w-2/4 w-3/4 space-y-2 p-5">
+        <div className="login-card text-center border mx-auto rounded-xl xl:w-1/4 md:w-2/4 sm:w-2/4 w-full space-y-2 p-5">
           <div className="py-1">
             <p className="">Wallet Balance</p>
             {/* <span className="p-2 bg-white"> */}
-              <p className="font-extrabold text-xl ">
+              <p className="dashboard-tab-header">
                 {/* {CurrentWallet.chainId === "0x4" ? "ETH " : "MATIC "} */}
                 ETH {EthBalance ? EthBalance.toFixed(3) : 0}
               </p>
@@ -191,7 +191,7 @@ var ethball=1212.23234234.toFixed(3);
           </button>
 
           <p
-            className=" break-all"
+            className="dashboard-tabs-text break-all"
             style={{ "overflowWrap": "break-word", "wordBreak": "break-all" }}
           >
             {/* Account : {CurrentWallet && CurrentWallet.user_account} */}
@@ -204,9 +204,9 @@ var ethball=1212.23234234.toFixed(3);
           {/* <p className="text-white">
             Chain Id : {CurrentWallet && CurrentWallet.chainId}
           </p> */}
-          <p>Wallet Type : {CurrentWallet && CurrentWallet.wallet_name}</p>
+          <p className="dashboard-tabs-text">Wallet Type : {CurrentWallet && CurrentWallet.wallet_name}</p>
           <button
-            className="bg-red-500 my-2 text-white p-1 rounded-md"
+            className="disconnect-wallet bg-red-500"
             onClick={() => WalletDisconnect(CurrentWallet.wallet_name)}
           >
             Disconnect Wallet
