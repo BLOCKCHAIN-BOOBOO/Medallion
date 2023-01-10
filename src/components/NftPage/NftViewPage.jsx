@@ -29,6 +29,7 @@ const [display,setDisplay]=useState();
     return MemberShipObject[ELITE_STATUS];
   };
 const displayCard=(type)=>{
+  console.log("Calling")
   setDisplay(type);
 }
   const HandleMedallionData = async () => {
