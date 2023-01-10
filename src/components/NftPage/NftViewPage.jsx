@@ -78,8 +78,10 @@ const displayCard=(type)=>{
             {SingleRecord && (
               <div className=""> 
                 <Tabs>
-                <div className="container mx-auto flex flex-row xl:flex xl:flex-row xl:justify-between align">
-         <div className="mx-auto flex">
+                <div className="container mx-auto  align">
+                {/* flex flex-row xl:flex xl:flex-row xl:justify-between */}
+         <div className="mx-auto ">
+         {/* flex */}
             <div className=" mx-auto  p-6 md:p-8 text-left">
             {/* buy-card-width xl:w-2/5 md:w-4/5 sm:w-full w-full p-6 md:p-8 text-left  w-5/6  */}
                 <div className="desktop-login-card mx-auto p-6 md:p-8 text-left h-auto ">
