@@ -88,7 +88,7 @@ function UpdateProfile() {
       {!Loading && UserInfo && (
         <div className="p-6 self-center md:p-8 text-left">
           <div className="flex flex-col">
-            <h3 className="dashboard-tab-header mb-10 self-start">
+            <h3 className="dashboard-tab-header mb-5 xl:self-start md:self-start sm:self-start self-center">
               Update Profile
             </h3>
             <form

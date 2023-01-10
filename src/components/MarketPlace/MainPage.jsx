@@ -58,7 +58,7 @@ function MainPage() {
         </div>
       </section>
       <div className="market-section-color">
-        <section className="market-background relative pt-10 pb-20 xl:pt-10">
+        <section className="market-background relative pt-2 pb-20 xl:pt-2">
           {/* <Banner /> */}
           <div className="m-3 p-3 flex flex-col">
             <div className="self-center">

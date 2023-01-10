@@ -29,7 +29,7 @@ const ProfileCard = () => {
  }
 
   return (
-    <div className="p-2 flex">
+    <div className="p-2 flex flex-col sm:flex-row md:flex-row xl:flex-row">
        <ToastContainer />
       <img
         src={DefaultAvatar}

@@ -28,10 +28,10 @@ function MedallionActivity({ Medallion_Id }) {
   }, [Medallion_Id, Token]);
 
   return (
-    <>
+    <div className="flex w-full overflow-y-auto overflow-x-auto mt-2">
       {Activity && (
         // <div className="h-60 bg-white overflow-y-auto overflow-x-auto">            xl:px-40 md:px-20 sm:px-20 px-2 
-          <table className="table-auto m-0 m-auto">
+          <table className="table-auto w-full self-start text-left float-left">
             <thead>
               <tr className="text-sm">
                 <td className="p-2 border font-bold">S.No</td>
@@ -80,7 +80,7 @@ function MedallionActivity({ Medallion_Id }) {
           </table>
         // </div>
       )}
-    </>
+    </div>
   );
 }
 

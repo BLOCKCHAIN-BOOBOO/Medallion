@@ -1645,7 +1645,7 @@ color: #003595;
   font-family: 'Red Hat Display';
 font-style: normal;
 font-weight: 700;
-font-size: 16px;
+/* font-size: 16px; */
 line-height: 24px;
 letter-spacing: 0.025em;
 color: #020215;
@@ -3001,6 +3001,47 @@ font-family: 'Red Hat Display';
     display:flex;
     color: #FFFFFF;
     }
+
+    .collection-medallion-card-background{
+      position: absolute;
+    /* height: 210px; */
+    left: -0.5px;
+    right: 0.5px;
+    top: 0px;
+    /* width:380px; */
+    height: 270px;
+    border-top-left-radius: 16px;
+    border-top-right-radius:16px;
+    /* background: #003595; */
+    background-image: url("../../src/theme/images/bg-wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Width:287.5px;
+    Height:210px;
+    Left:-0.5px; */
+    }
+    
+    .collection-medallion-second-card{
+      position: absolute;
+    /* height: 150px; */
+    left: -0.5px;
+    right: 0.5px;
+    top: 0px;
+    /* width: 380px; */
+    height:200px;
+    background-image: url("../../src/theme/images/wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
+    
+    /* Width:287.5px;
+    Height:157.5px;
+    Left:-0.5px; */
+    }
+    .collection-medallion-second-card div{
+      padding:30px;
+    }
   .mobile-login-card{
     display: flex;
     flex-direction: column;
@@ -3011,47 +3052,290 @@ font-family: 'Red Hat Display';
     border-radius: 16px;
     position: relative;
   }
-.collection-medallion-card-background{
-  position: absolute;
-/* height: 210px; */
-left: -0.5px;
-right: 0.5px;
-top: 0px;
-/* width:380px; */
-height: 270px;
-border-top-left-radius: 16px;
-border-top-right-radius:16px;
-/* background: #003595; */
-background-image: url("../../src/theme/images/bg-wave.png");
-background-repeat: no-repeat;
-background-size: cover;
 
-/* Width:287.5px;
-Height:210px;
-Left:-0.5px; */
 }
 
-.collection-medallion-second-card{
-  position: absolute;
-/* height: 150px; */
-left: -0.5px;
-right: 0.5px;
-top: 0px;
-/* width: 380px; */
-height:200px;
-background-image: url("../../src/theme/images/wave.png");
-background-repeat: no-repeat;
-background-size: cover;
-/* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
 
-/* Width:287.5px;
-Height:157.5px;
-Left:-0.5px; */
+@media (min-width: 280px) and (max-width: 320px) {
+
+    .collection-medallion-card-background{
+      position: absolute;
+    /* height: 210px; */
+    left: -0.5px;
+    right: 0.5px;
+    top: 0px;
+    /* width:380px; */
+    height: 35%;
+    border-top-left-radius: 16px;
+    border-top-right-radius:16px;
+    /* background: #003595; */
+    background-image: url("../../src/theme/images/bg-wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    /* Width:287.5px;
+    Height:210px;
+    Left:-0.5px; */
+    }
+    
+    .collection-medallion-second-card{
+      position: absolute;
+    /* height: 150px; */
+    left: -0.5px;
+    right: 0.5px;
+    top: 0px;
+    /* width: 380px; */
+    height:75%;
+    background-image: url("../../src/theme/images/wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
+    
+    /* Width:287.5px;
+    Height:157.5px;
+    Left:-0.5px; */
+    }
+    .collection-medallion-second-card div{
+      padding:30px;
+    }
+ 
 }
-.collection-medallion-second-card div{
-  padding:30px;
+
+@media (min-width: 320px) and (max-width: 420px) {
+
+  .collection-medallion-card-background{
+    position: absolute;
+  /* height: 210px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width:380px; */
+  height: 45%;
+  border-top-left-radius: 16px;
+  border-top-right-radius:16px;
+  /* background: #003595; */
+  background-image: url("../../src/theme/images/bg-wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Width:287.5px;
+  Height:210px;
+  Left:-0.5px; */
+  }
+  
+  .collection-medallion-second-card{
+    position: absolute;
+  /* height: 150px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width: 380px; */
+  height:70%;
+  background-image: url("../../src/theme/images/wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
+  
+  /* Width:287.5px;
+  Height:157.5px;
+  Left:-0.5px; */
+  }
+  .collection-medallion-second-card div{
+    padding:30px;
+  }
+
 }
+@media (min-width: 420px) and (max-width: 460px) {
+
+  .collection-medallion-card-background{
+    position: absolute;
+  /* height: 210px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width:380px; */
+  height: 45%;
+  border-top-left-radius: 16px;
+  border-top-right-radius:16px;
+  /* background: #003595; */
+  background-image: url("../../src/theme/images/bg-wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Width:287.5px;
+  Height:210px;
+  Left:-0.5px; */
+  }
+  
+  .collection-medallion-second-card{
+    position: absolute;
+  /* height: 150px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width: 380px; */
+  height:77%;
+  background-image: url("../../src/theme/images/wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
+  
+  /* Width:287.5px;
+  Height:157.5px;
+  Left:-0.5px; */
+  }
+  .collection-medallion-second-card div{
+    padding:30px;
+  }
+
 }
+
+@media (min-width: 460px) and (max-width: 495px) {
+
+  .collection-medallion-card-background{
+    position: absolute;
+  /* height: 210px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width:380px; */
+  height: 290px;
+  border-top-left-radius: 16px;
+  border-top-right-radius:16px;
+  /* background: #003595; */
+  background-image: url("../../src/theme/images/bg-wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Width:287.5px;
+  Height:210px;
+  Left:-0.5px; */
+  }
+  
+  .collection-medallion-second-card{
+    position: absolute;
+  /* height: 150px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width: 380px; */
+  height:215px;
+  background-image: url("../../src/theme/images/wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
+  
+  /* Width:287.5px;
+  Height:157.5px;
+  Left:-0.5px; */
+  }
+  .collection-medallion-second-card div{
+    padding:30px;
+  }
+
+}
+
+
+
+@media (min-width: 495px) and (max-width: 560px) {
+
+  .collection-medallion-card-background{
+    position: absolute;
+  /* height: 210px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width:380px; */
+  /* height: 290px; */
+  height:55%;
+  border-top-left-radius: 16px;
+  border-top-right-radius:16px;
+  /* background: #003595; */
+  background-image: url("../../src/theme/images/bg-wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Width:287.5px;
+  Height:210px;
+  Left:-0.5px; */
+  }
+  
+  .collection-medallion-second-card{
+    position: absolute;
+  /* height: 150px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width: 380px; */
+  /* height:215px; */
+  height:72%;
+  background-image: url("../../src/theme/images/wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
+  
+  /* Width:287.5px;
+  Height:157.5px;
+  Left:-0.5px; */
+  }
+  .collection-medallion-second-card div{
+    padding:30px;
+  }
+
+}
+
+
+
+
+
+@media (min-width: 560px) and (max-width: 720px) {
+
+  .collection-medallion-card-background{
+    position: absolute;
+  /* height: 210px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width:380px; */
+  height: 65%;
+  border-top-left-radius: 16px;
+  border-top-right-radius:16px;
+  /* background: #003595; */
+  background-image: url("../../src/theme/images/bg-wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  /* Width:287.5px;
+  Height:210px;
+  Left:-0.5px; */
+  }
+  
+  .collection-medallion-second-card{
+    position: absolute;
+  /* height: 150px; */
+  left: -0.5px;
+  right: 0.5px;
+  top: 0px;
+  /* width: 380px; */
+  /* height:200px; */
+  height:82%;
+  background-image: url("../../src/theme/images/wave.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background: linear-gradient(333.35deg, rgba(255, 255, 255, 0.3) 31.34%, rgba(255, 255, 255, 0) 75.44%); */
+  
+  /* Width:287.5px;
+  Height:157.5px;
+  Left:-0.5px; */
+  }
+  .collection-medallion-second-card div{
+    padding:30px;
+  }
+
+}
+
+
+
 @media screen and (min-width: 720px) {
   .collection-medallion-name{
     font-family: 'Red Hat Display';
@@ -3119,3 +3403,9 @@ background-repeat: no-repeat;
 }
 
 /* My Collections page end */
+
+@media screen and (min-width: 767px) {
+  .show-desktop-menu{
+    display:block;
+  }
+}

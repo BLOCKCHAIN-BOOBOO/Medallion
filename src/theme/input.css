@@ -261,16 +261,30 @@ border:2px solid white;
 
 } */
 
-.ul-close{
-  /* top:25px !important; */
+/* .ul-close{
+  
   top:10px !important;
   display: flex;
   opacity:100 !important;
-}
+} */
+/* top:25px !important; */
 
-.ul-open{
+/* .ul-open{
   opacity:0;
   top:0;
-  /* display:none; */
   display:flex;
+} */
+
+  /* display:none; */
+
+.ul-open{
+  top:0;
+display:flex;
+opacity:100 !important;
+}
+
+.ul-close{  
+  top:10px !important;
+  display: flex;
+  opacity:100 !important;
 }
