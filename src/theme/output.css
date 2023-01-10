@@ -2588,7 +2588,7 @@ color: #6C6C78;
 flex-direction: row;
 justify-content: center;
 align-items: center;
-padding: 16px;
+padding: 8px 16px;
 background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
 box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.2);
 border-radius: 4px;
@@ -3001,6 +3001,23 @@ font-family: 'Red Hat Display';
     display:flex;
     color: #FFFFFF;
     }
+    .list-button{
+      font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #003595;
+border:2px solid;
+margin:4px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 8px 16px;
+background: #FFFFFF;
+border-radius: 4px;
+    }
 
     .collection-medallion-card-background{
       position: absolute;
@@ -3346,6 +3363,25 @@ font-family: 'Red Hat Display';
     letter-spacing: 0.03em;
     display:none;
     color: #FFFFFF;
+    }
+    .list-button{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      padding: 16px;
+      background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+      box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      width:100%;      
+      font-family: 'Red Hat Display';
+      font-style: normal;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: #fff;
     }
   .desktop-login-card{
     display: flex;

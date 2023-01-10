@@ -78,13 +78,12 @@ const displayCard=(type)=>{
             {SingleRecord && (
               <div className=""> 
                 <Tabs>
-                <div className="container mx-auto align">
-                {/* flex flex-row xl:flex xl:flex-row xl:justify-between  */}
-         {/* <div className="mx-auto flex"> */}
-            <div className=" mx-auto  p-2 md:p-4 sm:p-2 xl:p-4  text-left">
+                <div className="container mx-auto flex flex-row xl:flex xl:flex-row xl:justify-between align">
+         <div className="mx-auto flex">
+            <div className=" mx-auto  p-6 md:p-8 text-left">
             {/* buy-card-width xl:w-2/5 md:w-4/5 sm:w-full w-full p-6 md:p-8 text-left  w-5/6  */}
-                <div className="desktop-login-card mx-auto p-0 sm:p-2 xl:p-8 md:p-8 text-left h-auto ">
-                  <div className="mobile-login-card w-full ">
+                <div className="desktop-login-card mx-auto p-6 md:p-8 text-left h-auto ">
+                  <div className="mobile-login-card">
                 {/* xl:w-3/4 md:w-full sm:w-full w-full */}
                 {/* buy-card  */}
                 <div className=" corner-wave2 collection-medallion-card-background flex-start">
@@ -111,7 +110,7 @@ const displayCard=(type)=>{
                     {/* <Tab></Tab> */}
                     <div className="flex xl:flex-row md:flex-row sm:flex-row flex-row py-4 self-center text-center justify-center">
                     {/* <Tab className="m-2"> */}
-                      <button className=" m-1  md:mr-0 active-button" onClick={e=>displayCard("list marketplace")}>
+                      <button className=" m-1  md:mr-0 list-button self-center" onClick={e=>displayCard("list marketplace")}>
                      <span className="display-text">List</span> 
                      <span className="display-button-text"> List On MarketPlace</span> 
                       </button>
@@ -152,8 +151,7 @@ const displayCard=(type)=>{
                     </Tab>
                   </TabList>
                   {/* <TabPanel></TabPanel> */}
-  <TabPanel className="px-2">
-  {/* xl:px-10 md:px-0 sm:px-10 px-8 */}
+  <TabPanel className="xl:px-10 md:px-0 sm:px-10 px-8">
 <div className="">
   <div className="py-2">
 <span className="dashboard-tab-header">Description</span>
@@ -182,8 +180,7 @@ const displayCard=(type)=>{
 </div>
 </TabPanel>
 
-<TabPanel className=" px-2">
-{/* xl:px-10 md:px-10 sm:px-10 */}
+<TabPanel className="xl:px-10 md:px-10 sm:px-10 px-1">
                   <div className=" " >
                   {/* buy-card */}
                     <div className="py-2">
@@ -232,7 +229,7 @@ const displayCard=(type)=>{
                   </div>
                   </div>
                   </div>
-                  {/* </div> */}
+                  </div>
                 
                 {/* </Tabs> */}
                
