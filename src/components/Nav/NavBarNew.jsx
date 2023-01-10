@@ -186,7 +186,7 @@ const SignOut = async () => {
           className="w-full md:w-auto md:flex-row xl:flex-row sm:flex-row flex-col  md:items-center  bg-white sm:bg-white 
           md:bg-transparent lg:bg-transparent 
           absolute z-[1] md:static md:z-auto
-          mt-10 md:mt-0 lg:mt-0 left-0 py-2 md:opacity-100 opacity-100 transition-all ease-in duration-500 hidden"
+          mt-10 md:mt-0 lg:mt-0 left-0 py-2 md:opacity-100 opacity-100 transition-all ease-in duration-500 sm:hidden md:flex xl:flex"
            >             
           <li 
           

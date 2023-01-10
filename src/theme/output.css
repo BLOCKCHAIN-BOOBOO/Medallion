@@ -1968,6 +1968,11 @@ text-transform: uppercase;
    .sm\:self-end	{
     align-self: flex-end;
    }
+   .sm\:hidden{
+   
+      display: none;
+  
+   }
 }
 
 @media (min-width: 768px) {
@@ -2426,6 +2431,9 @@ text-transform: uppercase;
   .xl\:visible{
   	visibility: visible;
   }
+  .xl\:hidden{   
+    display: none;
+ }
   .lg\:block{
     display: block;
 }
