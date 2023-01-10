@@ -56,7 +56,7 @@ const displayCard=(type)=>{
       <ToastContainer />
       <div className="market-section-color mt-16 sm:mt-16 md:mt-20 lg:mt-20">
         <section
-          className="market-background relative py-20 xl:py-20"
+          className="market-background relative py-10 pb-20 xl:py-10"
           style={{ minHeight: "800px" }}
         >
           <div className="w-full flex flex-col">
