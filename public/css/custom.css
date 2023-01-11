@@ -476,7 +476,7 @@ button {
 }
 .bold {
   color: #fff;
-  font-family: "Baloo Tammudu", sans-serif;
+  /* font-family: "Baloo Tammudu", sans-serif; */
   font-style: normal;
   font-weight: bold;
   font-size: 81.9111px;

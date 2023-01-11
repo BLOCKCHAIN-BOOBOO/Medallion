@@ -147,7 +147,7 @@ const SignOut = async () => {
 
   return (
     <div>
-    <nav className="fixed align w-full z-10 top-0 princess-background sm:h-full h-16 md:h-20 xl:h-20">
+    <nav className="fixed align w-full z-20 top-0 princess-background sm:h-full h-16 md:h-20 xl:h-20">
     {/* shadow */}
       <div className="container mx-auto relative md:flex md:items-center md:justify-between py-2 md:py-4">
         <Link to={user.token && ValidateToken()?"/collection":"/market-place"}>

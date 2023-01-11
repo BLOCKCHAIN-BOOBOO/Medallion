@@ -80,6 +80,10 @@ const displayCard=(type)=>{
               <div className=""> 
                 <Tabs>
                 <div className="container mx-auto  align">
+            <div className="flex">  
+            <NavLink className="text-black self-center"  to="/collection"> <i class="fa fa-arrow-left self-center text-xl px-3" aria-hidden="true"> </i> </NavLink>
+             <p className="title-text py-1"> {SingleRecord.medallion_ID}</p>
+              </div>
                 {/* flex flex-row xl:flex xl:flex-row xl:justify-between */}
          <div className="mx-auto ">
          {/* flex */}
@@ -242,7 +246,7 @@ const displayCard=(type)=>{
 (<div className="mt-2 mb-10 w-full p-6 md:p-8 text-center" >
   {/* buy-card  */}
                     <div className="xl:w-2/3 md:w-full sm:w-full w-full mx-auto">
-                      <p className="text-xl font-semibold">List and Unlist Medallion</p>
+                      <p className="dashboard-tab-header">List and Unlist Medallion</p>
                       <EditSaleStatus
                         MedallionID={SingleRecord.medallion_ID}
                         sale_status={SingleRecord.status}
@@ -258,7 +262,7 @@ const displayCard=(type)=>{
 (   <div className="mt-2 mb-10 w-full text-center justify-center self-center" >
   {/* buy-card  */}
 <div className="h-auto xl:w-2/3 md:w-full sm:w-full w-full mx-auto">
-  <p className="text-xl font-semibold">Gift Medallion</p>
+  <p className="dashboard-tab-header">Gift Medallion</p>
   <TransferMedallion
     MedallionID={SingleRecord.medallion_ID}
     HandleMedallionData={() => HandleMedallionData()}

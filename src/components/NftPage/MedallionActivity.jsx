@@ -31,15 +31,15 @@ function MedallionActivity({ Medallion_Id }) {
     <div className="flex w-full overflow-y-auto overflow-x-auto mt-2">
       {Activity && (
         // <div className="h-60 bg-white overflow-y-auto overflow-x-auto">            xl:px-40 md:px-20 sm:px-20 px-2 
-          <table className="table-auto w-full self-start text-left float-left">
+          <table className="table-auto w-full activity-table  self-start text-left float-left">
             <thead>
               <tr className="text-sm">
-                <td className="p-2 border font-bold">S.No</td>
-                <td className="p-2 border font-bold">From</td>
-                <td className="p-2 border font-bold">To</td>
-                <td className="p-2 border font-bold">Amount</td>
-                <td className="p-2 border font-bold">Type</td>
-                <td className="p-2 border font-bold">Transaction Date</td>
+                <th className="p-2">S.No</th>
+                <th className="p-2">From</th>
+                <th className="p-2">To</th>
+                <th className="p-2">Amount</th>
+                <th className="p-2 ">Type</th>
+                <th className="p-2 ">Transaction Date</th>
               </tr>
             </thead>
             <tbody>

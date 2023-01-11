@@ -33,14 +33,14 @@ function PrivateCardLayout({ medallion }) {
 
   return (
     <div className="medallion-card text-left mx-auto self-center flex flex-col ">
-      <div>
+      <div className="float-right self-end">
       {/* className={medallion.status === "on_sale" ? "mt-0" : "mt-4"} */}
         {medallion.status === "on_sale" && (
           <img
             src={forsale}
             alt=""
-            style={{ width: "53px", height: "53px" }}
-            className="-mt-9 "
+            style={{ width: "60px", height: "60px" }}
+            className="-mt-1 z-10 absolute -ml-16 "
           />
         )}
       </div>

@@ -57,7 +57,9 @@ html {
   /* 3 */
   tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", 
+  Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", 
+  "Segoe UI Symbol", "Noto Color Emoji"; */
   /* 4 */
 }
 
@@ -648,6 +650,9 @@ video {
 .z-10 {
   z-index: 10;
 }
+.z-20	{
+  z-index: 20;
+}
 
 .z-\[1\] {
   z-index: 1;
@@ -730,7 +735,9 @@ video {
 .mt-20 {
   margin-top: 5rem;
 }
-
+.-mt-1{
+  margin-top: -0.25rem;
+}
 .-mt-10 {
   margin-top: -2.5rem !important;
 }
@@ -817,6 +824,9 @@ video {
 
 .-ml-6 {
   margin-left: -1.5rem;
+}
+.-ml-16 {
+  margin-left: -4rem;
 }
 
 .ml-0 {
@@ -1418,33 +1428,6 @@ video {
   text-align: right;
 }
 
-.activity-table {
-  display: table;
-  /* border-collapse: separate; */
-  /* border-spacing: 0 1em; */
-}
-
-.activity-table tbody tr {
-  /* background: linear-gradient(180deg, #CB74F6 0%, #1160EB 100%); */
-  background: #fff;
-}
-
-.activity-table tr td:first-child {
-  border-top-left-radius: 10px;
-}
-
-.activity-table tr td:last-child {
-  border-top-right-radius: 10px;
-}
-
-.activity-table tr td:first-child {
-  border-bottom-left-radius: 10px;
-}
-
-.activity-table tr td:last-child {
-  border-bottom-right-radius: 10px;
-}
-
 .element {
   position: relative;
 }
@@ -1631,7 +1614,8 @@ border-radius: 4px;
 /* navbar text */
 .active{
   /* border-bottom: 2px solid #f2c746; */
-font-family: 'Red Hat Display';
+/* font-family: 'Red Hat Display'; */
+font-family:system-ui;
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
@@ -1642,7 +1626,8 @@ color: #003595;
 }
 
 .navbar-option-text{
-  font-family: 'Red Hat Display';
+  /* font-family: 'Red Hat Display'; */
+  font-family:'system-ui';
 font-style: normal;
 font-weight: 700;
 /* font-size: 16px; */
@@ -1660,10 +1645,11 @@ color: #020215;
 /* footer section */
 .footer-text{
   color:#003595;
-  font-family: 'Red Hat Display';
+  /* font-family: 'Red Hat Display'; */
+  font-family:'system-ui';
 font-style: normal;
-/* font-weight: 500; */
-font-weight:700;
+font-weight: 500;
+/* font-weight:700; */
 font-size: 12px;
 line-height: 18px;
 letter-spacing: 0.025em;
@@ -1855,7 +1841,9 @@ text-transform: uppercase;
 .active-link:active{
   color:#000;
 }
-
+.text-black	{
+  color: rgb(0 0 0);
+}
 @media (min-width: 640px) {
  
   .sm\:float-right	{
@@ -1954,7 +1942,30 @@ text-transform: uppercase;
   }
   .sm\:w-2\/3{	width: 66.666667%;}
 
-
+  .sm\:px-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  
+  .sm\:px-1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+  
+  .sm\:px-2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+  
+  .sm\:px-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  
+  .sm\:px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
   .sm\:px-10 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
@@ -1999,7 +2010,30 @@ text-transform: uppercase;
   .md\:static {
     position: static;
   }
-
+  .sm\:px-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  
+  .md\:px-1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+  
+  .md\:px-2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+  
+  .md\:px-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  
+  .md\:px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
   .md\:px-40 {
     padding-left: 10rem;
     padding-right: 10rem;
@@ -2424,6 +2458,30 @@ text-transform: uppercase;
   .xl\:w-1\/4 {
     width: 25%;
   }
+  .xl\:px-0 {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+  }
+  
+  .xl\:px-1 {
+    padding-right: 0.25rem !important;
+    padding-left: 0.25rem !important;
+  }
+  
+  .xl\:px-2 {
+    padding-right: 0.5rem !important;
+    padding-left: 0.5rem !important;
+  }
+  
+  .xl\:px-3 {
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
+  }
+  
+  .xl\:px-4 {
+    padding-right: 1.5rem !important;
+    padding-left: 1.5rem !important;
+  }
   .xl\:px-40 {
     padding-left: 10rem;
     padding-right: 10rem;
@@ -2560,13 +2618,14 @@ border: 1.5px solid #CDD1D5;
 border-radius: 4px;
 
 
-font-family: 'Red Hat Display';
+font-family: 'system-ui';
 font-style: normal;
-font-weight: 700;
-font-size: 12px;
-line-height: 18px;
-letter-spacing: 0.09em;
-color: #6C6C78;
+font-weight: 400;
+/* font-size: 12px; */
+font-size:16px;
+line-height: 24px;
+letter-spacing: 0.025em;
+color: #020215;
 
 }
 .inactive-button{
@@ -2580,7 +2639,8 @@ border-radius: 4px;
 width:100%;
 
 
-font-family: 'Red Hat Display';
+/* font-family: 'Red Hat Display'; */
+font-family:'system-ui';
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
@@ -2602,19 +2662,22 @@ box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 
 border-radius: 4px;
 width:100%;
 
-font-family: 'Red Hat Display';
+/* font-family: 'Red Hat Display'; */
+font-family: 'system-ui';
 font-style: normal;
-font-weight: 700;
+/* font-weight: 700; */
+font-weight:600;
 font-size: 16px;
 line-height: 24px;
-letter-spacing: 0.09em;
+/* letter-spacing: 0.09em; */
+letter-spacing:0.09em;
 text-transform: uppercase;
 color: #fff;
 }
 
 .login-text{
   font-family: 'Lora';
-font-style: italic;
+/* font-style: italic; */
 font-weight: 700;
 font-size: 32px;
 line-height: 40px;
@@ -2644,7 +2707,8 @@ color: #020215;
 }
 
 .input-label{
-  font-family: 'Red Hat Display';
+  /* font-family: 'Red Hat Display'; */
+  font-family:'system-ui';
 font-style: normal;
 font-weight: 700;
 font-size: 12px;
@@ -2660,7 +2724,7 @@ color: #6C6C78;
 /* Marketplace Page */
 .no-medallions-text{
   font-family: 'Lora';
-font-style: italic;
+/* font-style: italic; */
 font-weight: 700;
 font-size: 32px;
 line-height: 40px;
@@ -2672,7 +2736,7 @@ text-transform: capitalize;
 
 .second-header-text{
   font-family: 'Lora';
-font-style: italic;
+/* font-style: italic; */
 font-weight: 700;
 font-size: 32px;
 line-height: 40px;
@@ -2683,7 +2747,8 @@ text-transform: capitalize;
 }
 
 .marketplace-sub-text{
-  font-family: 'Red Hat Text';
+  /* font-family: 'Red Hat Text'; */
+  font-family:'system-ui';
 font-style: normal;
 font-weight: 400;
 font-size: 16px;
@@ -2697,7 +2762,8 @@ color: #020215;
 
 /* Dashboard page start */
 .dashboard-user-header{
-font-family: 'Red Hat Display';
+/* font-family: 'Red Hat Display'; */
+font-family:'system-ui';
 font-style: normal;
 font-weight: 700;
 font-size: 16px;
@@ -2708,7 +2774,8 @@ color: #020215;
 }
 
 .user-wallet-add{
-  font-family: 'Red Hat Display';
+  /* font-family: 'Red Hat Display'; */
+  font-family:'system-ui';
 font-style: normal;
 font-weight: 700;
 font-size: 12px;
@@ -2719,7 +2786,8 @@ color: #020215;
 }
 
 .dashboard-tab-header{
-  font-family: 'Red Hat Display';
+  /* font-family: 'Red Hat Display'; */
+  font-family:'system-ui';
   font-style: normal;
   font-weight: 700;
   font-size: 22px;
@@ -2750,7 +2818,8 @@ color: #fff;
 }
 
 .dashboard-tabs-text{
-  font-family: 'Red Hat Display';
+  /* font-family: 'Red Hat Display'; */
+  font-family:'system-ui';
 font-style: normal;
 font-weight: 700;
 font-size: 12px;
@@ -2812,6 +2881,7 @@ display: flex;
 
 .view-button{
 font-weight: 700;
+font-family:'system-ui';
 font-size: 16px;
 line-height: 24px;
 letter-spacing: 0.09em;
@@ -2853,8 +2923,8 @@ padding: 10px 20px;
 background: #CC9F53;
 border-radius: 4px;
 
-
-font-family: 'Red Hat Display';
+font-family:'system-ui';
+/* font-family: 'Red Hat Display'; */
 font-style: normal;
 font-weight: 700;
 font-size: 12px;
@@ -2872,8 +2942,8 @@ color: #F2EFED;
   padding: 10px 20px;
   background: #000000;
   border-radius: 4px;
-
-  font-family: 'Red Hat Display';
+font-family:'system-ui';
+  /* font-family: 'Red Hat Display'; */
 font-style: normal;
 font-weight: 700;
 font-size: 12px;
@@ -2892,7 +2962,8 @@ color: #F2EFED;
     background: #003595;
     border-radius: 4px;
 
-    font-family: 'Red Hat Display';
+    /* font-family: 'Red Hat Display'; */
+    font-family:'system-ui';
 font-style: normal;
 font-weight: 700;
 font-size: 12px;
@@ -2910,8 +2981,8 @@ color: #F2EFED;
       padding: 10px 20px;
       background: #8E1537;
       border-radius: 4px;
-
-      font-family: 'Red Hat Display';
+font-family:'system-ui';
+      /* font-family: 'Red Hat Display'; */
 font-style: normal;
 font-weight: 700;
 font-size: 12px;
@@ -2963,7 +3034,8 @@ Left:-0.5px; */
   padding:30px;
 }
 .medallion-name-text{
-font-family: 'Red Hat Display';
+/* font-family: 'Red Hat Display'; */
+font-family:'system-ui';
 font-style: normal;
 font-weight: 700;
 font-size: 22px;
@@ -2984,7 +3056,8 @@ color: #FFFFFF;
   background-size: cover;
 }
 .sub-tabs-text{
-font-family: 'Red Hat Display';
+/* font-family: 'Red Hat Display'; */
+font-family:'system-ui';
     font-style: normal;
     font-weight: 700;
     font-size: 12px;
@@ -3382,9 +3455,10 @@ border-radius: 4px;
       box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.2);
       border-radius: 4px;
       width:100%;      
-      font-family: 'Red Hat Display';
+      /* font-family: 'Red Hat Display'; */
+      font-family:'system-ui';
       font-style: normal;
-      font-weight: 700;
+      font-weight: 600;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 0.09em;
@@ -3445,7 +3519,16 @@ background-repeat: no-repeat;
 .img-position div{
   position:relative;
 }
-
+.title-text{
+  font-family: 'Lora';
+/* font-style: italic; */
+font-weight: 700;
+font-size: 32px;
+line-height: 40px;
+letter-spacing: 0.005em;
+color: #020215;
+text-transform: uppercase;
+}
 /* My Collections page end */
 
 @media screen and (min-width: 767px) {
@@ -3453,3 +3536,64 @@ background-repeat: no-repeat;
     display:block;
   }
 }
+
+/* Activity page */
+
+.activity-table {
+  display: table;
+  /* border-collapse: separate; */
+  /* border-spacing: 0 1em; */
+}
+
+.activity-table tbody tr {
+  /* background: linear-gradient(180deg, #CB74F6 0%, #1160EB 100%); */
+  background: #fff;
+}
+
+.activity-table tr td:first-child {
+  border-top-left-radius: 10px;
+}
+
+.activity-table tr td:last-child {
+  border-top-right-radius: 10px;
+}
+
+.activity-table tr td:first-child {
+  border-bottom-left-radius: 10px;
+}
+
+.activity-table tr td:last-child {
+  border-bottom-right-radius: 10px;
+}
+
+.activity-table tr td,th{
+  border:0px !important;
+  text-align:left;
+}
+.activity-table tr,th {
+  border-bottom: 0.5px solid #9ca3af!important;
+}
+.activity-table tr th{
+  /* font-family: 'Red Hat Display'; */
+  font-family:'system-ui';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.025em;
+color: #020215;
+}
+.activity-table tr td{
+  /* font-family: 'Red Hat Display'; */
+  font-family:'system-ui';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.025em;
+color: #020215;
+}
+/* .activity-table thead tr {
+  border-bottom:1px soild #9ca3af!important;
+} */
+/* Activty page end */

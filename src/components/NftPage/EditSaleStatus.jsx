@@ -98,7 +98,7 @@ function EditSaleStatus(props) {
         {PricingForm && (
           <div className="mx-auto inline-block">
             {/*Currency*/}
-            <span className="after:content-[''] after:ml-0.5 mt-2 after:text-red-500 block text-left input-label">
+            <span className="after:content-[''] after:ml-0.5 mt-5 after:text-red-500 block text-left input-label">
               Currency
             </span>
             <select 
@@ -108,15 +108,15 @@ function EditSaleStatus(props) {
               }
             >
               <option
-                value="reth"
-                selected={Currency.currency === "reth" ? true : false}
+                // value="reth"
+                selected={Currency.currency === "USD" ? "USD" : ""}
               >
                 USD
               </option>
             </select>
             {/*Price */}
             <div className="flex flex-col">
-              <span className="after:content-[''] after:ml-0.5 mt-2 after:text-red-500 block text-left input-label">
+              <span className="after:content-[''] after:ml-0.5 mt-5 after:text-red-500 block text-left input-label">
                 Price
               </span>
               <input

@@ -72,30 +72,30 @@ const Activity = () => {
             <>
               {records ? (
                 <div className="container align">
-                <div className="rounded-2xl bg-white h-96 overflow-y-auto">
-                  <table className="table-auto w-full bg-white">
+                <div className="rounded-2xl bg-white h-96 overflow-y-auto p-3">
+                  <table className="table-auto activity-table w-full bg-white">
                     <thead>
                       <tr>
-                        <td className="p-3 border font-bold">Medallion ID</td>
-                        <td className="p-3 border font-bold">From</td>
-                        <td className="p-3 border font-bold">To</td>
-                        <td className="p-3 border font-bold">Action</td>
-                        <td className="p-3 border font-bold">Amount</td>
-                        <td className="p-3 border font-bold">Date</td>
+                        <th className="p-3 font-bold">Medallion ID</th>
+                        <th className="p-3 font-bold">From</th>
+                        <th className="p-3 font-bold">To</th>
+                        <th className="p-3 font-bold">Action</th>
+                        <th className="p-3 font-bold">Amount</th>
+                        <th className="p-3 font-bold">Date</th>
                       </tr>
                     </thead>
                     <tbody>
                       {records?.map((each_row, index) => {
                         return (
-                          <tr key={index}>
-                            <td className="border p-2">
+                          <tr key={index} className="border-b-2">
+                            <td className=" p-2">
                               {each_row.medallion_ID}
                             </td>
-                            <td className="border p-2">
+                            <td className=" p-2">
                               {each_row.from_email}
                             </td>
-                            <td className="border p-2">{each_row.to_email}</td>
-                            <td className="border p-2">
+                            <td className=" p-2">{each_row.to_email}</td>
+                            <td className=" p-2">
                               {each_row.action === "Purchase" &&
                               each_row.to_email === email.email
                                 ? "Bought"
@@ -108,7 +108,7 @@ const Activity = () => {
                               {each_row.price ? each_row.price : "-"}{" "}
                               {each_row.price ? "USD" : "-"}{" "}
                             </td> */}
-                            <td className="border p-2">
+                            <td className=" p-2">
                               {each_row.price &&
                               each_row.payment_method === "CRYPTO"
                                 ? (each_row.price/1000000000000000000) + " ETH"
@@ -118,7 +118,7 @@ const Activity = () => {
                                 : "--"}
                             </td>
 
-                            <td className="border p-2">
+                            <td className=" p-2">
                               {each_row?.updatedAt.split("T")[0]}
                             </td>
                           </tr>

@@ -58,7 +58,7 @@ function UpdatePassword() {
             >
                 <div className="flex m-2 xl:flex-row md:flex-row sm:flex-col flex-col">
               <label className="block m-4 self-center">
-                <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
+                <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
                   Current Password
                 </span>
                 <input
@@ -76,7 +76,7 @@ function UpdatePassword() {
               </label>
 
               <label className="block m-4 self-center">
-                <span className="after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
+                <span className="input-label nafter:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
                   New Password
                 </span>
                 <input
