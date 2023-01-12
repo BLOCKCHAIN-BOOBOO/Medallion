@@ -10,6 +10,7 @@ import {
   CLAIM_NFT,
   CLAIM_FUND,
   GET_SINGLE_MEDALLION_ACTIVITY,
+  GET_MARKET_PLACE_SINGLE_NFT_BY_MEDALLIONID,
 } from "../api";
 import { GetFunction, PostFunction } from "./Helper";
 
@@ -100,11 +101,13 @@ export const GetMarketPlaceMedallions = async (
 };
 
 //Get SingleMedallion Data
-export const GetSingleMedallionData = async (MedallionId, Token) => {
+export const GetSingleMedallionData = async (MedallionId, Token,from) => {
   try {
     const SingleMedallionUrl =
-      // BASE_URL + GET_SINGLE_NFT_BY_MEDALLIONID + MedallionId;
-      BASE_URL + GET_SINGLE_NFT_BY_MEDALLIONID + MedallionId;
+    from === "collectons"
+      ? // BASE_URL + GET_SINGLE_NFT_BY_MEDALLIONID + MedallionId;
+        BASE_URL + GET_SINGLE_NFT_BY_MEDALLIONID + MedallionId
+      : BASE_URL + GET_MARKET_PLACE_SINGLE_NFT_BY_MEDALLIONID + MedallionId;
 
     const result = await GetFunction(SingleMedallionUrl, Token);
     return result.data.data.records;

@@ -35,7 +35,7 @@ const displayCard=(type)=>{
   const HandleMedallionData = async () => {
     SetLoading(true);
     try {
-      const Records = await GetSingleMedallionData(MedallionId, Token);
+      const Records = await GetSingleMedallionData(MedallionId, Token,"collectons");
       Records.length && SetSingleRecord(...Records);
     } catch (error) {
       toast.error(error);

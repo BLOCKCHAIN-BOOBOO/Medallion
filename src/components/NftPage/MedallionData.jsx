@@ -16,7 +16,7 @@ function MedallionData({ SingleRecord }) {
 
 {/* <p className="text-3xl font-bold">{SingleRecord.name}</p> */}
 
-      <p className="dashboard-tabs-text py-1">Medallion ID: {SingleRecord.medallion_ID}</p>
+      <p className="dashboard-tabs-text xl:self-start md:self-start self-center text-center py-1">Medallion ID: {SingleRecord.medallion_ID}</p>
    
       <p className="dashboard-tab-header py-2 hidden sm:flex md:flex xl:flex"> {SingleRecord.elite_status}</p>
       {/* Membership Status: */}

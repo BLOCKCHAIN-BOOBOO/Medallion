@@ -3,6 +3,9 @@ export const BASE_URL = "https://nft.radiqal.com:8000";
 //Public URI's
 export const MARKET_PLACE_NFTS = "/nfts/marketplace?status=on_sale";
 export const GET_ALL_ONSALE_NFTS = "/nfts/get_nfts?status=on_sale"; //GET REQUEST
+
+export const GET_MARKET_PLACE_SINGLE_NFT_BY_MEDALLIONID =
+  "/nfts/marketplace?medallion_ID=";
 // export const GET_SINGLE_NFT_BY_MEDALLIONID = "/nfts/get_nfts?medallion_ID="; //GET REQUEST
 export const GET_SINGLE_NFT_BY_MEDALLIONID = "/nfts/collections?medallion_ID="; //GET REQUEST
 
@@ -37,3 +40,4 @@ export const RAZORPAY_PAYMENT_STATUS = "/transactions/payment_status";
 export const GET_PAYMENT_METHODS =
   "/transactions/get_payment_method_for_customer";
 export const MEDPAY_BUY = "/nfts/MedPay_buy";
+

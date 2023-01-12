@@ -76,7 +76,7 @@ function SingleNftPage(props) {
   const HandleMedallionData = async () => {
     SetLoading(true);
     try {
-      const Records = await GetSingleMedallionData(MedallionId, Token);
+      const Records = await GetSingleMedallionData(MedallionId, Token,"marketplace");
       Records.length && SetSingleRecord(...Records);
       console.log({ ...Records });
     } catch (error) {
@@ -132,23 +132,34 @@ function SingleNftPage(props) {
               {Loading && <ReactLoading type="bars" color="#fff" />}
             </div>
           </div>
-          <div className="container mx-auto flex flex-col xl:flex xl:flex-row xl:justify-between align">
+          <div className="mx-auto ">
+          <div className=" mx-auto  p-1 md:p-8 xl:p-8 text-left">
+          <div className="desktop-login-card mx-auto p-1 md:p-8 xl:p-8 text-left h-auto ">
+                  <div className="mobile-login-card">
+                <div className=" corner-wave2 collection-medallion-card-background flex-start">
+                <div className=" corner-wave1 flex-start collection-medallion-second-card">
+                </div>
+</div>
+                <div className="flex xl:flex-row md:flex-row sm:flex-col flex-col img-position">
+
             {/*Content Start*/}
             {SingleRecord && (
-              <div className="flex flex-col justify-between xl:flex xl:flex-col xl:justify-between xl:mb-0 py-0 mx-4 sm:mx-0 xl:mx-0">
+              // <div className="flex flex-col justify-between xl:flex xl:flex-col xl:justify-between xl:mb-0 py-0 mx-4 sm:mx-0 xl:mx-0">
                 <CanvasElement
                   medallion_name={SingleRecord.name}
                   medallion_elite_status={SingleRecord.elite_status}
-                  canvas_width="500"
-                  canvas_height="500"
-                  element_size="large"
+                  // canvas_width="500"
+                  // canvas_height="500"
+                  element_size="small"
                 />
-              </div>
+              // </div>
             )}
             {SingleRecord && (
-              <div className="buy-card lg:w-2/5 p-6 md:p-8 text-left">
+              <div className="flex flex-col self-center justify-center">
                 <MedallionData SingleRecord={SingleRecord} />
-                <button
+               
+               <div className="flex xl:self-start md:self-start self-center text-center justify-center"> 
+               <button
                   className="active-button md:mr-2 px-10 py-1 font-bold"
                   onClick={() => {
                     Token
@@ -159,10 +170,15 @@ function SingleNftPage(props) {
                   BUY NOW
                 </button>
               </div>
+              </div>
             )}
 
             {/*Content End*/}
           </div>
+          </div>
+          </div>
+        </div>
+        </div>
         </section>
       </div>
     </div>
