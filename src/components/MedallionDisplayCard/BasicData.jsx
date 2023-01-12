@@ -18,7 +18,7 @@ function BasicData(props) {
       </div>
       </div>
       {/* Membership Status :  */}
-      <div className="flex flex-col mt-32">
+      <div className="flex flex-col mt-32 mobile-margin">
       <div className="flex mx-auto">
       <span
       //  className="gold-button button-wave flex mx-auto  self-center text-center justify-center "

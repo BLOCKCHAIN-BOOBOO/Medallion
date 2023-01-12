@@ -2752,6 +2752,27 @@ color: #6C6C78;
 
 
 /* Marketplace Page */
+
+@media (min-width: 270px) and (max-width: 290px) {
+ .mobile-margin{
+  margin-top:20px;
+ }
+}
+@media (min-width: 290px) and (max-width: 310px) {
+  .mobile-margin{
+   margin-top:40px;
+  }
+ }
+ @media (min-width: 310px) and (max-width: 330px) {
+  .mobile-margin{
+   margin-top:60px;
+  }
+ }
+ @media (min-width: 330px) and (max-width: 350px) {
+  .mobile-margin{
+   margin-top:80px;
+  }
+ }
 .no-medallions-text{
   font-family: 'Lora';
 /* font-style: italic; */
