@@ -75,7 +75,7 @@ function BuyComponent({ MedallionId }) {
         </Modal>
       )}
       <button
-        className="text-white rounded-3xl btn-sign md:mr-2 px-10 py-1 font-bold"
+        className="claim-button md:mr-2 px-10 py-1 font-bold"
         onClick={() => handleBuy(MedallionId)}
       >
         BUY NOW

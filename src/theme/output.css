@@ -1494,10 +1494,29 @@ video {
 
 /* navbar */
 .signup-btn{
+  font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
   background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
 box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), 
 inset 1px 1px 0px rgba(255, 255, 255, 0.2);
 border-radius: 4px;
+border:2px solid #003595;
+}
+.signup-btn:hover{
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #003595;
+border:2px solid;
+background: #FFFFFF;
+border-radius: 4px;
+
+
 }
 .btn-sign {
   background: #f2c746;
@@ -2673,7 +2692,18 @@ line-height: 24px;
 letter-spacing:0.09em;
 text-transform: uppercase;
 color: #fff;
+border:2px solid;
 }
+
+.active-button:hover{
+
+color: #003595;
+border:2px solid;
+display: flex;
+background: #FFFFFF;
+border-radius: 4px;
+}
+
 
 .login-text{
   font-family: 'Lora';
@@ -2897,6 +2927,16 @@ padding: 8px 16px;
 background: #FFFFFF;
 border-radius: 4px;
 }
+.view-button:hover{
+  display: flex;
+  border:2px solid;
+  background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+  box-shadow: 0px 4px 32px rgba(0, 0, 0, 0.16), inset -1px -1px 0px rgba(0, 0, 0, 0.25), inset 1px 1px 0px rgba(255, 255, 255, 0.2);
+  border-radius: 4px; 
+  text-transform: uppercase;
+  color:  #F2EFED;
+}
+
 
 .claim-button{
   display: flex;
@@ -2915,7 +2955,17 @@ line-height: 24px;
 letter-spacing: 0.09em;
 text-transform: uppercase;
 color:  #F2EFED;
+border:2px solid;
 }
+.claim-button:hover{  
+color: #003595;
+border:2px solid;
+display: flex;
+background: #FFFFFF;
+border-radius: 4px;
+}
+
+
 .gold-button{
 display: flex;
 flex-direction: row;
@@ -3098,6 +3148,13 @@ align-items: flex-start;
 padding: 8px 16px;
 background: #FFFFFF;
 border-radius: 4px;
+    }
+    .list-button:hover{
+      color: #003595;
+      border:2px solid;
+      display: flex;
+      background: #FFFFFF;
+      border-radius: 4px;
     }
 
     .collection-medallion-card-background{
@@ -3464,6 +3521,13 @@ border-radius: 4px;
       letter-spacing: 0.09em;
       text-transform: uppercase;
       color: #fff;
+    }
+    .list-button:hover{
+      color: #003595;
+      border:2px solid;
+      display: flex;
+      background: #FFFFFF;
+      border-radius: 4px;
     }
   .desktop-login-card{
     display: flex;

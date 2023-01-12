@@ -33,7 +33,7 @@ function BasicData(props) {
         
         {props.medallion.elite_status}</span>
       </div>
-      <span className="dashboard-tabs-text mt-5"> Medallion ID : #{props.medallion.medallion_ID}</span>
+      <span className="dashboard-tabs-text self-center text-center mt-5"> Medallion ID : #{props.medallion.medallion_ID}</span>
       </div>
       
       {/* <span>Sale Status : {ChangeSaleText(props.medallion.status)}</span> */}

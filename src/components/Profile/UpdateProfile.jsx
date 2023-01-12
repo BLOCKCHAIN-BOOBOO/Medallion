@@ -9,6 +9,7 @@ function UpdateProfile() {
   const Token = useSelector((state) => state.user.token);
   const [UserInfo, SetUserInfo] = useState(null);
   const [Loading, SetLoading] = useState(false);
+  const [active,setActive]=useState(false);
   let messagesEndRef = useRef();
   let ref2 = useRef(null);
   const dispatch = useDispatch();
@@ -98,12 +99,15 @@ function UpdateProfile() {
             >
               <div className="flex m-2 xl:flex-row md:flex-row sm:flex-col flex-col">
               <label className="block m-4 self-center">
-                <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
+                <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-left 
+                text-sm text-gray-500 font-medium">
                   First Name
                 </span>
                 <input
                   type="text"
-                  className="login-input mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
+                  className="login-input mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border focus:outline-none
+                   focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm 
+                   focus:ring"
                   value={UserInfo.first_name}
                   required
                   onChange={(e) =>
@@ -113,12 +117,14 @@ function UpdateProfile() {
               </label>
 
               <label className="block m-4 self-center">
-                <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm text-gray-500 font-medium">
+                <span className="input-label after:content-[''] after:ml-0.5 after:text-red-500 block text-left text-sm 
+                text-gray-500 font-medium">
                   Last Name
                 </span>
                 <input
                   type="text"
-                  className="login-input mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border focus:outline-none focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
+                  className="login-input mt-1 px-3 p-1 bg-transparent shadow-sm border-gray-500 border focus:outline-none
+                   focus:border-sky-500 focus:ring-sky-500 block dashboard-input-width w-64 rounded-3xl input-background sm:text-sm focus:ring"
                   value={UserInfo.last_name}
                   required
                   onChange={(e) =>
@@ -128,7 +134,12 @@ function UpdateProfile() {
               </label>
               </div>
               <div className="flex xl:float-right md:float-right sm:self-center self-center m-6">
-              <button className=" inactive-button px-10 py-2">
+              <button disabled={UserInfo.last_name!=="" && UserInfo.first_name!==""?false:true} 
+              // className=" inactive-button px-10 py-2"
+              className={`px-10 py-2 ${
+                UserInfo.last_name!=="" && UserInfo.first_name!==""? "active-button" : "inactive-button"
+              }`}
+              >
                 Update
               </button>
               </div>

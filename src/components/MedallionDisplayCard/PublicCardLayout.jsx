@@ -8,15 +8,18 @@ import "./../../theme/output.css";
 function PublicCardLayout({ medallion }) {
   console.log("Public Card", medallion);
   return (
-    <div className="buy-card p-6 md:p-8 text-left">
+    <div className="medallion-card mx-auto self-center flex flex-col">
+       <div className="float-right self-end">
        <img
         src={forsale}
-        alt="" style={{width:"50px",height:"50px"}}
-        className="-mt-9 "
+        alt="" 
+        style={{ width: "60px", height: "60px" }}
+        className="-mt-1 z-10 absolute -ml-16 "
       />
+      </div>
       <BasicData medallion={medallion} />
       <PriceComponent medallion_price={medallion.price} />
-      <div className="flex flex-row justify-center space-x-2">
+      <div className="flex py-2 self-center text-center justify-center">
         <ViewComponent
           ViewUrl="/view-single-nft/"
           MedallionId={medallion.medallion_ID}

@@ -164,7 +164,7 @@ function DisplayCard(props) {
         {props.show_view && (
           <Link
             to={ViewUrl}
-            className="view-button"
+            className="view-button self-center"
           >
             VIEW
           </Link>
@@ -173,7 +173,7 @@ function DisplayCard(props) {
         {props.show_claim && Claimed && (
           <Link
             to={ViewUrl}
-            className="view-button"
+            className="view-button self-center"
           >
             VIEW
           </Link>
@@ -181,7 +181,7 @@ function DisplayCard(props) {
 
         {props.show_buy && (
           <button
-            className="text-white rounded-3xl btn-sign md:mr-2 px-10 py-1 font-bold"
+            className="active-button md:mr-2 px-10 py-1"
             onClick={() => {
               Token
                 ? handleBuy(props.medallion.medallion_ID)

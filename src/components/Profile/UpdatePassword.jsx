@@ -94,7 +94,14 @@ function UpdatePassword() {
               </label>
               </div>
                <div className="flex xl:float-right md:float-right sm:self-center self-center m-6">
-              <button className="inactive-button px-10 py-2">
+              <button  disabled={CurrentPassword&&NewPassword?false:true} 
+              // className="inactive-button px-10 py-2"
+              
+              className={`px-10 py-2 ${
+                CurrentPassword&&NewPassword? "active-button" : "inactive-button"
+              }`}
+              
+              >
                 Update Password
               </button>
               </div>

@@ -149,7 +149,7 @@ function SingleNftPage(props) {
               <div className="buy-card lg:w-2/5 p-6 md:p-8 text-left">
                 <MedallionData SingleRecord={SingleRecord} />
                 <button
-                  className="text-white rounded-3xl btn-sign md:mr-2 px-10 py-1 font-bold"
+                  className="active-button md:mr-2 px-10 py-1 font-bold"
                   onClick={() => {
                     Token
                       ? handleBuy(SingleRecord.medallion_ID)

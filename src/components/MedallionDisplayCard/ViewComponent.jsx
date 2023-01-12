@@ -5,7 +5,7 @@ function ViewComponent({ ViewUrl, MedallionId }) {
   return (
     <Link
       to={RedirectUrl}
-      className="view-button"
+      className="self-center view-button"
     >
       VIEW
     </Link>
