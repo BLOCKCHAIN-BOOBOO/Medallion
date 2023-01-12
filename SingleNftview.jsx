@@ -1,3 +1,4 @@
+import { data } from "autoprefixer";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { BASE_URL, GET_SINGLE_NFT_BY_MEDALLIONID } from "../api";
@@ -11,7 +12,6 @@ function SingleNftview() {
     BASE_URL + GET_SINGLE_NFT_BY_MEDALLIONID + TokenId,
     token
   );
-
   return (
     <div className="container vh-100">
       {!Loading && Data

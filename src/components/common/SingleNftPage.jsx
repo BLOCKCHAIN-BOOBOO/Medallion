@@ -15,6 +15,8 @@ import MedallionActivity from "../NftPage/MedallionActivity";
 import { ValidateToken } from "../../Utils/Helper";
 import { GetUserInfo } from "../../Utils/Methods";
 import { toast, ToastContainer } from "react-toastify";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import { ViewLessContent, ViewMoreContent } from "../../Utils/Helper";
 
 
 function SingleNftPage(props) {
@@ -32,6 +34,8 @@ function SingleNftPage(props) {
   const [ModalBody, SetModalBody] = useState(null);
   const [HideCloseOption, SetHideCloseOption] = useState(true);
   // const [TransactionStatus, SetTransactionStatus] = useState(false);
+const [display,setDisplay]=useState();
+  const [ContentControl, SetContentControl] = useState(true);
 
   const GetMemberShipData = (ELITE_STATUS) => {
     const MemberShipObject = MemberShip.memberships;
@@ -58,6 +62,11 @@ function SingleNftPage(props) {
       navigate("/login");
     }
   };
+
+  const displayCard=(type)=>{
+  console.log("Calling")
+  setDisplay(type);
+}
 
   //Open Modal
   const handleModalOpen = () => {
@@ -107,7 +116,9 @@ function SingleNftPage(props) {
 
 
   return (
+   
     <div>
+      
       <div className="market-section-color mt-16 sm:mt-16 md:mt-20 lg:mt-20">
       <ToastContainer />
         <section
@@ -176,6 +187,72 @@ function SingleNftPage(props) {
             {/*Content End*/}
           </div>
           </div>
+<Tabs>
+<div className="w-full">
+<TabList className="border-b-2 flex xl:flex-row md:flex-row sm:flex-row flex-row py-1 self-start text-start justify-start">
+                    {/* <Tab></Tab> */}
+                    <Tab className="xl:px-4 md:px-2 sm:px-1 px-1 cursor-pointer">
+                      <a className=" m-2  md:mr-0 sub-tabs-text" >
+                       General Info
+                      </a>
+                    </Tab>
+                 
+                    <Tab className="xl:px-4 md:px-2 sm:px-1 px-1 cursor-pointer">
+                      <a className="m-2 md:mr-0 sub-tabs-text" >
+                        Medallion Activity
+                      </a>
+                    </Tab>
+                  </TabList>
+                  {/* <TabPanel></TabPanel> */}
+
+
+  <TabPanel className="xl:px-10 md:px-0 sm:px-10 px-8">
+<div className="">
+  <div className="py-2">
+<span className="dashboard-tab-header">Description</span>
+                  {ContentControl ? (
+        <p className="py-2 text-sm terms-text">
+          {ViewLessContent(GetMemberShipData(SingleRecord&&SingleRecord.elite_status), 200)}
+          <button
+            className="footer-text"
+            onClick={() => SetContentControl(false)}
+          >
+            ...View More
+          </button>
+        </p>
+      ) : (
+        <p className="py-2 text-sm terms-text">
+          {ViewMoreContent(GetMemberShipData(SingleRecord&&SingleRecord.elite_status))}
+          <button
+            className="footer-text"
+            onClick={() => SetContentControl(true)}
+          >
+            View Less
+          </button>
+        </p>
+      )}
+</div>
+</div>
+</TabPanel>
+
+<TabPanel className="xl:px-10 md:px-10 sm:px-10 px-1">
+                  <div className=" " >
+                  {/* buy-card */}
+                    <div className="py-2">
+                      <p className="text-xl font-semibold text-left">Medallion Activity</p>
+                       
+                    <MedallionActivity
+                        Medallion_Id={SingleRecord&&SingleRecord.medallion_ID}
+                      />
+                    </div>
+                
+                    </div>
+                  </TabPanel>
+
+</div>
+
+</Tabs>
+
           </div>
         </div>
         </div>
