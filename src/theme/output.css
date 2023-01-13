@@ -67,7 +67,14 @@ html {
 1. Remove the margin in all browsers.
 2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
 */
-
+body.modal-open {
+  bottom: 0;
+  left: 0;
+  position: fixed !important;
+  right: 0;
+  top: 0;
+  overflow: hidden !important;
+}
 
 body {
   margin: 0;
@@ -817,6 +824,8 @@ video {
 .mb-3 {
   margin-bottom: 0.75rem;
 }
+
+
 
 .ml-2 {
   margin-left: 0.5rem;
@@ -2796,6 +2805,17 @@ letter-spacing: 0.005em;
 color: #020215;
 text-transform: capitalize;
 }
+.medallion-header-text {
+  font-family: 'Lora';
+  /* font-style: italic; */
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  text-align: center;
+  letter-spacing: 0.005em;
+  color: #fff;
+  text-transform: capitalize;
+}
 
 .marketplace-sub-text{
   /* font-family: 'Red Hat Text'; */
@@ -2808,6 +2828,67 @@ text-align: center;
 letter-spacing: 0.025em;
 color: #020215;
 }
+
+@media (min-width: 280px) and (max-width: 420px) {
+.connect-wallet{
+  width: 100%;
+  max-width: 90% !important;
+  position: fixed;
+  margin: auto;
+  top: 30%;
+  left: 5%;
+  background-color: rgb(255, 255, 255);
+}
+.connect-wallet-card{
+  
+}
+}
+
+@media (min-width: 420px) and (max-width: 720px) {
+  .connect-wallet{
+    width: 100%;
+    max-width: 81% !important;
+    position: fixed;
+    margin: auto;
+    top: 30%;
+    right: 5%;
+    left: 5%;
+    background-color: rgb(255, 255, 255);
+  }
+  .connect-wallet-card{
+    
+  }
+  }
+  @media (min-width: 720px) and (max-width:870px ){
+    .connect-wallet{
+      width: 100%;
+      max-width: 40% !important;
+      position: fixed;
+      margin: auto;
+      top: 30%; 
+      left: 20%;
+      right:20%;
+      background-color: rgb(255, 255, 255);
+    }
+    .connect-wallet-card{
+      
+    }
+    }
+    @media screen and (min-width: 870px){
+      .connect-wallet{
+        width: 100%;
+        max-width: 30% !important;
+        position: fixed;
+        margin: auto;
+        top: 30%; 
+        left: 40%;
+        background-color: rgb(255, 255, 255);
+      }
+      .connect-wallet-card{
+        
+      }
+      }
+
 
 /* Marketplace page end */
 
@@ -3632,7 +3713,7 @@ text-transform: uppercase;
 
 .activity-table tbody tr {
   /* background: linear-gradient(180deg, #CB74F6 0%, #1160EB 100%); */
-  background: #fff;
+  /* background: #fff; */
 }
 
 .activity-table tr td:first-child {

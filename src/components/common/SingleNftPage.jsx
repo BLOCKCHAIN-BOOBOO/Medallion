@@ -46,6 +46,7 @@ const [display,setDisplay]=useState();
 
   //Handle Buy Medallion
   const handleBuy = async (medallion_id) => {
+    document.body.classList.add('modal-open');
     if (Token && ValidateToken()) {
       if (userinfo.address === null || userinfo.address === "") {
         toast.error("error");
@@ -115,10 +116,8 @@ const [display,setDisplay]=useState();
   
 
 
-  return (
-   
-    <div>
-      
+  return (   
+    <div>      
       <div className="market-section-color mt-16 sm:mt-16 md:mt-20 lg:mt-20">
       <ToastContainer />
         <section
@@ -187,7 +186,7 @@ const [display,setDisplay]=useState();
             {/*Content End*/}
           </div>
           </div>
-<Tabs>
+<Tabs className="w-full">
 <div className="w-full">
 <TabList className="border-b-2 flex xl:flex-row md:flex-row sm:flex-row flex-row py-1 self-start text-start justify-start">
                     {/* <Tab></Tab> */}
@@ -236,7 +235,7 @@ const [display,setDisplay]=useState();
 </TabPanel>
 
 <TabPanel className="xl:px-10 md:px-10 sm:px-10 px-1">
-                  <div className=" " >
+                  {/* <div className=" " > */}
                   {/* buy-card */}
                     <div className="py-2">
                       <p className="text-xl font-semibold text-left">Medallion Activity</p>
@@ -246,7 +245,7 @@ const [display,setDisplay]=useState();
                       />
                     </div>
                 
-                    </div>
+                    {/* </div> */}
                   </TabPanel>
 
 </div>

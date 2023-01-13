@@ -22,6 +22,7 @@ function BuyComponent({ MedallionId }) {
 
   //Handle Buy Medallion
   const handleBuy = async (medallion_id) => {
+    document.body.classList.add('modal-open');
     if (Token && ValidateToken()) {
       if (userinfo.address === null || userinfo.address === "") {
         toast.error("error");
@@ -67,7 +68,7 @@ function BuyComponent({ MedallionId }) {
       {ModalTitle && ModalBody && (
         <Modal hide_close_button={HideCloseOption && HideCloseOption}>
           <div>
-            <h1 className="text-3xl p-4 ">{ModalTitle && ModalTitle}</h1>
+            <h1 className="second-header-text">{ModalTitle && ModalTitle}</h1>
             <div className="flex flex-col p-4">
               <p className="text-bold text-xl py-3">{ModalBody && ModalBody}</p>
             </div>
