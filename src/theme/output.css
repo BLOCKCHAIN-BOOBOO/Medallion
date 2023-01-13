@@ -3190,7 +3190,8 @@ Left:-0.5px; */
 font-family:'system-ui';
 font-style: normal;
 font-weight: 700;
-font-size: 22px;
+/* font-size:22px; */
+font-size: 20px;
 line-height: 32px;
 letter-spacing: 0.03em;
 
