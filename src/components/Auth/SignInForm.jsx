@@ -13,6 +13,7 @@ function SigninForm() {
   const [Loading, SetLoading] = useState(false);
   const [Email, SetEmail] = useState("");  
   const [showconfirm, setshowconfirm] = useState(false);
+  const [psw,setpsw]=useState()
 
   let Content = "";
   const navigate = useNavigate();
@@ -79,6 +80,7 @@ function SigninForm() {
                 pattern: /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/,
                 onChange: (e) => SetEmail(e.target.value.toLowerCase()),
               })}
+
             />
             {errors.email?.type === "pattern" && (
               <span className="wrong-text">
@@ -97,7 +99,9 @@ function SigninForm() {
               className="mt-1 login-input focus:outline-none focus:border-sky-500 focus:ring-sky-500 
               block w-64 dashboard-input-width  input-background sm:text-sm focus:ring"
               placeholder="Enter Password"
+              
               {...register("password", { required: true })}
+                
             />
 {showconfirm ? (
                 <i className="fa fa-eye float-right -mt-6 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(false)}></i>
@@ -117,9 +121,9 @@ function SigninForm() {
             <button  
               // className="inactive-button"
 
-          className={Loading ? "active-button" : "inactive-button"}
+          className={ "hover: active-button "+ (Email?"active-button":"inactive-button")}
 
-              disabled={Loading ? true : false}
+              disabled={Email ? false : true}
             >
               Login
             </button>
