@@ -12,11 +12,12 @@ const ModalOverLay = {
 };
 
 const ModalClass = {
-  width: "auto",
-  minWidth: "20%",
-  height: "auto",
-  minHeight: "30%",
+  width: "100%",
+  maxWidth: "30%",
+  // height: "auto",
+  // minHeight: "30%",
   position: "fixed",
+  margin:"auto",
   top: "30%",
   left: "40%",
   transform: 'translate("-50%", "-50%")',
@@ -27,6 +28,7 @@ function Modal({ children, hide_close_button }) {
   const ModalState = useSelector((state) => state.Modal);
   const dispatch = useDispatch();
   const handleModalClose = () => {
+    document.body.classList.remove('modal-open');
     dispatch({
       type: Modal_Closed,
     });
@@ -38,10 +40,12 @@ function Modal({ children, hide_close_button }) {
 
   return ReactDOM.createPortal(
     <>
-      <div style={ModalOverLay} className="z-40">
-        <div style={ModalClass} className="p-5 rounded-xl z-50">
+      <div style={ModalOverLay} className="modal-open z-40 connect-wallet-card">
+        <div  className="p-5 rounded-xl z-50 connect-wallet modal-open">
+        {/* style={ModalClass} */}
           {!hide_close_button && (
-            <div>
+            <div className="">
+              {/* <h1 class="second-header-text market-font float-left mx-2 md:mx-0 ">Connect to Wallet</h1> */}
               <button
                 onClick={() => handleModalClose()}
                 className="relative bottom-0 p-1 float-right"
@@ -51,7 +55,7 @@ function Modal({ children, hide_close_button }) {
             </div>
           )}
           <div className="text-center clear-both p-2">{children}</div>
-          <hr />
+          {/* <hr /> */}
           <br></br>
         </div>
       </div>

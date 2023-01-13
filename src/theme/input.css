@@ -182,10 +182,10 @@
 
 
 .card-details {
-  width: 335px;
+  /* width: 335px; */
   /* background-color: #f2c746; */
   background-image: linear-gradient(rgb(14 12 12),rgb(38 36 36 / 80%));
-  margin-right: 21px;
+  /* margin-right: 21px; */
   border-radius: 7px;
   height: auto;
   padding: 25px;
@@ -213,6 +213,15 @@ left: 25%;
 /* background-color: rgb(255, 255, 255); */
 background: linear-gradient(to bottom, #4e48cf 6.93%, #1d4fb2 52.34%);
 border-radius:20px;
+}
+
+body.modal-open {
+  bottom: 0;
+  left: 0;
+  position: fixed !important;
+  right: 0;
+  top: 0;
+  overflow: hidden !important;
 }
 
 

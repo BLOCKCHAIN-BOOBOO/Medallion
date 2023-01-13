@@ -100,10 +100,10 @@ const MedalianPay = ({ setShowModal, handleModalClose, medid }) => {
   return (
     <div className="medallion-pay-card medallion-pay-card-height p-4">
       <div className="title flex flex-row justify-between">
-        <div className="text-md text-white self-start"> Medallion Pay</div>
+        <div className="medallion-header-text text-white self-center mx-auto"> Medallion Pay</div>
         <div
           onClick={close}
-          className="justify-end p-2 text-sm"
+          className="justify-end p-2 text-sm text-white"
         >
           <i className="fa fa-close"></i>
         </div>
@@ -119,8 +119,10 @@ const MedalianPay = ({ setShowModal, handleModalClose, medid }) => {
           <ReactLoading type="bars" color="#fff" />
         ) : (
           <> */}
+          <div className="flex mx-auto">
         {records ? (
           records.map((rec, index) => {
+            console.log(rec)
             return (
               <div
                 key={index}
@@ -164,8 +166,51 @@ const MedalianPay = ({ setShowModal, handleModalClose, medid }) => {
             );
           })
         ) : (
-          <div className="text-white text-bold">NO CARD DETAILS</div>
+          // <div className="text-white text-bold">NO CARD DETAILS</div>
+          <div className="flex flex-col mx-auto">
+          <div
+          className="card-details text-white cursor-pointer my-5"
+        >
+          
+          <div className="text-left">
+            <div><img src={visa} alt="visa" style={{ height: "30px" , width:"100px"}} /></div>
+            <div className="flex flex-row justify-between">
+                   <div className="mt-2">
+                     <img src={cardchip} alt="cardchip" style={{ height: "30px" , width:"40px"}} />
+                   </div>
+                   <div className="text-sm mt-2">
+                     <span className="card-no-size font-medium">xxxx-xxxx-xxxx-7890</span>
+                   </div>
+                 </div>               
+                <div className="mt-2 text-left">
+                  <span className="text-sm font-normal self-start text-left">VENU KRISH</span>
+                </div>
+            </div>
+            </div>
+
+
+<div
+className="card-details text-white cursor-pointer my-5"
+>
+
+<div className="text-left">
+  <div> <img src={visa} alt="visa" style={{ height: "30px" , width:"100px"}} /></div>
+  <div className="flex flex-row justify-between">
+         <div className="mt-2">
+           <img src={cardchip} alt="cardchip" style={{ height: "30px" , width:"40px"}} />
+         </div>
+         <div className="text-sm mt-2">
+           <span className="card-no-size font-medium">xxxx-xxxx-xxxx-7890</span>
+         </div>
+       </div>               
+      <div className="mt-2 text-left">
+        <span className="text-sm font-normal self-start text-left">VENU KRISH</span>
+      </div>
+  </div>
+  </div>
+  </div>
         )}
+        </div>
         {/* </>
         )} */}
       </div>
