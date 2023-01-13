@@ -42,6 +42,7 @@ function MainPage() {
   };
 
   useEffect(() => {
+     document.body.classList.remove('modal-open');
     HandleCollection(Token);
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
   }, [Token],[]);
