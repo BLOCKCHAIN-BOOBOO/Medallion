@@ -1,7 +1,11 @@
 const HandleError = (result) => {
   console.log(result);
   let { ShowContent, ResultType, Message } = "";
-  if ( result.status?result.status:result.data.status === 200 && result.data.code === "success") {
+  if (
+    result.status
+      ? result.status
+      : result.data.status === 200 && result.data.code === "success"
+  ) {
     Message = result.data.message ? result.data.message : result.message;
     ShowContent = false;
     ResultType = "success";
