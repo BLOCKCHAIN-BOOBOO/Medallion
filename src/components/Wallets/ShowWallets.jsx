@@ -60,6 +60,8 @@ function ShowWallets({ medallion_id }) {
       if (CurrentWallet && CurrentWallet.user_account) {
         const update_form = toast.loading("Processing");
         try {
+     
+          
           const PruchaseResponse = await Purchase(
             Token,
             medallion_id,
@@ -75,7 +77,6 @@ function ShowWallets({ medallion_id }) {
           });
           navigate("/collection/"+ medallion_id);
         } catch (error) {
-          console.log(error.message)
           toast.update(update_form, {
             render: error.message.slice(0,50),
             type: "error",

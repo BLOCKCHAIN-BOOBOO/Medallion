@@ -48,10 +48,12 @@ const [display,setDisplay]=useState();
   const handleBuy = async (medallion_id) => {
     if (Token && ValidateToken()) {
       if (userinfo.address === null || userinfo.address === "") {
+
         toast.error("error");
 
         navigate("/user-dashboard/wallet ");
       } else {
+
         SetModalTitle("Connect to Wallet");
         SetModalBody(<ShowWallets medallion_id={medallion_id} />);
 

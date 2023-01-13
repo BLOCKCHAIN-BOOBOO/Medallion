@@ -1,4 +1,9 @@
-import { BASE_URL, GET_SINGLE_NFT_BY_MEDALLIONID, CLAIM_FUND } from "../../api";
+import {
+  BASE_URL,
+  GET_SINGLE_NFT_BY_MEDALLIONID,
+  CLAIM_FUND,
+  GET_MARKET_PLACE_SINGLE_NFT_BY_MEDALLIONID,
+} from "../../api";
 
 import GetFunction from "../common/GetFunction";
 import HandleError from "../common/HandleError";
@@ -32,6 +37,7 @@ export const Purchase = async (
     // );
 
     //Metamask Wallet Balance
+
     const UserWalletBalance = await Meta_WalletBalance(
       ValidatedResponse.chain_type
     );
@@ -71,19 +77,24 @@ export const Purchase = async (
 //Medallion Price Validation
 const ValidateMedallionPrice = async (Token, MedallionId) => {
   try {
+
     const usdtoeth = await DollarsToETH();
     const GET_SINGLE_NFT_API =
-      BASE_URL + GET_SINGLE_NFT_BY_MEDALLIONID + MedallionId;
+      BASE_URL + GET_MARKET_PLACE_SINGLE_NFT_BY_MEDALLIONID + MedallionId;
     const { result, RequestResolved } = await GetFunction(
       GET_SINGLE_NFT_API,
       Token
     );
+
+
     if (RequestResolved) {
       const { ResultType, Message } = HandleError(result);
       if (ResultType === "success") {
         if (result.data.data.records) {
           const medallion_data = { ...result.data.data.records };
-          const medallion_price = (medallion_data[0].price * usdtoeth).toFixed(8);
+          const medallion_price = (medallion_data[0].price * usdtoeth).toFixed(
+            8
+          );
           const chain_type = medallion_data[0].currency;
           const data = {
             chain_type: chain_type,
