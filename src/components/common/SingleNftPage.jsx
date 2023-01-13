@@ -46,7 +46,7 @@ const [display,setDisplay]=useState();
 
   //Handle Buy Medallion
   const handleBuy = async (medallion_id) => {
-    document.body.classList.add('modal-open');
+    // document.body.classList.add('modal-open');
     if (Token && ValidateToken()) {
       if (userinfo.address === null || userinfo.address === "") {
 
