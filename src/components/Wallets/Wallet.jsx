@@ -195,7 +195,7 @@ var ethball=1212.23234234.toFixed(3);
             style={{ "overflowWrap": "break-word", "wordBreak": "break-all" }}
           >
             {/* Account : {CurrentWallet && CurrentWallet.user_account} */}
-            Account : {CurrentWallet.user_account.replace(CurrentWallet && CurrentWallet.user_account.substring(7,20), "*****")}
+            Account : {CurrentWallet.user_account.replace(CurrentWallet && CurrentWallet.user_account.substring(7,32), "*****")}
           </p>
           {/* <p className="text-white">
             Account : {CurrentWallet && CurrentWallet.user_account.substring(0, 7)}....

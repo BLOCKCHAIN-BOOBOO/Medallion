@@ -68,9 +68,9 @@ function UpdatePassword() {
                   onChange={(e) => SetCurrentPassword(e.target.value)}
                 />
                 {currentshowconfirm ? (
-                <i className="fa fa-eye float-right -mt-6 mr-2 cursor-pointer"  onClick={(e) => setcurrentshowconfirm(false)}></i>
+                <i className="fa fa-eye float-right -mt-8 mr-2 cursor-pointer"  onClick={(e) => setcurrentshowconfirm(false)}></i>
               ) : (
-                <i className="fa fa-eye-slash float-right -mt-6 mr-2 cursor-pointer"  onClick={(e) => setcurrentshowconfirm(true)}></i>
+                <i className="fa fa-eye-slash float-right -mt-8 mr-2 cursor-pointer"  onClick={(e) => setcurrentshowconfirm(true)}></i>
               )}
 
               </label>
@@ -86,9 +86,9 @@ function UpdatePassword() {
                   onChange={(e) => SetNewPassword(e.target.value)}
                 />
                 {newshowconfirm ? (
-                <i className="fa fa-eye float-right -mt-6 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(false)}></i>
+                <i className="fa fa-eye float-right -mt-8 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(false)}></i>
               ) : (
-                <i className="fa fa-eye-slash float-right -mt-6 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(true)}></i>
+                <i className="fa fa-eye-slash float-right -mt-8 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(true)}></i>
               )}
 
               </label>

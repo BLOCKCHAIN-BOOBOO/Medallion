@@ -100,9 +100,9 @@ function SigninForm() {
               {...register("password", { required: true })}
             />
 {showconfirm ? (
-                <i className="fa fa-eye float-right -mt-6 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(false)}></i>
+                <i className="fa fa-eye float-right -mt-8 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(false)}></i>
               ) : (
-                <i className="fa fa-eye-slash float-right -mt-9 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(true)}></i>
+                <i className="fa fa-eye-slash float-right -mt-8 mr-2 cursor-pointer"  onClick={(e) => setshowconfirm(true)}></i>
               )}
 
 
