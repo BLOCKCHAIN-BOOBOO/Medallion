@@ -257,7 +257,7 @@ const SignOut = async () => {
                onClick={e=>mobileMenutoggle(e)}
               to="/create-user-account"
               // btn-sign
-              className="text-white rounded-3xl duration-500 signup-btn mr-4 md:mr-0 px-3 py-2"
+              className="text-white rounded-3xl duration-500 signup-btn mr-4 md:mr-0 px-3 py-1"
             >
               SIGN UP
             </Link>
@@ -346,7 +346,7 @@ const SignOut = async () => {
               onClick={ showDropdown}
               to="/create-user-account"
               // btn-sign
-              className="text-white rounded-3xl duration-500 signup-btn mr-4 md:mr-0 px-3 py-2"
+              className="text-white rounded-3xl duration-500 signup-btn mr-4 md:mr-0 px-3 py-1"
             >
               SIGN UP
             </Link>
@@ -367,7 +367,7 @@ const SignOut = async () => {
               <Link
                 to="/create-user-account"
                 // btn-sign
-                className="text-white rounded-3xl  signup-btn mr-4 md:mr-0 px-3 py-2"
+                className="text-white rounded-3xl  signup-btn mr-4 md:mr-0 px-3 py-1"
               >
                 SIGN UP
               </Link>

@@ -17,6 +17,8 @@ function SignupForm() {
   const [LastName, SetLastName] = useState("");
   const [Email, SetEmail] = useState("");
   const navigate = useNavigate();
+  const [disabled,setdisabled] =useState(true)
+  const [psw,setpsw]=useState("")
 
   const {
     register,
@@ -120,6 +122,7 @@ function SignupForm() {
                   message: "Min length is 6",
                 },
               })}
+              onChange={e=>{setpsw(e.target.value)}}
             />
             {errors.password?.type === "minLength" && (
               <span className="wrong-text">
@@ -146,8 +149,8 @@ function SignupForm() {
 
           <div className="mb-5 mt-5 self-center text-center">
             <button 
-             className={Loading ? "active-button" : "inactive-button"}
-               disabled={Loading ? true : false} >
+             className={  FirstName&& LastName&&Email&&psw ? "active-button" : "inactive-button" }
+               disabled={FirstName&& LastName&&Email&&psw ? false : true} >
               
               SIGN UP
             </button>
