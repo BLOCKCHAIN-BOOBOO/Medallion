@@ -42,7 +42,7 @@
   min-height: 80vh; */
 }
 .market-section-color {
-  min-height: 80vh;
+  /* min-height: 80vh; */
   background: #0167d6;
   /*background: linear-gradient(to bottom, #4e48cf 6.93%, #0167d6 52.34%);*/
 }
@@ -215,14 +215,14 @@ background: linear-gradient(to bottom, #4e48cf 6.93%, #1d4fb2 52.34%);
 border-radius:20px;
 }
 
-body.modal-open {
+/* body.modal-open {
   bottom: 0;
   left: 0;
   position: fixed !important;
   right: 0;
   top: 0;
   overflow: hidden !important;
-}
+} */
 
 
 #activity-modal {

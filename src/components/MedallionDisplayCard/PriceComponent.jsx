@@ -17,7 +17,7 @@ function PriceComponent({ medallion_price }) {
   });
   return (
     <div className="mt-2 mb-2">
-      <p className="font-bold self-center text-center text-truncate">
+      <p className="font-bold self-center text-center text-truncate h-12">
         USD {medallion_price} ( ETH {price} )
       </p>
     </div>

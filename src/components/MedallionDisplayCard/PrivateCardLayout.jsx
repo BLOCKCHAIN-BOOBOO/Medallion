@@ -49,7 +49,7 @@ function PrivateCardLayout({ medallion }) {
         <PriceComponent medallion_price={medallion.price} />
       )}
       <div className="text-center">
-        <div className={medallion.status === "on_sale" ? "mt-0 pb-4" : "mt-7 mx-auto justify-center flex pb-4"}>
+        <div className={medallion.status === "on_sale" ? "mt-0 pb-4" : "mt-14 mx-auto justify-center flex pb-4"}>
           {medallion.claimed ? (
             <ViewComponent
               ViewUrl="/collection/"

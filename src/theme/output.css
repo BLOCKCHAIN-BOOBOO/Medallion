@@ -798,6 +798,10 @@ video {
 .mt-10 {
   margin-top: 2.5rem;
 }
+.mt-14	{
+  margin-top: 3.5rem;
+}
+.mt-16{	margin-top: 4rem;}
 .mt-32{
   	margin-top: 8rem;
 }
@@ -1407,7 +1411,7 @@ video {
   opacity: 0;
 }
 
-
+.h-12	{height: 3rem;}
 .h-80 {
   height: 20rem;
 }
@@ -1581,6 +1585,7 @@ border-radius: 4px;
 .market-section-color {
   /* min-height: 80vh; */
   min-height: 100vh;
+  overflow-y: auto;
   /* background: #0167d6; */
   /* background:#F5F5F5; */
   background:#F2EFED;
@@ -2534,8 +2539,8 @@ text-transform: uppercase;
 }
 
 .text-truncate {
-  white-space: nowrap;
-  overflow: hidden;
+  /* white-space: nowrap;
+  overflow: hidden; */
   text-overflow: ellipsis;
 }
 .text-display-short{
