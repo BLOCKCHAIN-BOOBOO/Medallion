@@ -2682,8 +2682,42 @@ text-transform: uppercase;
 color: #6C6C78;
 }
 
+.list-inactive-button{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 16px;
+background: #CDD1D5;
+border-radius: 4px;
+width:100%;
 
+
+/* font-family: 'Red Hat Display'; */
+font-family:'system-ui';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #6C6C78;
+}
+
+.list-inactive-button:hover{
+
+  padding: 8px 16px;
+  background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+  border:2px solid;
+  display: flex;
+  border-radius: 4px;
+  letter-spacing:0.09em;
+text-transform: uppercase;
+color: #fff;
+border:2px solid;
+  }
 .active-button{
+  
   display: flex;
 flex-direction: row;
 justify-content: center;
@@ -2705,7 +2739,7 @@ line-height: 24px;
 letter-spacing:0.09em;
 text-transform: uppercase;
 color: #fff;
-border:2px solid;
+border:2px solid #003595;
 }
 
 .active-button:hover{
