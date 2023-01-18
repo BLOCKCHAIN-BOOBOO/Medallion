@@ -109,7 +109,10 @@ const [display,setDisplay]=useState();
       SetLoading(false);
     }
   };
-
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
+  
   useEffect(() => {
     HandleMedallionData();
     HandleGetUserInfo(Token);

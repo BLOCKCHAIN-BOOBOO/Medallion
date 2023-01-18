@@ -84,7 +84,7 @@ else{
           Note: Transfer of Medallion is Irreversible
         </p>
         <div className="inline-block mx-auto">
-        <button className="inactive-button px-10 py-2 my-3">
+        <button className="list-inactive-button px-10 py-2 my-3">
           Transfer
         </button>
         </div>

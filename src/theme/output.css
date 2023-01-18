@@ -798,6 +798,10 @@ video {
 .mt-10 {
   margin-top: 2.5rem;
 }
+.mt-14	{
+  margin-top: 3.5rem;
+}
+.mt-16{	margin-top: 4rem;}
 .mt-32{
   	margin-top: 8rem;
 }
@@ -1407,7 +1411,7 @@ video {
   opacity: 0;
 }
 
-
+.h-12	{height: 3rem;}
 .h-80 {
   height: 20rem;
 }
@@ -1581,6 +1585,7 @@ border-radius: 4px;
 .market-section-color {
   /* min-height: 80vh; */
   min-height: 100vh;
+  overflow-y: auto;
   /* background: #0167d6; */
   /* background:#F5F5F5; */
   background:#F2EFED;
@@ -2534,8 +2539,8 @@ text-transform: uppercase;
 }
 
 .text-truncate {
-  white-space: nowrap;
-  overflow: hidden;
+  /* white-space: nowrap;
+  overflow: hidden; */
   text-overflow: ellipsis;
 }
 .text-display-short{
@@ -2682,8 +2687,42 @@ text-transform: uppercase;
 color: #6C6C78;
 }
 
+.list-inactive-button{
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: flex-start;
+padding: 16px;
+background: #CDD1D5;
+border-radius: 4px;
+width:100%;
 
+
+/* font-family: 'Red Hat Display'; */
+font-family:'system-ui';
+font-style: normal;
+font-weight: 700;
+font-size: 16px;
+line-height: 24px;
+letter-spacing: 0.09em;
+text-transform: uppercase;
+color: #6C6C78;
+}
+
+.list-inactive-button:hover{
+
+  padding: 8px 16px;
+  background: linear-gradient(180deg, #1A5AD7 0%, #003595 71.87%);
+  border:2px solid;
+  display: flex;
+  border-radius: 4px;
+  letter-spacing:0.09em;
+text-transform: uppercase;
+color: #fff;
+border:2px solid;
+  }
 .active-button{
+  
   display: flex;
 flex-direction: row;
 justify-content: center;
@@ -2705,7 +2744,7 @@ line-height: 24px;
 letter-spacing:0.09em;
 text-transform: uppercase;
 color: #fff;
-border:2px solid;
+border:2px solid #003595;
 }
 
 .active-button:hover{

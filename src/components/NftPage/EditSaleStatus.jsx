@@ -132,7 +132,7 @@ function EditSaleStatus(props) {
           </div>
         )}
  <div className=" mx-auto inline-block">
-        <button className="inactive-button px-10 py-2 my-3">
+        <button className="list-inactive-button px-10 py-2 my-3">
           Update
         </button>
         </div>
