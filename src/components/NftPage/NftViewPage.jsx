@@ -29,7 +29,6 @@ const [display,setDisplay]=useState();
     return MemberShipObject[ELITE_STATUS];
   };
 const displayCard=(type)=>{
-  console.log("Calling")
   setDisplay(type);
 }
   const HandleMedallionData = async () => {
@@ -250,7 +249,7 @@ const displayCard=(type)=>{
                       <EditSaleStatus
                         MedallionID={SingleRecord.medallion_ID}
                         sale_status={SingleRecord.status}
-                        price={SingleRecord.price/10000000000000000}
+                        price={SingleRecord.price}
                         currency={SingleRecord.currency}
                         HandleMedallionData={() => HandleMedallionData()}
                       />

@@ -18,7 +18,7 @@ function PriceComponent({ medallion_price }) {
   return (
     <div className="mt-2 mb-2">
       <p className="font-bold self-center text-center text-truncate h-12">
-        USD {medallion_price} ( ETH {price} )
+        USD {medallion_price.toString().slice(0, 8) } ( ETH {price&&price.toString().slice(0, 8)} )
       </p>
     </div>
   );
