@@ -58,7 +58,7 @@ function ShowWallets({ medallion_id }) {
     handleModalClose();
     try {
       if (CurrentWallet && CurrentWallet.user_account) {
-        const update_form = toast.loading("Processing");
+        const update_form = "";
         try {
      
           
@@ -85,7 +85,7 @@ function ShowWallets({ medallion_id }) {
           });
         }
       } else {
-        const update_form = toast.loading("Connecting wallet");
+        const update_form = "";
         const account = await MetaMaskUserAccount();
         const connected_chainid = await ConnectedChainId();
         if (account) {
