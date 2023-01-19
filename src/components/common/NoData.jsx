@@ -14,7 +14,7 @@ function NoData() {
         </p>
         <div className="text-center mt-4 full-width">
           <NavLink
-            to="/user-dashboard"
+            to="/user-dashboard/update-profile"
             className="rounded-3xl text-xs active-button md:mr-0 px-8 py-2 font-bold"
           >
             {/* btn-sign */}
