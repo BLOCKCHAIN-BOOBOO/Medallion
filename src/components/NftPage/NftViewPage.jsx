@@ -178,11 +178,11 @@ const displayCard=(type)=>{
                       </a>
                     </Tab>
                  
-                    <Tab className="xl:px-4 md:px-2 sm:px-1 px-1 cursor-pointer">
+                  {SingleRecord.claimed &&  <Tab className="xl:px-4 md:px-2 sm:px-1 px-1 cursor-pointer">
                       <a className="m-2 md:mr-0 sub-tabs-text" onClick={e=>displayCard("")}>
                         Medallion Activity
                       </a>
-                    </Tab>
+                    </Tab>}
                   </TabList>
                   {/* <TabPanel></TabPanel> */}
   <TabPanel className="xl:px-10 md:px-0 sm:px-10 px-8">
