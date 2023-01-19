@@ -180,7 +180,7 @@ function ShowWallets({ medallion_id }) {
   };
 
   const medallionPayConnect = () => {
-    // document.body.classList.add('modal-open');
+    document.body.classList.add('modal-open');
     setShowModal(true);
   };
 

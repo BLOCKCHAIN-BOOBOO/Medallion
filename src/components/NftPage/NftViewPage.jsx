@@ -106,9 +106,9 @@ const displayCard=(type)=>{
                 {/* flex flex-row xl:flex xl:flex-row xl:justify-between */}
          <div className="mx-auto ">
          {/* flex */}
-            <div className=" mx-auto  p-6 md:p-8 text-left">
+            <div className=" mx-auto  xl:p-6 md:p-8 sm:p-0 p-0 text-left">
             {/* buy-card-width xl:w-2/5 md:w-4/5 sm:w-full w-full p-6 md:p-8 text-left  w-5/6  */}
-                <div className="desktop-login-card mx-auto p-6 md:p-8 text-left h-auto ">
+                <div className="desktop-login-card mx-auto xl:p-6 md:p-8 sm:p-0 p-0 text-left h-auto ">
                   <div className="mobile-login-card">
                 {/* xl:w-3/4 md:w-full sm:w-full w-full */}
                 {/* buy-card  */}
@@ -185,7 +185,7 @@ const displayCard=(type)=>{
                     </Tab>}
                   </TabList>
                   {/* <TabPanel></TabPanel> */}
-  <TabPanel className="xl:px-10 md:px-0 sm:px-10 px-8">
+  <TabPanel className="xl:px-10 md:px-0 sm:px-0 px-0">
 <div className="">
   <div className="py-2">
 <span className="dashboard-tab-header">Description</span>

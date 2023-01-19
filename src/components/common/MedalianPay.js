@@ -52,6 +52,7 @@ const MedalianPay = ({ setShowModal, handleModalClose, medid }) => {
   };
 
   const close = () => {
+    document.body.classList.remove('modal-open');
     setShowModal(false);
     handleModalClose();
   };
