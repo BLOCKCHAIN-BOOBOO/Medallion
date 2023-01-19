@@ -1654,12 +1654,12 @@ border-radius: 4px;
 /* font-family: 'Red Hat Display'; */
 font-family:system-ui;
 font-style: normal;
-font-weight: 700;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0.025em;
-text-decoration-line: underline;
-color: #003595;
+font-weight: 700 !important;
+font-size: 16px !important;
+line-height: 24px !important;
+letter-spacing: 0.025em !important;
+text-decoration-line: underline !important;
+color: #003595 !important;
 }
 
 .navbar-option-text{

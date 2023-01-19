@@ -228,8 +228,8 @@ const SignOut = async () => {
           // onClick={e=>mobileMenutoggle(e)}
         
            className={`navbar-option-text text-xs sm:text-sm md:text-md xl:text-lg list-style-none md:mx-2 xl:mx-4 sm:mx-2 mx-2 py-2 my-2" 
-            ${dashboardurl === "/user-dashboard/update-user-password" &&" active"} ${dashboardurl==="/user-dashboard/wallet" &&" active"} ${dashboardurl==="/user-dashboard" &&" active"} ${dashboardurl==="/user-dashboard/update-user-password" &&" active"}`}>
-            <NavLink to="/user-dashboard">
+           ${dashboardurl === "/user-dashboard/update-profile" &&" active"}  ${dashboardurl === "/user-dashboard/update-user-password" &&" active"} ${dashboardurl==="/user-dashboard/wallet" &&" active"} ${dashboardurl==="/user-dashboard" &&" active"} ${dashboardurl==="/user-dashboard/update-user-password" &&" active"}`}>
+            <NavLink to="/user-dashboard/update-profile">
             {/* /update-profile */}
             DASHBOARD </NavLink>
             {/* <Link
