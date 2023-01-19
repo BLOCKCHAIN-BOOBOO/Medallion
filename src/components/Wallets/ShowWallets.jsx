@@ -58,10 +58,8 @@ function ShowWallets({ medallion_id }) {
     handleModalClose();
     try {
       if (CurrentWallet && CurrentWallet.user_account) {
-        const update_form = "";
+        const update_form = toast.loading("Processing...",{autoClose:true});
         try {
-     
-          
           const PruchaseResponse = await Purchase(
             Token,
             medallion_id,
@@ -85,7 +83,7 @@ function ShowWallets({ medallion_id }) {
           });
         }
       } else {
-        const update_form = "";
+        const update_form =  toast.loading("Processing...", { autoClose: true });
         const account = await MetaMaskUserAccount();
         const connected_chainid = await ConnectedChainId();
         if (account) {
@@ -96,11 +94,11 @@ function ShowWallets({ medallion_id }) {
         }
 
         try {
-          toast.update(update_form, {
-            render: "Processing ",
-            type: "success",
-            isLoading: true,
-          });
+          // toast.update(update_form, {
+          //   render: "Processing ",
+          //   type: "success",
+          //   isLoading: true,
+          // });
           const PruchaseResponse = await Purchase(
             Token,
             medallion_id,
@@ -108,6 +106,12 @@ function ShowWallets({ medallion_id }) {
             CurrentWallet.chainId,
             "MetaMask"
           );
+           toast.update(update_form, {
+            render: "Purchased",
+            type: "success",
+            isLoading: false,
+            autoClose: true,
+          });
           navigate("/collection/"+ medallion_id);
         } catch (error) {
           toast.update(update_form, {
