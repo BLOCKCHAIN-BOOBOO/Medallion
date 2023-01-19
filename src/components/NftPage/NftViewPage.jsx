@@ -44,6 +44,7 @@ const displayCard=(type)=>{
     } finally {
       SetLoading(false);
     }
+  
   };
   useEffect(() => {
     window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
@@ -54,6 +55,9 @@ const displayCard=(type)=>{
   }, []);
 
 
+  // useEffect(() => {
+  //   window.scrollTo({bottom: 0, left: 0, behavior: 'smooth'});
+  // }, []);
 
   const handleMedallionActivity = async (Medallion_Id, Token) => {
     try {
