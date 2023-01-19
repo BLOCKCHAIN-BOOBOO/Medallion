@@ -147,13 +147,13 @@ const displayCard=(type)=>{
                     {/* <Tab className="m-2"> */}
                       <button className=" m-1  md:mr-0 list-button self-center" onClick={e=>displayCard("list marketplace")}>
                      <span className="display-text">List</span> 
-                     <span className="display-button-text" onClick={scrollToBottom}> List On MarketPlace</span> 
+                     <span className="display-button-text" onClick={scrollToBottom()}> List On MarketPlace</span> 
                       </button>
                     {/* </Tab>  
                     <Tab className="m-2"> */}
                       <button className=" m-1  md:mr-0 active-button" onClick={e=>displayCard("Gift Medallion")}>
                       <span className="display-text">Send Gift</span>  
-                      <span className="display-button-text"  onClick={scrollToBottom}>  Gift Medallion</span>
+                      <span className="display-button-text"  onClick={scrollToBottom()}>  Gift Medallion</span>
                       </button>
                       </div>
                       :<ClaimComponent
@@ -162,7 +162,6 @@ const displayCard=(type)=>{
             />
                     }
                     
-
                     {/* </Tab> */}
                     {/* <Tab>
                    
