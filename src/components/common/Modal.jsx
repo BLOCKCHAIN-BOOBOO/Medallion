@@ -28,7 +28,7 @@ function Modal({ children, hide_close_button }) {
   const ModalState = useSelector((state) => state.Modal);
   const dispatch = useDispatch();
   const handleModalClose = () => {
-    document.body.classList.remove('modal-open');
+    // document.body.classList.remove('modal-open');
     dispatch({
       type: Modal_Closed,
     });

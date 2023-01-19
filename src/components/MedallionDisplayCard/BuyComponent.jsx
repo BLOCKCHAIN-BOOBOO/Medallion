@@ -64,7 +64,7 @@ function BuyComponent({ MedallionId }) {
   }, [Token]);
 
   return (
-    <div>
+    <div className="modal-open">
       {ModalTitle && ModalBody && (
         <Modal hide_close_button={HideCloseOption && HideCloseOption}>
           <div>

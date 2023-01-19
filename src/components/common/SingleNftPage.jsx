@@ -46,7 +46,7 @@ const [display,setDisplay]=useState();
 
   //Handle Buy Medallion
   const handleBuy = async (medallion_id) => {
-    // document.body.classList.add('modal-open');
+    document.body.classList.add('modal-open');
     if (Token && ValidateToken()) {
       if (userinfo.address === null || userinfo.address === "") {
 
@@ -210,7 +210,7 @@ const [display,setDisplay]=useState();
                   {/* <TabPanel></TabPanel> */}
 
 
-  <TabPanel className="xl:px-10 md:px-0 sm:px-10 px-8">
+  <TabPanel className="xl:px-10 md:px-0 sm:px-0 px-0">
 <div className="">
   <div className="py-2">
 <span className="dashboard-tab-header">Description</span>

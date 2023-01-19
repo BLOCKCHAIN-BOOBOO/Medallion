@@ -26,7 +26,6 @@ var scroll    = Scroll.animateScroll;
 
 const wrapperRef = useRef(null);
 useOutsideAlerter(wrapperRef);
-
 const showDropdown = () => {
   console.log(isMenuOpen)
   if (isMenuOpen) {
@@ -142,11 +141,18 @@ const SignOut = async () => {
    
    
   //     }
-
+  const ModalOverLay = {
+    position: "fixed",
+    top: "0",
+    left: "0",
+    width: "100%",
+    height: "100%",
+    backgroundColor: "rgba(0,0,0,0.7)",
+  };
 
 
   return (
-    <div>
+    <div >
     <nav className="fixed align w-full z-20 top-0 princess-background sm:h-full h-16 md:h-20 xl:h-20">
     {/* shadow */}
       <div className="container mx-auto relative md:flex md:items-center md:justify-between py-2 md:py-4">
@@ -270,6 +276,7 @@ const SignOut = async () => {
 
 
         {isMenuOpen  && ( 
+          <div style={ModalOverLay} className="modal-open">
            <ul
           className="w-full md:w-auto md:flex-row xl:flex-row sm:flex-row flex-col  md:items-center  bg-white sm:bg-white 
           md:bg-transparent lg:bg-transparent 
@@ -353,7 +360,8 @@ const SignOut = async () => {
             </Link>
           </div>
 }
-        </ul>)}
+        </ul>
+        </div>)}
         <div className="text-1xl mb-0 md:mb-0 invisible md:visible">
           {user.token && ValidateToken() ? (
             <NewDropDown user={user} />
