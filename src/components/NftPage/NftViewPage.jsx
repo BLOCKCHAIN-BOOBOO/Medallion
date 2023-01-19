@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { GetSingleMedallionData } from "../../Utils/Methods";
+import { GetMedallionActivity, GetSingleMedallionData } from "../../Utils/Methods";
 import { ToastContainer, toast } from "react-toastify";
 import { useState, useEffect } from "react";
 import CanvasElement from "../common/CanvasElement";
@@ -14,6 +14,7 @@ import MedallionActivity from "./MedallionActivity";
 import { ViewLessContent, ViewMoreContent } from "../../Utils/Helper";
 import MemberShip from "../../EliteText.json";
 import { NavLink } from "react-router-dom";
+import ClaimComponent from "../MedallionDisplayCard/ClaimComponent";
 
 function NftPage() {
   const { MedallionId } = useParams();
@@ -21,6 +22,7 @@ function NftPage() {
   const [Loading, SetLoading] = useState(false);
   const [SingleRecord, SetSingleRecord] = useState(null);
 const [display,setDisplay]=useState();
+   const [Activitylength, SetActivityLength] = useState(null);
   
   const [ContentControl, SetContentControl] = useState(true);
 
@@ -35,6 +37,7 @@ const displayCard=(type)=>{
     SetLoading(true);
     try {
       const Records = await GetSingleMedallionData(MedallionId, Token,"collectons");
+      console.log(Records)
       Records.length && SetSingleRecord(...Records);
     } catch (error) {
       toast.error(error);
@@ -49,6 +52,23 @@ const displayCard=(type)=>{
   useEffect(() => {
     HandleMedallionData();
   }, []);
+
+
+
+  const handleMedallionActivity = async (Medallion_Id, Token) => {
+    try {
+      const ActivityResponse = await GetMedallionActivity(Medallion_Id, Token);
+      if (ActivityResponse && ActivityResponse.length) {
+        SetActivityLength(ActivityResponse.length);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    handleMedallionActivity(MedallionId, Token);
+  }, [MedallionId, Token]);
 
   return (
     <div>
@@ -114,6 +134,7 @@ const displayCard=(type)=>{
                 <MedallionData SingleRecord={SingleRecord} />
                   {/* <TabList className="flex xl:flex-row md:flex-row sm:flex-col flex-col py-4 self-center text-center justify-center"> */}
                     {/* <Tab></Tab> */}
+                    {SingleRecord.claimed?
                     <div className="flex xl:flex-row md:flex-row sm:flex-row flex-row py-4 self-center text-center justify-center">
                     {/* <Tab className="m-2"> */}
                       <button className=" m-1  md:mr-0 list-button self-center" onClick={e=>displayCard("list marketplace")}>
@@ -127,6 +148,13 @@ const displayCard=(type)=>{
                       <span className="display-button-text">  Gift Medallion</span>
                       </button>
                       </div>
+                      :<ClaimComponent
+              MedallionId={SingleRecord.medallion_ID}
+              Activitylength={Activitylength}
+            />
+                    }
+                    
+
                     {/* </Tab> */}
                     {/* <Tab>
                    
