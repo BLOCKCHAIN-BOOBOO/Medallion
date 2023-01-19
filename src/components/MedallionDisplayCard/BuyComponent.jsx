@@ -22,7 +22,7 @@ function BuyComponent({ MedallionId }) {
 
   //Handle Buy Medallion
   const handleBuy = async (medallion_id) => {
-    // document.body.classList.add('modal-open');
+    document.body.classList.add('modal-open');
     if (Token && ValidateToken()) {
       if (userinfo.address === null || userinfo.address === "") {
         toast.error("error");
@@ -64,7 +64,7 @@ function BuyComponent({ MedallionId }) {
   }, [Token]);
 
   return (
-    <div className="modal-open">
+    <div>
       {ModalTitle && ModalBody && (
         <Modal hide_close_button={HideCloseOption && HideCloseOption}>
           <div>

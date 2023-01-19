@@ -29,15 +29,20 @@ useOutsideAlerter(wrapperRef);
 const showDropdown = () => {
   console.log(isMenuOpen)
   if (isMenuOpen) {
-    setIsMenuOpen(false);
+     document.body.classList.remove('modal-open');
+    setIsMenuOpen(false);    
     console.log("if")
+   
   }
-else if(!isMenuOpen) {
+else if(!isMenuOpen) {   
+  document.body.classList.add('modal-open');
     setIsMenuOpen(true);
     console.log("else if")
-
+  
   }
   else{
+    
+  document.body.classList.add('modal-open');
     console.log("else ")
     
   }
@@ -51,6 +56,8 @@ else if(!isMenuOpen) {
 
 function useOutsideAlerter(ref) {
   function handleClickOutside(event) {
+    
+  document.body.classList.remove('modal-open');
     if (ref.current && !ref.current.contains(event.target)) {
       setIsMenuOpen(false);
     }

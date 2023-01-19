@@ -185,7 +185,7 @@ function ShowWallets({ medallion_id }) {
   };
 
   const handleModalClose = () => {
-    // document.body.classList.remove('modal-open');
+    document.body.classList.remove('modal-open');
     dispatch({
       type: Modal_Closed,
     });

@@ -80,6 +80,7 @@ const [display,setDisplay]=useState();
 
   //Close Modal
   const handleModalClose = () => {
+    document.body.classList.remove('modal-open');
     dispatch({
       type: Modal_Closed,
     });
