@@ -1125,6 +1125,9 @@ video {
 .bg-transparent {
   background-color: transparent;
 }
+.bg-slate-300	{
+  background-color: rgb(203 213 225);
+}
 
 .bg-indigo-800 {
   --tw-bg-opacity: 1;
@@ -1169,7 +1172,9 @@ video {
 .p-6 {
   padding: 1.5rem;
 }
-
+.p-16{
+  	padding: 4rem;
+}
 .p-1 {
   padding: 0.25rem;
 }
@@ -3304,8 +3309,10 @@ Height:157.5px;
 Left:-0.5px; */
 }
 .medallion-second-card div{
-  padding:30px;
+  /* padding:30px; */
+  padding:3.75rem 3rem;
 }
+
 .medallion-name-text{
 /* font-family: 'Red Hat Display'; */
 font-family:'system-ui';

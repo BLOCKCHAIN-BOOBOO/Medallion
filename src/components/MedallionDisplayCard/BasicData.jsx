@@ -15,12 +15,14 @@ function BasicData(props) {
         //   medallion_elite_status={props.medallion.elite_status}
         //   element_size="extrasmall"
         // />
-        <div className="rounded-full bg-white w-full" 
+       <div className="" style={{padding:"30px"}}>
+        <div className="rounded-full bg-slate-300 w-full" 
          medallion_name={props.medallion.name}  medallion_elite_status={props.medallion.elite_status}>
 
-        <div className="rounded-full self-center text-center h-3/4 bg-yellow-400">
+        <div className="rounded-full self-center text-center h-full bg-yellow-400">
         <img src={Logo} alt="Princess" className="mx-auto self-center"></img>
         </div>
+        </div> 
         </div>
       )}
       </div>
