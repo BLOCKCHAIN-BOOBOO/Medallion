@@ -1,19 +1,27 @@
 // import { ChangeSaleText } from "../../Utils/Helper";
 import CanvasElement from "../common/CanvasElement";
+import Logo from "./../../theme/images/Logo.png";
 
 function BasicData(props) {
   return (
     <>
     <div className="self-center medallion-card-background text-center">
-       <div className="medallion-second-card">
+       <div className="medallion-second-card p-5">
        <h3 className="medallion-name-text pt-4 mb-1">{props.medallion.name}</h3>
       
       {props.medallion.name && (
-        <CanvasElement className="border-4 rounded-full"
-          medallion_name={props.medallion.name}
-          medallion_elite_status={props.medallion.elite_status}
-          element_size="extrasmall"
-        />
+        // <CanvasElement className="border-4 rounded-full"
+        //   medallion_name={props.medallion.name}
+        //   medallion_elite_status={props.medallion.elite_status}
+        //   element_size="extrasmall"
+        // />
+        <div className="rounded-full bg-white w-full" 
+         medallion_name={props.medallion.name}  medallion_elite_status={props.medallion.elite_status}>
+
+        <div className="rounded-full self-center text-center h-3/4 bg-yellow-400">
+        <img src={Logo} alt="Princess" className="mx-auto self-center"></img>
+        </div>
+        </div>
       )}
       </div>
       </div>
