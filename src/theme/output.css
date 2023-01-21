@@ -3913,3 +3913,18 @@ path {
 text {
   fill: #000;
 }
+
+.text-alignment{
+  transform-origin: bottom;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* height: 300px; */
+    height:260px;
+    width: 100%;
+    text-align: center;
+    left: 50;
+    top: 50;
+
+    position: absolute;
+    margin-top: -85px;
+    margin-left: -75px;
+}

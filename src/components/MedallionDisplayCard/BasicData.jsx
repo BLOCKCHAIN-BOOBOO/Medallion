@@ -22,12 +22,14 @@ function BasicData(props) {
           
          
 
-          <svg viewBox="-5 0 130 130">
+          <svg viewBox="-5 0 130 130" className="text-alignment" style={{width:"100%"}}>
   <path id="MyPath" fill="none" stroke="lightblue"
-        d="m10,45c53,-33 96,3 96,3" />
+        d="m10,45c53,-38 96,18 60,3" />
         {/* <path id="MyPath" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" /> */}
 
-<text><textPath href="#MyPath">{props.medallion.name}</textPath></text>
+<text className="flex self-center text-center justify-center">
+  <textPath href="#MyPath">{props.medallion.name}</textPath>
+  </text>
 
 </svg>
 
