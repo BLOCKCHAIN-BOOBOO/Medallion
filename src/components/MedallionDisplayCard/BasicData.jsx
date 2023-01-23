@@ -16,19 +16,30 @@ function BasicData(props) {
         //   element_size="extrasmall"
         // />
        <div className="" style={{padding:"30px"}}>
-        <div className="rounded-full bg-slate-300 w-full" 
+        <div className="rounded-full bg-slate-300 w-full metal-ring" 
+        medallion_name={props.medallion.name}
           medallion_elite_status={props.medallion.elite_status}>
           {/* <span className="text-md" >{props.medallion.name}</span> */}
           
          
 
-          <svg viewBox="-5 0 130 130" className="text-alignment" style={{width:"100%"}}>
-  <path id="MyPath" fill="none" stroke="lightblue"
-        d="m10,45c53,-38 96,18 60,3" />
+          <svg 
+          // viewBox="-5 0 130 130" style={{width:"100%"}}
+          viewBox="0 0 100 100"
+           width="100" height="100"
+          className="text-alignment" >
+  <path id="MyPath" fill="none" 
+ d="
+ M 50, 50
+ m -37, 0
+ a 37,37 0 1,1 74,0
+ a 37,37 0 1,1 -74,0"
+  // stroke="lightblue"  d="m10,45c53,-38 96,18 60,3" 
+        />
         {/* <path id="MyPath" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" /> */}
 
-<text className="flex self-center text-center justify-center">
-  <textPath href="#MyPath">{props.medallion.name}</textPath>
+<text style={{fontSize:"9px"}}  className="flex self-center text-center justify-center">
+  <textPath className="" startOffset="25%" text-anchor="middle" style={{fontSize:"9px !important"}}  href="#MyPath">{props.medallion.name}</textPath>
   </text>
 
 </svg>
