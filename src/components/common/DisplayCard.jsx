@@ -75,7 +75,6 @@ function DisplayCard(props) {
             MedalloionId,
             Token
           );
-          console.log(ClaimNftResponse);
           SetModalTitle("Medallion Claimed Successfully");
           SetModalBody(ClaimNftResponse);
           SetHideCloseOption(false);
@@ -92,7 +91,6 @@ function DisplayCard(props) {
         handleModalOpen();
       }
     } else {
-      console.log("Session expired");
       navigate("/login");
     }
   };

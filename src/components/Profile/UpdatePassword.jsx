@@ -27,7 +27,6 @@ function UpdatePassword() {
       // toast.success("Password Updated Successfully");
       // SetFormVisible(false);
     } catch (error) {
-      console.log("Update Password Error", error);
       toast.error(error);
       
       // SetFormVisible(true);

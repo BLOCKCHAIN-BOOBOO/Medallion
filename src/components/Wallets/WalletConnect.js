@@ -34,7 +34,6 @@ import Web3 from "web3";
 
 export const WalletConnect_Balance = async (user_account) => {
   try {
-    console.log(user_account);
     const AccountBalance = await window.ethereum.request({
       method: "eth_getBalance",
       params: [user_account, "latest"],
@@ -47,11 +46,7 @@ export const WalletConnect_Balance = async (user_account) => {
     // const web3 = new Web3.providers.HttpProvider(connector);
     // var AccountBalance = await web3.eth.getBalance(user_account);
 
-    console.log(AccountBalance);
-    console.log(
-      "WalletConnect Balance",
-      ethers.utils.formatEther(AccountBalance)
-    );
+   
     return AccountBalance;
   } catch (error) {
     console.log(error);
@@ -60,7 +55,6 @@ export const WalletConnect_Balance = async (user_account) => {
 };
 
 export const WalletConnect_Transaction = async (user_account, chainId) => {
-  console.log("Initiating WalletConnect Transaction");
 
   const connector = await new WalletConnect({
     bridge: "https://bridge.walletconnect.org", // Required
@@ -69,10 +63,8 @@ export const WalletConnect_Transaction = async (user_account, chainId) => {
 
   if (!connector.connected) {
     // create new session
-    console.log("Creating Session");
     await connector.createSession();
   } else {
-    console.log("Starting Transaction");
     const tx = {
       from: user_account, // Required
       to: "0xb29061feF085EA807847DE47038Ac0e9942FEaD2", // Required (for non contract deployments)
@@ -88,7 +80,6 @@ export const WalletConnect_Transaction = async (user_account, chainId) => {
       .sendTransaction(tx)
       .then((result) => {
         // Returns transaction id (hash)
-        console.log(result);
       })
       .catch((error) => {
         // Error returned when rejected

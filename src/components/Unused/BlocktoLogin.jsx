@@ -39,7 +39,6 @@ function BlockTo() {
         provider
       );
 
-      console.log("Ethereum", bloctoSDK.ethereum);
 
       //Read Methods
       // ContractInstance.name().then(console.log).catch(console.log);
@@ -55,9 +54,8 @@ function BlockTo() {
       GetBalance()
         .then((res) => {
           Balance = res;
-          console.log("Assigned_Balance", Balance);
         })
-        .catch(console.log);
+        .catch();
 
       //Write Methods
       const signer = provider.getSigner();
@@ -66,7 +64,7 @@ function BlockTo() {
         return await signer.getBalance();
       }
 
-      SingerAddress().then(console.log).catch(console.log);
+      SingerAddress().then().catch();
 
       const SignerContractInstance = ContractInstance.connect(signer);
       async function Transaction() {
@@ -78,13 +76,7 @@ function BlockTo() {
         //console.log("Tx", response);
       }
       // bloctoSDK.ethereum.enable();
-      Transaction().then(console.log).catch(console.log);
-
-      console.log("User Account", bloctoSDK.ethereum.accounts[0]);
-      console.log("Provider", provider);
-      console.log("Contract", ContractInstance);
-      console.log("Signer", signer);
-      console.log("SignerContractConnection", SignerContractInstance);
+      Transaction().then().catch();
     } else {
       alert("User Not Connected");
     }

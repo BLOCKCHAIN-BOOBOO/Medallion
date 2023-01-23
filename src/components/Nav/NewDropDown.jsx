@@ -50,7 +50,6 @@ const wrapperRef = useRef(null);
         console.log(error);
       }
     } else if (wallet_name === "WalletConnect") {
-      console.log("WalletConnect Disconnect");
       try {
         sessionStorage.removeItem("walletconnect");
         sessionStorage.removeItem("current_wallet");

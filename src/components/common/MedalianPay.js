@@ -32,10 +32,8 @@ const MedalianPay = ({ setShowModal, handleModalClose, medid }) => {
   const getActivity = async () => {
     SetLoading(true);
     const email = JSON.parse(window.sessionStorage.getItem("princess_store"));
-    console.log(email.email);
     const FilterDataUrl = BASE_URL + GET_PAYMENT_METHODS;
     const { result, RequestResolved } = await GetFunction(FilterDataUrl, token);
-    console.log(result);
     if (RequestResolved) {
       const { ResultType, Message } = HandleError(result);
       if (ResultType === "success") {
@@ -123,7 +121,6 @@ const MedalianPay = ({ setShowModal, handleModalClose, medid }) => {
           <div className="flex mx-auto">
         {records ? (
           records.map((rec, index) => {
-            console.log(rec)
             return (
               <div
                 key={index}

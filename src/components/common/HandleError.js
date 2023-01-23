@@ -1,5 +1,4 @@
 const HandleError = (result) => {
-  console.log(result);
   let { ShowContent, ResultType, Message } = "";
   if (
     result.status

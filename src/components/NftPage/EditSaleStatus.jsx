@@ -53,7 +53,6 @@ function EditSaleStatus(props) {
         isLoading: false,
         autoClose: true,
       });
-      console.log("Edit Form Error", error);
     } finally {
       SetLoading(false);
     }

@@ -13,7 +13,6 @@ function PriceComponent({ medallion_price }) {
     };
 
     handle();
-    console.log(price);
   });
   return (
     <div className="mt-2 mb-2">

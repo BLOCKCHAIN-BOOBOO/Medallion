@@ -1,6 +1,5 @@
 import {
   BASE_URL,
-  GET_SINGLE_NFT_BY_MEDALLIONID,
   CLAIM_FUND,
   GET_MARKET_PLACE_SINGLE_NFT_BY_MEDALLIONID,
 } from "../../api";
@@ -9,10 +8,7 @@ import GetFunction from "../common/GetFunction";
 import HandleError from "../common/HandleError";
 import PostFunction from "../common/PostFunction";
 import { Meta_BuyMedallion, Meta_WalletBalance } from "../Wallets/MetaMask";
-import {
-  WalletConnect_Transaction,
-  WalletConnect_Balance,
-} from "../Wallets/WalletConnect";
+import { WalletConnect_Transaction } from "../Wallets/WalletConnect";
 import { DollarsToETH } from "../../Utils/Helper";
 
 const ResponseObject = {
@@ -77,7 +73,6 @@ export const Purchase = async (
 //Medallion Price Validation
 const ValidateMedallionPrice = async (Token, MedallionId) => {
   try {
-
     const usdtoeth = await DollarsToETH();
     const GET_SINGLE_NFT_API =
       BASE_URL + GET_MARKET_PLACE_SINGLE_NFT_BY_MEDALLIONID + MedallionId;
@@ -85,7 +80,6 @@ const ValidateMedallionPrice = async (Token, MedallionId) => {
       GET_SINGLE_NFT_API,
       Token
     );
-
 
     if (RequestResolved) {
       const { ResultType, Message } = HandleError(result);
@@ -188,7 +182,6 @@ export const ClaimFund = async (UserAccount, Token) => {
     if (RequestResolved) {
       const { ResultType, Message } = HandleError(result);
       if (ResultType === "success") {
-        console.log("Claim Function", Message);
         return Message;
       } else {
         ResponseObject.status = "error";

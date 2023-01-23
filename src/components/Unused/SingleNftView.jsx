@@ -13,7 +13,7 @@ function SingleNftView() {
       .then((response) => {
         SetNftData((NftData) => [response]);
       })
-      .catch(console.log);
+      .catch();
   }, []);
 
   return (

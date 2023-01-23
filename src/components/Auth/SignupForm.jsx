@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { SignUp } from "./Signup";
-import { Link } from "react-router-dom";
 import AlertHandler from "../common/AlertHandler";
 import { useForm } from "react-hook-form";
 import HandleError from "../common/HandleError";
@@ -17,7 +16,6 @@ function SignupForm() {
   const [LastName, SetLastName] = useState("");
   const [Email, SetEmail] = useState("");
   const navigate = useNavigate();
-  const [disabled,setdisabled] =useState(true)
   const [psw,setpsw]=useState("")
 
   const {

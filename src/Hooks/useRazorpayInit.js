@@ -9,12 +9,10 @@ const useRazorpayInit = (CheckOutUrl) => {
         script.src = CheckOutUrl;
         document.body.appendChild(script);
         script.onload = () => {
-          console.log("Added Scrit");
           resolve(true);
           SetRazorPayInit(true);
         };
         script.onerror = () => {
-          console.log("Not Added Scrit");
           resolve(false);
           SetRazorPayInit(false);
         };

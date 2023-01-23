@@ -13,7 +13,6 @@ let GLOBAL_WEB3AUTH_PROVIDER_ETH = null;
 let GLOBAL_WEB3AUTH_PROVIDER_MATIC = null;
 
 export const ConnectionInit = async (chain_type) => {
-  console.log("Chain Name", chain_type);
   let chain_config = null;
   if (chain_type === "reth") {
     chain_config = {
@@ -45,11 +44,9 @@ export const ConnectionInit = async (chain_type) => {
     });
     await web3auth.initModal();
     if (chain_type === "matic") {
-      console.log("Matic Web3 Initiated");
       GLOBAL_WEB3AUTH_ETH = web3auth;
       return web3auth;
     } else if (chain_type === "reth") {
-      console.log("ETH Web3 Initiated");
       GLOBAL_WEB3AUTH_MATIC = web3auth;
       return web3auth;
     } else {
@@ -74,22 +71,18 @@ export const SignInToWallet = async (chain_type) => {
     : await ConnectionInit(chain_type);
 
   if (!web3auth) {
-    console.log("Wallet Not Initiated, please chcek");
     return false;
   } else {
     try {
       const web3authProvider = await web3auth.connect();
       if (chain_type === "reth") {
-        console.log("ETH Provider Set");
         GLOBAL_WEB3AUTH_PROVIDER_ETH = web3authProvider;
         return web3authProvider;
       } else if (chain_type === "matic") {
-        console.log("MATIC Provider Set");
         GLOBAL_WEB3AUTH_PROVIDER_MATIC = web3authProvider;
         return web3authProvider;
       }
     } catch (error) {
-      console.log("Not Signed In", error);
       return false;
     }
   }
@@ -125,16 +118,13 @@ export const GetUserAccount = async (chain_type) => {
     : await SignInToWallet(chain_type);
 
   if (!web3authProvider) {
-    console.log("Connection Init and Provider Not Established, Please Check");
     return false;
   } else {
     try {
-      console.log("Fethcing User Account");
       const web3 = new Web3(web3authProvider);
       const accounts = await web3.eth.getAccounts();
       return accounts[0];
     } catch (error) {
-      console.log("Fetching Accounts Failed, Please check");
       return false;
     }
   }
@@ -158,7 +148,6 @@ export const GetWalletBalance = async (chain_type) => {
     const balance = web3.utils.fromWei(
       await web3.eth.getBalance(address) // Balance is in wei
     );
-    console.log("User Balance", balance);
     return balance;
   } catch (error) {
     console.log(error);
@@ -187,7 +176,6 @@ export const BuyMedallion = async (medallion_price, chain_type) => {
     : await SignInToWallet(chain_type);
 
   if (!web3authProvider) {
-    console.log("provider not initialized yet");
     return false;
   } else {
     const providers = new ethers.providers.Web3Provider(web3authProvider);
@@ -199,18 +187,14 @@ export const BuyMedallion = async (medallion_price, chain_type) => {
     // }).then(console.log)
     //console.log(tx)
     let address = await signer.getAddress();
-    console.log("Signer Address", address);
     //Transaction Block
     try {
-      console.log("STARTING TRANSACTION");
       const tx = await signer.sendTransaction({
         to: "0xb29061feF085EA807847DE47038Ac0e9942FEaD2",
         value: ethers.utils.parseEther(medallion_price.toString()),
       });
-      console.log("Transaction response", tx);
       return tx.hash;
     } catch (error) {
-      console.log(error);
       throw error;
     }
   }
@@ -240,7 +224,6 @@ export const WalletLogout = async () => {
     await web3auth.logout();
     return true;
   } catch (error) {
-    console.log("Unable to Logout", error);
     return false;
   }
 };

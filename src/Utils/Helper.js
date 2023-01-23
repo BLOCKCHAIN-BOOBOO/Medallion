@@ -4,7 +4,6 @@ import BlackMedallion from "./../theme/images/medals/BLACK.png";
 import BlueMedallion from "./../theme/images/medals/BLUE.png";
 import GoldMedallion from "./../theme/images/medals/GOLD.png";
 import PinkMedallion from "./../theme/images/medals/PINK.png";
-import { useState } from "react";
 // import YellowMedallion from "./../theme/images/medals/YELLOW.png";
 
 export const GetDecodedToken = () => {
@@ -14,7 +13,6 @@ export const GetDecodedToken = () => {
     const DecodedToken = jwtDecode(user_object.token);
     return DecodedToken;
   } else {
-    console.log("Token Not Found");
     return false;
   }
 };
@@ -24,13 +22,11 @@ export const ValidateToken = () => {
   if (DecodedToken) {
     let currentDate = new Date();
     if (DecodedToken.exp * 1000 < currentDate.getTime()) {
-      console.log("Token Expired");
       return false; //Token Expired
     } else {
       return true; //Token Not Expired
     }
   } else {
-    console.log("Token NotFound");
     return false;
   }
 };
@@ -236,7 +232,6 @@ export const PostFunction = async (PostUrl, Data, Token) => {
     },
   })
     .then((response) => {
-      console.log("res", response);
       return response;
     })
     .catch((error) => {
@@ -284,7 +279,6 @@ export const DollarsToETH = async () => {
     },
   })
     .then((response) => {
-      console.log("res", response);
 
       if (response?.data?.data?.rates?.ETH) {
         return response?.data?.data?.rates?.ETH;
@@ -293,9 +287,7 @@ export const DollarsToETH = async () => {
       }
     })
     .catch((error) => {
-      console.log(error);
       throw error;
     });
-  console.log(dollar_price);
   return dollar_price;
 };

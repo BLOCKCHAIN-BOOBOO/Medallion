@@ -21,7 +21,6 @@ function EditNft() {
     const UserAccount = await MetamaskSignIn(); //User Address
     if (UserAccount !== "" || UserAccount !== "undefined") {
       const provider = new ethers.providers.Web3Provider(window.ethereum); //Provider
-      console.log(provider);
       const signer = provider.getSigner(); //Signer to Mint NFT
 
       const ContractInstance = new ethers.Contract(
@@ -36,8 +35,7 @@ function EditNft() {
       //Connecting Signer with Contract
 
       const SignerContractInstance = ContractInstance.connect(signer);
-      console.log("Singer Contract", SignerContractInstance);
-      console.log("Current Token", CurrentToken);
+    
       SignerContractInstance["change_fungible(uint256,string,string,uint256)"](
         CurrentToken,
         name,
@@ -49,10 +47,7 @@ function EditNft() {
           ContractInstance.on(
             "Edit",
             (from, to, tokenId, event) => {
-              //console.log(event);
-              console.log(
-                "NFT Successfully Edited"
-              );
+              
               SetEditStatus(
                 "NFT Successfully Edited"
               );
@@ -63,14 +58,13 @@ function EditNft() {
             // transaction and receipt and event functions
           );
         })
-        .catch(console.log);
+        .catch();
       // await SignerContractInstance.safeTransferFrom(
       //   UserAccount,
       //   "0xb29061feF085EA807847DE47038Ac0e9942FEaD2",
       //   0
       // );
     } else {
-      console.log("Not Signed in to MetaMask, Please Sign In");
       MetamaskSignIn();
     }
   };
@@ -78,10 +72,9 @@ function EditNft() {
   useEffect(() => {
     GetSingleNft(CurrentToken)
       .then((response) => {
-        console.log(response);
         setname(response.name);
       })
-      .catch(console.log);
+      .catch();
   }, []);
 
   return (

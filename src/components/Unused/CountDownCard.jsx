@@ -8,13 +8,11 @@ function CountDownCard() {
   //Duration Plugin not working => Getting Duration convertion value NaN
   //Converting Date from form value to ISOString not working in react hence using dayjs to convert
   const Time = new Date().getTime();
-  console.log(Time);
 
   const CurrentDate = () => {
     return Date.parse(dayjs(new Date()).format("YYYY-MM-DDTHH:mm:ss.sssZ"));
   };
 
-  console.log("Current Date", CurrentDate);
   const [EndDate, setEndDate] = useState(null);
   const [CountDown, SetCountDown] = useState(null);
 

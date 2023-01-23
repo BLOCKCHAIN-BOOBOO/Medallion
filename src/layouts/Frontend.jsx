@@ -46,7 +46,6 @@ function Frontend() {
         UpdateState(current_wallet);
       }
     } catch (error) {
-      console.log("Show WALLETS", error);
     }
   };
 

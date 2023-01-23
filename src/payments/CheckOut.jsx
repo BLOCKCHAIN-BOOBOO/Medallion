@@ -59,7 +59,6 @@ function CheckOut() {
           razorpaySignature: response.razorpay_signature,
         };
 
-        console.log("Payment Success Data", data);
         // const result = await axios.post(
         //   "http://localhost:5000/payment/success",
         //   data

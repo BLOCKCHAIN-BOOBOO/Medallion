@@ -72,7 +72,6 @@ function ClaimComponent({ MedallionId, Activitylength }) {
             });
           }
     } else {
-      console.log("Session expired");
       navigate("/login");
     }
   };

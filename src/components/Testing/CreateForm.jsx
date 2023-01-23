@@ -12,7 +12,7 @@ function CreateForm() {
     return e.target.value === watch("password") ? true : false;
   };
 
-  const onSubmit = (data) => console.log("Data", data);
+  const onSubmit = (data) => ;
 
   return (
     <div>

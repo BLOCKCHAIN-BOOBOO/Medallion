@@ -10,7 +10,6 @@ import { GetMedallionActivity } from "../../Utils/Methods";
 import { useEffect } from "react";
 
 function PrivateCardLayout({ medallion }) {
-  console.log("Private Card", medallion);
 
   let Medallion_Id = medallion.medallion_ID;
   const Token = useSelector((state) => state.user.token);
@@ -23,7 +22,6 @@ function PrivateCardLayout({ medallion }) {
         SetActivityLength(ActivityResponse.length);
       }
     } catch (error) {
-      console.log(error);
     }
   };
 

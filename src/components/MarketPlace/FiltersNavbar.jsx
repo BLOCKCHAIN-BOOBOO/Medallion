@@ -2,11 +2,9 @@ import { NavLink, Outlet } from "react-router-dom";
 
 function FiltersNavbar() {
   const LoadAllMedallions = () => {
-    console.log("Load All Medallions");
   };
 
   const LoadFixedMedallions = () => {
-    console.log("Load Fixed Medallions");
   };
   return (
     <div>

@@ -6,7 +6,6 @@ import NoData from "../common/NoData";
 import TitleBanner from "../common/TitleBanner";
 import { GetUserCollection } from "../../Utils/Methods";
 import { ToastContainer, toast } from "react-toastify";
-import TimedAuction from "../common/TimedAuction";
 // import { Web3authComponent } from "../Wallets/web3auth/Web3authComponent";
 
 function Collection(props) {

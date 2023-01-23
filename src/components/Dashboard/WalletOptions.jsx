@@ -48,7 +48,6 @@ const WalletOptions = () => {
           await HandleApplicationState(web3auth, web3authProvider, UserAccount);
         }
       } else {
-        console.log("Web3 Not Intialized");
       }
     } catch (error) {
       console.log(error);

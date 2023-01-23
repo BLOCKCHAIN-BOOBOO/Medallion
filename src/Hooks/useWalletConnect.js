@@ -21,7 +21,6 @@ const useWalletConnect = () => {
               "https://rinkeby.infura.io/v3/9facc91f8cd24fe693d3f0f4d930a380", // This is the mainnet RPC we have added, please pass on your own endpoint while creating an app
           },
         });
-        console.log(web3auth);
         Setweb3auth(web3auth);
         return await web3auth.initModal();
       } catch (error) {

@@ -75,7 +75,6 @@ function DemoNav() {
   const WalletSignOut = async () => {
     try {
       if (!web3auth) {
-        console.log("web3auth not initialized yet");
         return;
       }
       await web3auth.logout();
@@ -94,7 +93,6 @@ function DemoNav() {
         },
       });
     } catch (err) {
-      console.log("Wallet Not Connected");
       //console.log(err);
     }
   };

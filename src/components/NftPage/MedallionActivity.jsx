@@ -19,7 +19,6 @@ function MedallionActivity({ Medallion_Id }) {
         SetActivity(ActivityResponse);
       }
     } catch (error) {
-      console.log(error);
     }
   };
 

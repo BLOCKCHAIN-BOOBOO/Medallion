@@ -6,7 +6,6 @@ import forsale from "./../../theme/images/forsale.png";
 import "./../../theme/output.css";
 
 function PublicCardLayout({ medallion }) {
-  console.log("Public Card", medallion);
   return (
     <div className="medallion-card mx-auto self-center flex flex-col">
        <div className="float-right self-end">

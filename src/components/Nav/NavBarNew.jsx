@@ -27,23 +27,19 @@ var scroll    = Scroll.animateScroll;
 const wrapperRef = useRef(null);
 useOutsideAlerter(wrapperRef);
 const showDropdown = () => {
-  console.log(isMenuOpen)
   if (isMenuOpen) {
      document.body.classList.remove('modal-open');
     setIsMenuOpen(false);    
-    console.log("if")
    
   }
 else if(!isMenuOpen) {   
   document.body.classList.add('modal-open');
     setIsMenuOpen(true);
-    console.log("else if")
   
   }
   else{
     
   document.body.classList.add('modal-open');
-    console.log("else ")
     
   }
 //   let lists = document.querySelector('ul');
@@ -71,7 +67,6 @@ function useOutsideAlerter(ref) {
 
   const CurrentWallet = useSelector((state) => state.CurrentWallet);
   var dashboardurl = window.location.pathname;
-  console.log(dashboardurl);
 const SignOut = async () => {
     sessionStorage.setItem("princess_store", "");
     if (CurrentWallet && CurrentWallet.wallet_name) {
@@ -110,7 +105,6 @@ const SignOut = async () => {
         console.log(error);
       }
     } else if (wallet_name === "WalletConnect") {
-      console.log("WalletConnect Disconnect");
       try {
         sessionStorage.removeItem("walletconnect");
         sessionStorage.removeItem("current_wallet");

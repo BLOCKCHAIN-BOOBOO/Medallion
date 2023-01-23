@@ -38,7 +38,6 @@ function UpdateProfile() {
     try {
       const UserInfoResponse = await GetUserInfo(Token);
       SetUserInfo(UserInfoResponse);
-         console.log(UserInfoResponse)
       await  dispatch({
             type: UserLoggedIn,
             payload: {

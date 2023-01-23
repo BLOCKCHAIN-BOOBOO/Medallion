@@ -69,7 +69,6 @@ function HookWallet() {
       } else {
         const web3 = new Web3(web3authProvider);
         const accounts = await web3.eth.getAccounts();
-        console.log("User Account", accounts);
       }
     }
   };

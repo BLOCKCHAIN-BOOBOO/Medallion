@@ -123,7 +123,6 @@ function ShowWallets({ medallion_id }) {
         }
       }
     } catch (error) {
-      console.log("Show WALLETS", error);
     }
   };
   const handleModalOpen = () => {
@@ -143,12 +142,10 @@ function ShowWallets({ medallion_id }) {
 
       if (!connector.connected) {
         // create new session
-        console.log("Creating Session");
         await connector.createSession();
       }
 
       connector.on("connect", (error, payload) => {
-        console.log("Connected to Wallet");
         if (error) {
           throw error;
         }
@@ -159,7 +156,6 @@ function ShowWallets({ medallion_id }) {
       });
 
       connector.on("session_update", (error, payload) => {
-        console.log("Connected to Wallet");
         if (error) {
           throw error;
         }
@@ -179,7 +175,6 @@ function ShowWallets({ medallion_id }) {
         });
       });
     } catch (error) {
-      console.log(error);
     }
   };
 

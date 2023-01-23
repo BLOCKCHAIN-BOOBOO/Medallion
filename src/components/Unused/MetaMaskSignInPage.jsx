@@ -13,7 +13,7 @@ function MetaMaskSignInPage() {
         sessionStorage.setItem("MetaMaskUserAddress",response);
         SetMetaUserAddress(sessionStorage.getItem("MetaMaskUserAddress",response));
       })
-      .catch(console.log);
+      .catch();
   };
   return (
     <div

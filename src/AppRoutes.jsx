@@ -15,14 +15,12 @@ import MainPage from "./components/MarketPlace/MainPage";
 import SingleNftPage from "./components/common/SingleNftPage";
 import { ValidateToken } from "./Utils/Helper";
 import FiltersNavbar from "./components/MarketPlace/FiltersNavbar";
-import CardsGrid from "./components/common/CardsGrid";
 import NftPage from "./components/NftPage/NftViewPage";
 import Wallet from "./components/Wallets/Wallet";
 import { Web3authComponent } from "./components/Wallets/web3auth/Web3authComponent";
 import { UserLoggedOut } from "./store/UserAuthenticationReducer";
 import { CurrentWallet_DisConnected } from "./store/CurrentWalletReducer";
 import Activity from "./components/common/activity/Activity";
-import MedalianPay from "./components/common/MedalianPay";
 import NoData from "./components/common/NoData";
 import TimedAuction from "./components/common/TimedAuction";
 
@@ -61,7 +59,6 @@ function AppRoutes() {
         console.log(error);
       }
     } else if (wallet_name === "WalletConnect") {
-      console.log("WalletConnect Disconnect");
       try {
         sessionStorage.removeItem("walletconnect");
         sessionStorage.removeItem("current_wallet");
@@ -79,10 +76,8 @@ function AppRoutes() {
   useEffect(() => {
     if (token) {
       if (ValidateToken()) {
-        console.log("Token Valid");
         return;
       } else {
-        console.log("Session Expired, Signingout");
         SignOut();
       }
     }

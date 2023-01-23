@@ -16,12 +16,10 @@ export const RazorPayInit = async () => {
     script.src = CheckOutUrl;
     document.body.appendChild(script);
     script.onload = () => {
-      console.log("Added Scrit");
       GLOBAL_RAZORPAY_INIT = true;
       resolve(true);
     };
     script.onerror = () => {
-      console.log("Not Added Scrit");
       GLOBAL_RAZORPAY_INIT = false;
       resolve(false);
     };
@@ -34,7 +32,6 @@ export const CREATE_ORDER_RESPONSE_DATA = async (
   token
 ) => {
   if (GLOBAL_RAZORPAY_INIT) {
-    console.log("Creating Order");
     const OrderCreateUrl = BASE_URL + RAZORPAY_CREATE_ORDER;
     const form_data = new FormData();
     form_data.append("amount", Price);
@@ -44,16 +41,15 @@ export const CREATE_ORDER_RESPONSE_DATA = async (
       form_data,
       token
     );
-    if (successObject) {
-      console.log("Create Order Instance", successObject);
-    }
-    if (errorObject) {
-      console.log("Create Order Instance", errorObject);
-    }
+    // if (successObject) {
+    //   console.log("Create Order Instance", successObject);
+    // }
+    // if (errorObject) {
+    //   console.log("Create Order Instance", errorObject);
+    // }
     return { successObject, errorObject };
   } else {
     await RazorPayInit();
-    console.log("Razorpay Not Initiated");
   }
 };
 

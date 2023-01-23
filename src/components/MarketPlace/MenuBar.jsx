@@ -27,7 +27,6 @@ function MenuBar(props) {
         const records = result.data.data.records;
         props.LoadFilteredData(records);
       } else {
-        console.log(Message);
       }
     }
   };

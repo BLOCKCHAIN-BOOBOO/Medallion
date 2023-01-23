@@ -37,7 +37,6 @@ const displayCard=(type)=>{
     SetLoading(true);
     try {
       const Records = await GetSingleMedallionData(MedallionId, Token,"collectons");
-      console.log(Records)
       Records.length && SetSingleRecord(...Records);
     } catch (error) {
       toast.error(error);

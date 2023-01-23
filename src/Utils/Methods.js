@@ -165,7 +165,6 @@ export const MedallionTransfer = async (MedallionID, UserAddress, Token) => {
     form_data.append("medallion_id", MedallionID);
     form_data.append("email", UserAddress);
     const result = await PostFunction(MedallionTransferUrl, form_data, Token);
-    console.log("Transfer Function", result);
     return result.data.code;
   } catch (error) {
     const ErrorMessage = ErrorMessageHandler(error);
@@ -190,7 +189,6 @@ export const ClaimNft = async (medallion_ID, Token) => {
     const form_data = new FormData();
     form_data.append("medallion_id", medallion_ID);
     const result = await PostFunction(ClaimMedallionUrl, form_data, Token);
-    console.log("Claim Function", result);
     return result.data.message;
   } catch (error) {
     const ErrorMessage = ErrorMessageHandler(error);
@@ -204,7 +202,6 @@ export const ClaimFund = async (UserAccount, Token) => {
     const form_data = new FormData();
     form_data.append("address", UserAccount);
     const result = await PostFunction(ClaimFundUrl, form_data, Token);
-    console.log("Claim Fund Function", result);
     return result.data.message;
   } catch (error) {
     const ErrorMessage = ErrorMessageHandler(error);

@@ -67,7 +67,6 @@ const [display,setDisplay]=useState();
   };
 
   const displayCard=(type)=>{
-  console.log("Calling")
   setDisplay(type);
 }
 
@@ -91,7 +90,6 @@ const [display,setDisplay]=useState();
     try {
       const Records = await GetSingleMedallionData(MedallionId, Token,"marketplace");
       Records.length && SetSingleRecord(...Records);
-      console.log({ ...Records });
     } catch (error) {
       toast.error(error);
     } finally {

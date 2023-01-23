@@ -38,17 +38,14 @@ function CreateNft() {
         0
       )
         .then((response) => {
-          console.log(response.hash);
           SetMintStatus("NFT Minting On Process, please wait");
           //On Mint Completed
           ContractInstance.on(
             "Mint",
             (tokenId, to, oceanId, event) => {
-              //console.log(event);
               SetMintedTokenId(tokenId);
               SetMintStatus("success");
-              console.log("api token id : ", tokenId);
-              console.log("State : ", MintedTokenId);
+            
             }
 
             // The event object contains the verbatim log data, the
@@ -56,9 +53,8 @@ function CreateNft() {
             // transaction and receipt and event functions
           );
         })
-        .catch(console.log);
+        .catch();
     } else {
-      console.log("Not Signed in to MetaMask, Please Sign In");
       MetamaskSignIn();
     }
   };

@@ -72,10 +72,8 @@ function Wallet() {
           type: CurrentWallet_DisConnected,
         });
       } catch (error) {
-        console.log(error);
       }
     } else if (wallet_name === "WalletConnect") {
-      console.log("WalletConnect Disconnect");
       try {
         sessionStorage.removeItem("walletconnect");
         sessionStorage.removeItem("current_wallet");
@@ -83,7 +81,6 @@ function Wallet() {
           type: CurrentWallet_DisConnected,
         });
       } catch (error) {
-        console.log(error);
       }
     }
   };
@@ -127,7 +124,6 @@ function Wallet() {
           SetHideCloseOption(false);
           window.location.reload();
         }
-        console.log("Response", ClaimFundResponse);
       } catch (error) {
         toast.update(update_form, {
           render: "Claiming Wallet Fund Failed",
