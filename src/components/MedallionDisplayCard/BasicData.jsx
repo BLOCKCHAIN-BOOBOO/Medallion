@@ -16,7 +16,7 @@ function BasicData(props) {
         //   element_size="extrasmall"
         // />
        <div className="" style={{padding:"30px"}}>
-        <div className="rounded-full bg-slate-300 w-full metal-ring" 
+        <div className="rounded-full bg-slate-300 w-full metal-ring" style={{padding:"3.25rem 3rem"}}
         medallion_name={props.medallion.name}
           medallion_elite_status={props.medallion.elite_status}>
           {/* <span className="text-md" >{props.medallion.name}</span> */}
@@ -44,7 +44,7 @@ function BasicData(props) {
 
 </svg>
 
-<div className="rounded-full self-center text-center h-full bg-yellow-400">
+<div className="rounded-full self-center text-center h-full bg-yellow-400" style={{padding:"4.3rem 3rem"}}>
         <img src={Logo} alt="Princess" className="mx-auto self-center"></img>
         </div>
         

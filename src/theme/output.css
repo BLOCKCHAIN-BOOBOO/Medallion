@@ -3308,10 +3308,10 @@ background-size: cover;
 Height:157.5px;
 Left:-0.5px; */
 }
-.medallion-second-card div{
-  /* padding:30px; */
+/* .medallion-second-card div{
+ 
   padding:3.75rem 3rem;
-}
+} */
 
 .medallion-name-text{
 /* font-family: 'Red Hat Display'; */
@@ -3970,3 +3970,11 @@ text {
     margin-top:-60px;
     margin-left:-50px;
 }
+
+/* gold shades */
+
+/* background: #CFB53B; */
+    /* background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #d0a03b 30%, #b6954b 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #b38112 62.5%, #ce9b27 100%); */
+    /* background-image: linear-gradient( to right, #462523 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #462523 100% ); */
+    /* background-image: linear-gradient( to right, #cb9b51 0, #cb9b51 22%, #f6e27a 45%, #f6f2c0 50%, #f6e27a 55%, #cb9b51 78%, #cb9b51 100% ); */
+    /* background: #DAA520; */
