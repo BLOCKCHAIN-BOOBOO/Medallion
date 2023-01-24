@@ -164,6 +164,7 @@ const [display,setDisplay]=useState();
                 <CanvasElement
                   medallion_name={SingleRecord.name}
                   medallion_elite_status={SingleRecord.elite_status}
+                  inner_ring={SingleRecord.inner_ring}
                   // canvas_width="500"
                   // canvas_height="500"
                   element_size="small"
