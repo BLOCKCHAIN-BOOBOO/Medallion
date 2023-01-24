@@ -3,6 +3,7 @@ import CanvasElement from "../common/CanvasElement";
 import Logo from "./../../theme/images/Logo.png";
 
 function BasicData(props) {
+  console.log(props)
   return (
     <>
     <div className="self-center medallion-card-background text-center">
@@ -44,7 +45,7 @@ function BasicData(props) {
 
 </svg>
 
-<div className="rounded-full self-center text-center h-full bg-yellow-400" style={{padding:"4.3rem 3rem"}}>
+<div className="rounded-full self-center text-center h-full " style={{padding:"4.3rem 3rem",backgroundColor:`${props.medallion.inner_ring}`}}>
         <img src={Logo} alt="Princess" className="mx-auto self-center"></img>
         </div>
         
