@@ -3,7 +3,7 @@ import CanvasElement from "../common/CanvasElement";
 import Logo from "./../../theme/images/Logo.png";
 
 function BasicData(props) {
-  console.log(props)
+
   return (
     <>
     <div className="self-center medallion-card-background text-center">
