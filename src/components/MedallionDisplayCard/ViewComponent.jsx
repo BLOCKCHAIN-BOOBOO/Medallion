@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { ValidateToken } from "../../Utils/Helper";
 
 function ViewComponent({ ViewUrl, MedallionId }) {
+  console.log("hai")
   let RedirectUrl=""
   const Token = useSelector((state) => state.user.token);
    if (Token && ValidateToken()) {

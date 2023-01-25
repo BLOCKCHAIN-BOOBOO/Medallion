@@ -128,6 +128,7 @@ function DisplayCard(props) {
             medallion_name={props.medallion.name}
             medallion_elite_status={props.medallion.elite_status}
             element_size="small"
+            inner_ring={props.medallion.inner_ring}
           />
         )}
         {/* {<ReactLoading type="bars" color="#fff" />} */}

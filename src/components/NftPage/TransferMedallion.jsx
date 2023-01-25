@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { toast } from "react-toastify";
 import { MedallionTransfer } from "../../Utils/Methods";
 import { useSelector } from "react-redux";
@@ -11,6 +11,10 @@ function TransferMedallion(props) {
   const [UserAddress, SetUserAddress] = useState("");
   const Token = useSelector((state) => state.user.token);
 
+  useEffect(() => {
+    window.scrollTo({bottom: 0, left: 0, behavior: 'smooth'});
+  }, []);
+  
   const TransferHandler = async (e) => {
     e.preventDefault();
     const update_form = toast.loading("Transferring Medallion, please wait...");

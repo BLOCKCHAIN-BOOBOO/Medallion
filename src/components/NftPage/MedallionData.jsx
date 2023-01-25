@@ -23,15 +23,15 @@ function MedallionData({ SingleRecord }) {
       {/* <p>Currency : {SingleRecord.currency} </p> */}
 
     
-      <button
+      <span
       //  className="gold-button button-wave flex mx-auto  self-center text-center justify-center "
-      
+      style={{backgroundColor:`${SingleRecord.inner_ring}`}}
       className={`button-wave flex xl:self-start md:self-start sm:self-center self-center cursor-default" 
       ${SingleRecord.elite_status === "GOLD" &&" gold-button"} ${SingleRecord.elite_status==="ELITE" &&" elite-button"} 
       ${SingleRecord.elite_status==="BLUE" &&" blue-button"} ${SingleRecord.elite_status==="RUBY" &&" ruby-button"}`}
       
       >
-        {SingleRecord.elite_status}</button>
+        {SingleRecord.elite_status}</span>
      
 
 

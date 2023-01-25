@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { GetMedallionActivity, GetSingleMedallionData } from "../../Utils/Methods";
 import { ToastContainer, toast } from "react-toastify";
-import { useState, useEffect } from "react";
+import { useState, useEffect,useRef } from "react";
 import CanvasElement from "../common/CanvasElement";
 import ReactLoading from "react-loading";
 import EditSaleStatus from "./EditSaleStatus";
@@ -53,10 +53,14 @@ const displayCard=(type)=>{
     HandleMedallionData();
   }, []);
 
+   const messagesEndRef = useRef(null);
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "auto" });
+  };
 
-  // useEffect(() => {
-  //   window.scrollTo({bottom: 0, left: 0, behavior: 'smooth'});
-  // }, []);
+  useEffect(() => {
+    scrollToBottom();
+  }, []);
 
   const handleMedallionActivity = async (Medallion_Id, Token) => {
     try {
@@ -127,6 +131,7 @@ const displayCard=(type)=>{
               <CanvasElement
                 medallion_name={SingleRecord.name}
                 medallion_elite_status={SingleRecord.elite_status}
+                inner_ring={SingleRecord.inner_ring}
                 // canvas_width="500"
                 // canvas_height="500"
                 element_size="small"
@@ -142,13 +147,13 @@ const displayCard=(type)=>{
                     {/* <Tab className="m-2"> */}
                       <button className=" m-1  md:mr-0 list-button self-center" onClick={e=>displayCard("list marketplace")}>
                      <span className="display-text">List</span> 
-                     <span className="display-button-text"> List On MarketPlace</span> 
+                     <span className="display-button-text" onClick={scrollToBottom()}> List On MarketPlace</span> 
                       </button>
-                    {/* </Tab>
+                    {/* </Tab>  
                     <Tab className="m-2"> */}
                       <button className=" m-1  md:mr-0 active-button" onClick={e=>displayCard("Gift Medallion")}>
                       <span className="display-text">Send Gift</span>  
-                      <span className="display-button-text">  Gift Medallion</span>
+                      <span className="display-button-text"  onClick={scrollToBottom()}>  Gift Medallion</span>
                       </button>
                       </div>
                       :<ClaimComponent
@@ -157,7 +162,6 @@ const displayCard=(type)=>{
             />
                     }
                     
-
                     {/* </Tab> */}
                     {/* <Tab>
                    
@@ -273,7 +277,9 @@ const displayCard=(type)=>{
                 </Tabs>
 
 {display === "list marketplace"&&
-(<div className="mt-2 mb-10 w-full p-6 md:p-8 text-center" >
+
+(
+<div><div className="mt-2 mb-10 w-full p-6 md:p-8 text-center" >
   {/* buy-card  */}
                     <div className="xl:w-2/3 md:w-full sm:w-full w-full mx-auto">
                       <p className="dashboard-tab-header">List and Unlist Medallion</p>
@@ -285,11 +291,17 @@ const displayCard=(type)=>{
                         HandleMedallionData={() => HandleMedallionData()}
                       />
                     </div>
+
+                    
                     </div>
+                   <div ref={messagesEndRef}></div>
+                   </div>
                     )}
 
               {display === "Gift Medallion"&&
-(   <div className="mt-2 mb-10 w-full text-center justify-center self-center" >
+(  
+  <div> 
+    <div className="mt-2 mb-10 w-full text-center justify-center self-center" >
   {/* buy-card  */}
 <div className="h-auto xl:w-2/3 md:w-full sm:w-full w-full mx-auto">
   <p className="dashboard-tab-header">Gift Medallion</p>
@@ -298,6 +310,8 @@ const displayCard=(type)=>{
     HandleMedallionData={() => HandleMedallionData()}
   />
 </div>
+</div>
+<div ref={messagesEndRef}></div>
 </div>)}
 
                 {/*Editing Features start*/}
