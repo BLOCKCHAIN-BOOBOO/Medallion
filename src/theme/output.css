@@ -2622,7 +2622,8 @@ text-transform: uppercase;
   /* position: absolute; */
   background: #FFFFFF;
   border-radius: 16px;
-  /* width: 370px; */
+ min-width:270px;
+ max-width:370px;
 }
 }
 @media (min-width: 400px) and (max-width: 720px) {
@@ -3313,6 +3314,20 @@ background-size: cover;
 Height:157.5px;
 Left:-0.5px; */
 }
+@media (min-width:270px) and (max-width:400px) {
+  .medallion-second-card{
+    left: -0.5px;
+    right: 0.5px;
+    top: 0px;
+    height:200px;
+    padding:20px !important;
+    background-image: url("../../src/theme/images/wave.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    }
+}
+
 /* .medallion-second-card div{
  
   padding:3.75rem 3rem;
@@ -3470,7 +3485,7 @@ border-radius: 4px;
   margin-left: -45px;
 }
 
-@media (min-width: 270px) and (max-width: 400px) {
+@media (min-width: 270px) and (max-width: 320px) {
 .collection svg{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   /* height: 300px; */
@@ -3480,10 +3495,24 @@ border-radius: 4px;
   left: 50;
   top: 50;
   position: absolute;
-  margin-top: -82px;
-  margin-left: 5px;
+  margin-top: -80px;
+  margin-left: -2px;
 }
 }
+@media (min-width: 320px) and (max-width: 400px) {
+  .collection svg{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    /* height: 300px; */
+    height: 260px;
+    width: 100%;
+    text-align: center;
+    left: 50;
+    top: 50;
+    position: absolute;
+    margin-top: -80px;
+    margin-left: -10px;
+  }
+  }
 @media (min-width: 400px) and (max-width: 720px) {
   .collection svg{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
