@@ -61,6 +61,7 @@ function BasicData(props) {
       <div className="flex mx-auto">
       <span
       //  className="gold-button button-wave flex mx-auto  self-center text-center justify-center "
+      style={{backgroundColor:`${props.medallion.inner_ring}`}}
       
       className={`button-wave flex mx-auto  self-center text-center justify-center" 
       ${props.medallion.elite_status === "GOLD" &&" gold-button"} ${props.medallion.elite_status==="ELITE" &&" elite-button"} 
