@@ -123,7 +123,7 @@ const displayCard=(type)=>{
                 <div className=" corner-wave1 flex-start collection-medallion-second-card">
                 </div>
 </div>
-                <div className="flex xl:flex-row md:flex-row sm:flex-col flex-col img-position">
+                <div className="flex xl:flex-row md:flex-row sm:flex-col flex-col img-position collection-view">
               
                 <h3 className="collection-medallion-name self-center pt-4 mb-1">{SingleRecord.name}</h3>
 

@@ -7,7 +7,8 @@ function BasicData(props) {
   return (
     <>
     <div className="self-center medallion-card-background text-center">
-       <div className="medallion-second-card p-5">
+       <div className="medallion-second-card  collection">
+       {/* p-5 */}
        <h3 className="medallion-name-text pt-4 mb-1">{props.medallion.name}</h3>
       
       {props.medallion.name && (
@@ -57,7 +58,7 @@ function BasicData(props) {
       </div>
       </div>
       {/* Membership Status :  */}
-      <div className="flex flex-col mt-32 mobile-margin">
+      <div className="flex flex-col mt-20 mobile-margin">
       <div className="flex mx-auto">
       <span
       //  className="gold-button button-wave flex mx-auto  self-center text-center justify-center "
