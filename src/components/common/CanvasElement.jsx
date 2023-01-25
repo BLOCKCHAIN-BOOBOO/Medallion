@@ -33,8 +33,12 @@ function CanvasElement(props) {
   return (
     <div>
       <center>
-      <div className="" style={{padding:"30px"}}>
-        <div className="rounded-full bg-slate-300 w-full metal-ring" style={{padding:"3.25rem 3rem"}}
+      <div
+      //  className="circle-padding"
+      //  style={{padding:"30px"}} 
+       >
+        <div className="rounded-full bg-slate-300 w-full metal-ring"
+         style={{height:"250px", width:"250px",display:"table-cell",verticalAlign:"middle"}}
         // medallion_name={props.medallion.name}
         //   medallion_elite_status={props.medallion.elite_status}
           >
@@ -48,11 +52,9 @@ function CanvasElement(props) {
            width="100" height="100"
           className="text-alignment" >
   <path id="MyPath" fill="none" 
- d="
- M 50, 50
- m -37, 0
- a 37,37 0 1,1 74,0
- a 37,37 0 1,1 -74,0"
+ 
+  //  d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
+  d="M 55, 58 m -30, -2 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
   // stroke="lightblue"  d="m10,45c53,-38 96,18 60,3" 
         />
         {/* <path id="MyPath" d="M73.2,148.6c4-6.1,65.5-96.8,178.6-95.6c111.3,1.2,170.8,90.3,175.1,97" /> */}
@@ -64,8 +66,8 @@ function CanvasElement(props) {
 
 </svg>
 
-<div className="rounded-full self-center text-center h-full " style={{padding:"4.3rem 3rem", backgroundColor:`${inner_ring_color }`}}>
-        <img src={Logo} alt="Princess" className="mx-auto self-center"></img>
+<div className="rounded-full self-center text-center h-full " style={{height:"180px", width:"180px",display:"flex", backgroundColor:`${inner_ring_color }`}}>
+        <img src={Logo} alt="Princess" className="mx-auto white-img self-center"></img>
         </div>
         
         </div> 
